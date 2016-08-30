@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SoodYab" />
-        <activity android:name=".VamYab"></activity>
+        <activity android:name=".VaamYab"></activity>
     </application>
 
 </manifest>
