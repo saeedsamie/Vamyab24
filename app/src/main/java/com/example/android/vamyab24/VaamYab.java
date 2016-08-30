@@ -3,7 +3,7 @@ package com.example.android.vamyab24;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class VamYab extends AppCompatActivity {
+public class VaamYab extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
