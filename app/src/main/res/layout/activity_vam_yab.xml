@@ -93,7 +93,7 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
-            android:ems="10"
+            android:ems="20"
             android:id="@+id/editText8"
             android:layout_below="@+id/editText7"
             android:layout_alignRight="@+id/editText7"
