@@ -163,8 +163,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="مبلغ"
-            android:id="@+id/textView"
-            android:layout_alignBottom="@+id/editText"
+            android:id="@+id/mablagh"
+            android:layout_alignBottom="@+id/enter_mablagh"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
@@ -173,7 +173,7 @@
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:ems="10"
-            android:id="@+id/editText"
+            android:id="@+id/enter_mablagh"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
@@ -183,8 +183,8 @@
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:ems="10"
-            android:id="@+id/editText2"
-            android:layout_below="@+id/editText"
+            android:id="@+id/enter_modate_sepordegozari"
+            android:layout_below="@+id/enter_mablagh"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
@@ -193,8 +193,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="مدت سپرده گذاری"
-            android:id="@+id/textView2"
-            android:layout_alignBottom="@+id/editText2"
+            android:id="@+id/modate_sepordegozari"
+            android:layout_alignBottom="@+id/enter_modate_sepordegozari"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
@@ -203,8 +203,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="مبلغ قسط واریزی"
-            android:id="@+id/textView3"
-            android:layout_alignBottom="@+id/editText3"
+            android:id="@+id/mablaghe_ghest_varizi"
+            android:layout_alignBottom="@+id/enter_mablaghe_ghest_varizi"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
@@ -213,8 +213,8 @@
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:ems="10"
-            android:id="@+id/editText3"
-            android:layout_below="@+id/editText2"
+            android:id="@+id/enter_mablaghe_ghest_varizi"
+            android:layout_below="@+id/enter_modate_sepordegozari"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
@@ -223,8 +223,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="پرداخت قسط هر "
-            android:id="@+id/textView4"
-            android:layout_alignBottom="@+id/editText4"
+            android:id="@+id/pardakhte_ghest_har"
+            android:layout_alignBottom="@+id/enter_pardakhte_ghest_har"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
@@ -234,8 +234,8 @@
             android:foregroundGravity="right"
             android:inputType="numberDecimal"
             android:ems="10"
-            android:id="@+id/editText4"
-            android:layout_below="@+id/editText3"
+            android:id="@+id/enter_pardakhte_ghest_har"
+            android:layout_below="@+id/enter_mablaghe_ghest_varizi"
             android:layout_centerHorizontal="true" />
 
         <TextView
@@ -243,17 +243,17 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="ماه"
-            android:id="@+id/textView21"
-            android:layout_above="@+id/button"
-            android:layout_toLeftOf="@+id/editText4"
-            android:layout_toStartOf="@+id/editText4" />
+            android:id="@+id/mah"
+            android:layout_above="@+id/SoodYab_go"
+            android:layout_toLeftOf="@+id/enter_pardakhte_ghest_har"
+            android:layout_toStartOf="@+id/enter_pardakhte_ghest_har" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="جستجو"
-            android:id="@+id/button"
-            android:layout_below="@+id/editText4"
+            android:id="@+id/SoodYab_go"
+            android:layout_below="@+id/enter_pardakhte_ghest_har"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentRight="true"
