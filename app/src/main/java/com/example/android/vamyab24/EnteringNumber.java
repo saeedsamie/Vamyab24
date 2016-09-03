@@ -37,7 +37,7 @@ public class EnteringNumber extends AppCompatActivity {
         b8 = (Button)findViewById(R.id.n8);
         b9 = (Button)findViewById(R.id.n9);
         b0 = (Button)findViewById(R.id.n0);
-        dele = (Button)findViewById(R.id.dele);
+        dele = (Button)findViewById(R.id.del);
         done = (Button)findViewById(R.id.done);
 
         b0.setOnClickListener(new View.OnClickListener(){
