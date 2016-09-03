@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SoodYab" />
-        <activity android:name=".VaamYab"></activity>
+        <activity android:name=".VaamYab" />
+        <activity android:name=".EnteringNumber"></activity>
     </application>
 
 </manifest>
