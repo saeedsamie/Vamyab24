@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:inputType="none"
         android:editable="false"
-        android:ems="10"
+        android:ems="11"
         android:id="@+id/editText9"
         android:layout_alignBottom="@+id/textView44"
         android:layout_alignParentLeft="true"
