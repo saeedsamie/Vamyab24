@@ -27,91 +27,91 @@ public class EnteringNumber extends AppCompatActivity {
         setContentView(R.layout.activity_entering_number);
 
         editText = (EditText)findViewById(R.id.editText9);
-        b1 = (Button)findViewById(R.id.n1);
-        b2 = (Button)findViewById(R.id.n2);
-        b3 = (Button)findViewById(R.id.n3);
-        b4 = (Button)findViewById(R.id.n4);
-        b5 = (Button)findViewById(R.id.n5);
-        b6 = (Button)findViewById(R.id.n6);
-        b7 = (Button)findViewById(R.id.n7);
-        b8 = (Button)findViewById(R.id.n8);
-        b9 = (Button)findViewById(R.id.n9);
-        b0 = (Button)findViewById(R.id.n0);
-        dele = (Button)findViewById(R.id.dele);
-        done = (Button)findViewById(R.id.done);
+//        b1 = (Button)findViewById(R.id.n1);
+//        b2 = (Button)findViewById(R.id.n2);
+//        b3 = (Button)findViewById(R.id.n3);
+//        b4 = (Button)findViewById(R.id.n4);
+//        b5 = (Button)findViewById(R.id.n5);
+//        b6 = (Button)findViewById(R.id.n6);
+//        b7 = (Button)findViewById(R.id.n7);
+//        b8 = (Button)findViewById(R.id.n8);
+//        b9 = (Button)findViewById(R.id.n9);
+//        b0 = (Button)findViewById(R.id.n0);
+//        dele = (Button)findViewById(R.id.dele);
+//        done = (Button)findViewById(R.id.done);
 
-        b0.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                editText.setText(editText.getText().insert(editText.getText().length(),"0"));
-            }
-        });
-        b1.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                editText.setText(editText.getText().insert(editText.getText().length(),"1"));
-            }
-        });
-        b2.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                editText.setText(editText.getText().insert(editText.getText().length(),"2"));
-            }
-        });
-        b3.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                editText.setText(editText.getText().insert(editText.getText().length(),"3"));
-            }
-        });
-        b4.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                editText.setText(editText.getText().insert(editText.getText().length(),"4"));
-            }
-        });
-        b5.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                editText.setText(editText.getText().insert(editText.getText().length(),"5"));
-            }
-        });
-        b6.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                editText.setText(editText.getText().insert(editText.getText().length(),"6"));
-            }
-        });
-        b7.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                editText.setText(editText.getText().insert(editText.getText().length(),"7"));
-            }
-        });
-        b8.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                editText.setText(editText.getText().insert(editText.getText().length(),"8"));
-            }
-        });
-        b9.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                editText.setText(editText.getText().insert(editText.getText().length(),"9"));
-            }
-        });
-        dele.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                editText.setText(editText.getText().delete(editText.getText().length()-1,editText.getText().length()));
-            }
-        });
-        done.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
+//        b0.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View view) {
+//                editText.setText(editText.getText().insert(editText.getText().length(),"0"));
+//            }
+//        });
+//        b1.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View view) {
+//                editText.setText(editText.getText().insert(editText.getText().length(),"1"));
+//            }
+//        });
+//        b2.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View view) {
+//                editText.setText(editText.getText().insert(editText.getText().length(),"2"));
+//            }
+//        });
+//        b3.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View view) {
+//                editText.setText(editText.getText().insert(editText.getText().length(),"3"));
+//            }
+//        });
+//        b4.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View view) {
+//                editText.setText(editText.getText().insert(editText.getText().length(),"4"));
+//            }
+//        });
+//        b5.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View view) {
+//                editText.setText(editText.getText().insert(editText.getText().length(),"5"));
+//            }
+//        });
+//        b6.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View view) {
+//                editText.setText(editText.getText().insert(editText.getText().length(),"6"));
+//            }
+//        });
+//        b7.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View view) {
+//                editText.setText(editText.getText().insert(editText.getText().length(),"7"));
+//            }
+//        });
+//        b8.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View view) {
+//                editText.setText(editText.getText().insert(editText.getText().length(),"8"));
+//            }
+//        });
+//        b9.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View view) {
+//                editText.setText(editText.getText().insert(editText.getText().length(),"9"));
+//            }
+//        });
+//        dele.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View view) {
+//                editText.setText(editText.getText().delete(editText.getText().length()-1,editText.getText().length()));
+//            }
+//        });
+//        done.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View view) {
+//
+//            }
+//        });
 
     }
 }
