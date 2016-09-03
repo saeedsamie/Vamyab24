@@ -23,7 +23,7 @@ public class VaamYab extends AppCompatActivity implements View.OnClickListener {
 
         findViewById(R.id.searchLayout).getLayoutParams().height = 10 ;
         findViewById(R.id.searchLayout).requestLayout();
-        findViewById(R.id.searchLayout).setBackgroundColor(R.color.colorAccent);
+//        findViewById(R.id.searchLayout).setBackgroundColor(R.);
         Button button = (Button)findViewById(R.id.VamYab_go);
 //        button.setBackgroundColor(R.color.colorPrimary);
 
