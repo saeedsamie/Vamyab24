@@ -19,20 +19,13 @@ public class VaamYab extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
 
-
-
-//        Button button = (Button)findViewById(R.id.VamYab_go);
-//        button.setBackgroundColor(R.color.colorPrimary);
-
         switch (v.getId()){
-
 
             case R.id.VamYab_go:
                 if(i%2==0){
                     findViewById(R.id.vamYab_searchLayout).getLayoutParams().height = 0 ;
                     findViewById(R.id.vamYab_searchLayout).requestLayout();
-                }
-                else
+                }else
                     findViewById(R.id.vamYab_searchLayout).getLayoutParams().height = 580 ;
                     findViewById(R.id.vamYab_searchLayout).requestLayout();
                     i++;

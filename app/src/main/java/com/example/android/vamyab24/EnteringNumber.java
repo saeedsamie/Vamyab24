@@ -113,8 +113,19 @@ public class EnteringNumber extends Activity {
         done.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(getBaseContext() , MainActivity.class);
-                startActivity(intent);
+                Intent intent;
+                switch (getIntent().getExtras().getString("class")){
+                    case "VaamYab":
+                        intent= new Intent(getBaseContext() , VaamYab.class);
+                        startActivity(intent);
+                    break;
+
+                    case "SoodYab":
+                        intent= new Intent(getBaseContext() , SoodYab.class);
+                        startActivity(intent);
+                    break;
+                }
+
             }
         });
 

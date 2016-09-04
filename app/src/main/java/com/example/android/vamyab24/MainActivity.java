@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button4:
                 intent = new Intent( this , EnteringNumber.class);
+                intent.putExtra("class","VaamYab");
                 startActivity(intent);
                 break;
         }
