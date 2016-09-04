@@ -1,5 +1,6 @@
 package com.example.android.vamyab24;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,8 +20,8 @@ public class VaamYab extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
 
+        Intent intent ;
         switch (v.getId()){
-
             case R.id.VamYab_go:
                 if(i%2==0){
                     findViewById(R.id.vamYab_searchLayout).getLayoutParams().height = 0 ;
@@ -29,6 +30,31 @@ public class VaamYab extends AppCompatActivity implements View.OnClickListener {
                     findViewById(R.id.vamYab_searchLayout).getLayoutParams().height = 580 ;
                     findViewById(R.id.vamYab_searchLayout).requestLayout();
                     i++;
+                break;
+            case R.id.editText5:
+                intent = new Intent( this , EnteringNumber.class);
+                intent.putExtra("class","VaamYab");
+                startActivity(intent);
+                break;
+            case R.id.editText6:
+                intent = new Intent( this , EnteringNumber.class);
+                intent.putExtra("class","VaamYab");
+                startActivity(intent);
+                break;
+            case R.id.editText7:
+                intent = new Intent( this , EnteringNumber.class);
+                intent.putExtra("class","VaamYab");
+                startActivity(intent);
+                break;
+            case R.id.editText8:
+                intent = new Intent( this , EnteringNumber.class);
+                intent.putExtra("class","VaamYab");
+                startActivity(intent);
+                break;
+            case R.id.editText11:
+                intent = new Intent( this , EnteringNumber.class);
+                intent.putExtra("class","VaamYab");
+                startActivity(intent);
                 break;
         }
     }
