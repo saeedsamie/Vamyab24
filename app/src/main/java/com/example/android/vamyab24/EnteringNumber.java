@@ -103,7 +103,9 @@ public class EnteringNumber extends AppCompatActivity {
         dele.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                editText.setText(editText.getText().delete(editText.getText().length()-1,editText.getText().length()));
+                if(editText.getText().length()>0){
+                    editText.setText(editText.getText().delete(editText.getText().length() - 1, editText.getText().length()));
+                }
             }
         });
         done.setOnClickListener(new View.OnClickListener(){
