@@ -2,7 +2,6 @@ package com.example.android.vamyab24;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
 
@@ -21,10 +20,8 @@ public class VaamYab extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
 
 
-        findViewById(R.id.searchLayout).getLayoutParams().height = 10 ;
-        findViewById(R.id.searchLayout).requestLayout();
-//        findViewById(R.id.searchLayout).setBackgroundColor(R.);
-        Button button = (Button)findViewById(R.id.VamYab_go);
+
+//        Button button = (Button)findViewById(R.id.VamYab_go);
 //        button.setBackgroundColor(R.color.colorPrimary);
 
         switch (v.getId()){
@@ -32,13 +29,13 @@ public class VaamYab extends AppCompatActivity implements View.OnClickListener {
 
             case R.id.VamYab_go:
                 if(i%2==0){
-//                    v.requestLayout();
-//                    v.getLayoutParams().height = 10 ;
-//                    fadeOutEverythings();
+                    findViewById(R.id.vamYab_searchLayout).getLayoutParams().height = 0 ;
+                    findViewById(R.id.vamYab_searchLayout).requestLayout();
                 }
                 else
-//                    fadeInEverythings();
-                i++;
+                    findViewById(R.id.vamYab_searchLayout).getLayoutParams().height = 580 ;
+                    findViewById(R.id.vamYab_searchLayout).requestLayout();
+                    i++;
                 break;
         }
     }

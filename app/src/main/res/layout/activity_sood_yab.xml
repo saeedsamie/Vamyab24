@@ -11,12 +11,13 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:layout_gravity="center_horizontal|bottom"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:id="@+id/scrollView2">
+        android:id="@+id/scrollView2"
+        android:layout_below="@+id/SoodYab_go">
 
         <LinearLayout
             android:orientation="vertical"
@@ -84,7 +85,35 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Text"
+                android:id="@+id/textView2"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
                 android:id="@+id/textView13"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView4"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView3"
                 android:layout_gravity="center_horizontal" />
 
             <TextView
@@ -98,7 +127,35 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Text"
+                android:id="@+id/textView21"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView9"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
                 android:id="@+id/textView15"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView27"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView26"
                 android:layout_gravity="center_horizontal" />
 
             <TextView
@@ -112,7 +169,35 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Text"
+                android:id="@+id/textView46"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView45"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
                 android:id="@+id/textView17"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView48"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView47"
                 android:layout_gravity="center_horizontal" />
 
             <TextView
@@ -126,7 +211,35 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Text"
+                android:id="@+id/textView50"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView49"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
                 android:id="@+id/textView19"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView52"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView51"
                 android:layout_gravity="center_horizontal" />
 
             <TextView
@@ -140,7 +253,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Text"
+                android:id="@+id/textView54"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView53"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
                 android:id="@+id/textView8"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/textView55"
                 android:layout_gravity="center_horizontal" />
         </LinearLayout>
     </ScrollView>
@@ -150,7 +284,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|top"
         android:id="@+id/relativeLayout"
-        android:layout_above="@+id/SoodYab_go"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
@@ -172,7 +305,9 @@
             android:id="@+id/enter_mablagh"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/enter_modate_sepordegozari"
+            android:layout_alignEnd="@+id/enter_modate_sepordegozari" />
 
         <EditText
             android:layout_width="200dp"
@@ -182,7 +317,10 @@
             android:id="@+id/enter_modate_sepordegozari"
             android:layout_below="@+id/enter_mablagh"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/modate_sepordegozari"
+            android:layout_toStartOf="@+id/modate_sepordegozari"
+            android:layout_marginRight="30dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -212,7 +350,9 @@
             android:id="@+id/enter_mablaghe_ghest_varizi"
             android:layout_below="@+id/enter_modate_sepordegozari"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/enter_modate_sepordegozari"
+            android:layout_alignEnd="@+id/enter_modate_sepordegozari" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -220,7 +360,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="پرداخت قسط هر "
             android:id="@+id/pardakhte_ghest_har"
-            android:layout_alignParentBottom="true"
+            android:layout_alignBottom="@+id/enter_pardakhte_ghest_har"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
@@ -232,7 +372,8 @@
             android:ems="10"
             android:id="@+id/enter_pardakhte_ghest_har"
             android:layout_below="@+id/enter_mablaghe_ghest_varizi"
-            android:layout_centerHorizontal="true" />
+            android:layout_alignRight="@+id/enter_mablaghe_ghest_varizi"
+            android:layout_alignEnd="@+id/enter_mablaghe_ghest_varizi" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -240,11 +381,9 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="ماه"
             android:id="@+id/mah"
-            android:layout_alignParentBottom="true"
+            android:layout_alignBottom="@+id/enter_pardakhte_ghest_har"
             android:layout_toLeftOf="@+id/enter_pardakhte_ghest_har"
-            android:layout_toStartOf="@+id/enter_pardakhte_ghest_har"
-            android:layout_marginRight="41dp"
-            android:layout_marginEnd="41dp" />
+            android:layout_toStartOf="@+id/enter_pardakhte_ghest_har" />
 
         Button
             android:layout_width="wrap_content"
@@ -262,7 +401,7 @@
         android:layout_height="wrap_content"
         android:text="جستجو"
         android:id="@+id/SoodYab_go"
-        android:layout_above="@+id/scrollView2"
+        android:layout_below="@+id/relativeLayout"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
