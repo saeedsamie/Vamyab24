@@ -13,22 +13,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|bottom"
-        android:layout_below="@+id/relativeLayout">
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/scrollView2">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="1000dp"
+            android:layout_height="800dp"
             android:layout_gravity="center_horizontal|bottom">
 
-            <Button
+            Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Button"
                 android:id="@+id/button3"
                 android:layout_gravity="bottom" />
 
-            <Button
+            Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Button"
@@ -54,13 +57,6 @@
                 android:layout_height="wrap_content"
                 android:text="New Text"
                 android:id="@+id/textView7"
-                android:layout_gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Text"
-                android:id="@+id/textView9"
                 android:layout_gravity="center_horizontal" />
 
             <TextView
@@ -154,9 +150,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|top"
         android:id="@+id/relativeLayout"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
+        android:layout_above="@+id/SoodYab_go"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <TextView
             android:layout_width="wrap_content"
@@ -194,7 +190,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="مدت سپرده گذاری"
             android:id="@+id/modate_sepordegozari"
-            android:layout_alignBottom="@+id/enter_modate_sepordegozari"
+            android:layout_above="@+id/enter_mablaghe_ghest_varizi"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
@@ -204,9 +200,9 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="مبلغ قسط واریزی"
             android:id="@+id/mablaghe_ghest_varizi"
-            android:layout_alignBottom="@+id/enter_mablaghe_ghest_varizi"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_above="@+id/enter_pardakhte_ghest_har"
+            android:layout_alignRight="@+id/pardakhte_ghest_har"
+            android:layout_alignEnd="@+id/pardakhte_ghest_har" />
 
         <EditText
             android:layout_width="200dp"
@@ -224,7 +220,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="پرداخت قسط هر "
             android:id="@+id/pardakhte_ghest_har"
-            android:layout_alignBottom="@+id/enter_pardakhte_ghest_har"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
@@ -244,20 +240,32 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="ماه"
             android:id="@+id/mah"
-            android:layout_above="@+id/SoodYab_go"
+            android:layout_alignParentBottom="true"
             android:layout_toLeftOf="@+id/enter_pardakhte_ghest_har"
-            android:layout_toStartOf="@+id/enter_pardakhte_ghest_har" />
+            android:layout_toStartOf="@+id/enter_pardakhte_ghest_har"
+            android:layout_marginRight="41dp"
+            android:layout_marginEnd="41dp" />
 
-        <Button
+        Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="جستجو"
-            android:id="@+id/SoodYab_go"
-            android:layout_below="@+id/enter_pardakhte_ghest_har"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:text="New Button"
+            android:id="@+id/button"
+            android:minHeight="600dp"
+            android:layout_above="@+id/enter_pardakhte_ghest_har"
+            android:layout_alignLeft="@+id/mah"
+            android:layout_alignStart="@+id/mah" />
+
     </RelativeLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="جستجو"
+        android:id="@+id/SoodYab_go"
+        android:layout_above="@+id/scrollView2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
