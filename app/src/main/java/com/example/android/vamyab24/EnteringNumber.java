@@ -1,12 +1,14 @@
 package com.example.android.vamyab24;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class EnteringNumber extends AppCompatActivity {
+public class EnteringNumber extends Activity {
     EditText editText;
     Button b1;
     Button b2;
@@ -111,7 +113,8 @@ public class EnteringNumber extends AppCompatActivity {
         done.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-
+                Intent intent= new Intent(getBaseContext() , MainActivity.class);
+                startActivity(intent);
             }
         });
 
