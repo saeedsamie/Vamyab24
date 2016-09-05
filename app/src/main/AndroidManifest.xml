@@ -15,8 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SoodYab" />
-        <activity android:name=".VaamYab" />
+        <activity android:name=".SoodYabActivity" />
+        <activity android:name=".VaamYabActivity" />
         <activity android:name=".EnteringNumber"></activity>
     </application>
 

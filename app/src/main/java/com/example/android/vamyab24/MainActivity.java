@@ -7,8 +7,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.example.android.vamyab24.Back.MyActivityManager;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    public MyActivityManager myActivityManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,19 +30,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
 
         Intent intent ;
+        myActivityManager = new MyActivityManager();
         switch (v.getId()){
 
             case R.id.imageButton:
-                intent= new Intent( this , SoodYab.class);
+                intent= new Intent( this , myActivityManager.getSoodYabActivity().getClass());
                 startActivity(intent);
                 break;
             case R.id.imageButton2:
-                intent = new Intent( this , VaamYab.class);
+                intent = new Intent( this , myActivityManager.getVaamYabActivity().getClass());
                 startActivity(intent);
                 break;
             case R.id.button4:
                 intent = new Intent( this , EnteringNumber.class);
-                intent.putExtra("class","VaamYab");
+                intent.putExtra("class","VaamYabActivity");
                 startActivity(intent);
                 break;
         }

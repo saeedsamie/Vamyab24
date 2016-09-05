@@ -1,8 +1,8 @@
 package com.example.android.vamyab24;
 
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -114,14 +114,16 @@ public class EnteringNumber extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent;
+//                intent = new Intent(getBaseContext(),);
                 switch (getIntent().getExtras().getString("class")){
-                    case "VaamYab":
-                        intent= new Intent(getBaseContext() , VaamYab.class);
+                    case "VaamYabActivity":
+                        ComponentName activity = getCallingActivity();
+                        intent= new Intent(getBaseContext() , VaamYabActivity.class);
                         startActivity(intent);
                     break;
 
-                    case "SoodYab":
-                        intent= new Intent(getBaseContext() , SoodYab.class);
+                    case "SoodYabActivity":
+                        intent= new Intent(getBaseContext() , SoodYabActivity.class);
                         startActivity(intent);
                     break;
                 }

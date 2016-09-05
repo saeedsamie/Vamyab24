@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class SoodYab extends AppCompatActivity implements View.OnClickListener {
+public class SoodYabActivity extends AppCompatActivity implements View.OnClickListener {
 
     int i=0;
     @Override
