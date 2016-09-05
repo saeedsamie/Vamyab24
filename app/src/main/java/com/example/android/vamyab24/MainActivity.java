@@ -15,8 +15,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
+//        View decorView = getWindow().getDecorView();
+//        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+//        decorView.setSystemUiVisibility(uiOptions);
+        getSupportActionBar().hide();
+
         ImageButton ib = (ImageButton) findViewById(R.id.imageButton);
         ib.setOnClickListener(this);
         ImageButton ib2 = (ImageButton) findViewById(R.id.imageButton2);
@@ -36,10 +40,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.imageButton:
                 intent= new Intent( this , myActivityManager.getSoodYabActivity().getClass());
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
             case R.id.imageButton2:
                 intent = new Intent( this , myActivityManager.getVaamYabActivity().getClass());
                 startActivity(intent);
+                overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out);
                 break;
             case R.id.button4:
                 intent = new Intent( this , EnteringNumber.class);
