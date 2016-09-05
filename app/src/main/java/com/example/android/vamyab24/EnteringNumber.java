@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,11 +24,23 @@ public class EnteringNumber extends Activity {
     Button b0;
     Button dele;
     Button done;
+    VaamYabActivity vaamYabActivity;
+    SoodYabActivity soodYabActivity;
+
+    public void setVaamYabActivity(VaamYabActivity vaamYabActivity) {
+        this.vaamYabActivity = vaamYabActivity;
+    }
+
+    public void setSoodYabActivity(SoodYabActivity soodYabActivity) {
+        this.soodYabActivity = soodYabActivity;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entering_number);
+
+
 
         editText = (EditText)findViewById(R.id.editText9);
         b1 = (Button)findViewById(R.id.n1);
@@ -114,20 +127,50 @@ public class EnteringNumber extends Activity {
         done.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent;
-//                intent = new Intent(getBaseContext(),);
-                switch (getIntent().getExtras().getString("class")){
-                    case "VaamYabActivity":
-                        ComponentName activity = getCallingActivity();
-                        intent= new Intent(getBaseContext() , VaamYabActivity.class);
-                        startActivity(intent);
-                    break;
 
-                    case "SoodYabActivity":
-                        intent= new Intent(getBaseContext() , SoodYabActivity.class);
-                        startActivity(intent);
-                    break;
+                switch (getIntent().getExtras().get("field").toString()){
+                    case "mablagh":
+                        try{vaamYabActivity.setMablagh(Integer.parseInt(editText.getText().toString()));}catch (Exception e){}
+                        break;
+                    case "bazpardakht":
+                        try{vaamYabActivity.setBazpardakht(Integer.parseInt(editText.getText().toString()));}catch (Exception e){}
+                        break;
+                    case "mablagheharghest":
+                        try{vaamYabActivity.setMablagheharghest(Integer.parseInt(editText.getText().toString()));}catch (Exception e){}
+                        break;
+                    case "hadeaksarkarmozd":
+                        try{vaamYabActivity.setHadeaksarkarmozd(Integer.parseInt(editText.getText().toString()));}catch (Exception e){}
+                        break;
+                    case "tedadezamen":
+                        try{vaamYabActivity.setTedadezamen(Integer.parseInt(editText.getText().toString()));}catch (Exception e){}
+                        break;
                 }
+                finish();
+
+
+
+
+
+
+//                Intent intent;
+////                intent = new Intent(getBaseContext(),);
+////                switch (getIntent().getExtras().getString("class")){
+////                    case "VaamYabActivity":
+//                        intent= new Intent(getBaseContext() ,VaamYabActivity.class);
+//                        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+//                Bundle bundle = new Bundle();
+//                bundle.putString("feild",getIntent().getExtras().getString("field").toString());
+//                bundle.putString("input",editText.getText().toString());
+//                        intent.putExtra("box",bundle);
+//                        startActivity(intent);
+//                    break;
+
+//                    case "SoodYabActivity":
+//                        intent= new Intent(getBaseContext() , SoodYabActivity.class);
+//                        intent.addFlags(Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+//                        startActivity(intent);
+//                    break;
+//                }
 
             }
         });
