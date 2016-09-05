@@ -96,67 +96,102 @@
             android:layout_below="@id/n1"
             android:layout_toRightOf="@id/n2"
             />
-        <Button
-            android:text="7"
-            android:textColor="#C0C0C0"
-            android:id="@+id/n7"
-            android:background="#5F9EA0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/n4"
-            />
-        <Button
-            android:text="8"
-            android:textColor="#C0C0C0"
-            android:id="@+id/n8"
-            android:background="#5F9EA0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/n4"
-            android:layout_toRightOf="@id/n1"
-            />
-        <Button
-            android:text="9"
-            android:textColor="#C0C0C0"
-            android:id="@+id/n9"
-            android:background="#5F9EA0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/n4"
-            android:layout_toRightOf="@id/n2"
-            />
 
-        <Button
-            android:text="Del"
-            android:textColor="#C0C0C0"
-            android:id="@+id/del"
-            android:background="#B22222"
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/done"
-            android:layout_toLeftOf="@+id/done"
-            android:layout_toStartOf="@+id/done" />
-        <Button
-            android:text="Done"
-            android:textColor="#C0C0C0"
-            android:id="@+id/done"
-            android:background="#87A96B"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/n8"
-            android:layout_toRightOf="@+id/n8"
-            android:layout_toEndOf="@+id/n8" />
+            android:layout_alignParentBottom="true"
+            android:id="@+id/linearLayout2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
 
-        <Button
-            android:text="0"
-            android:textColor="#C0C0C0"
-            android:id="@+id/n0"
-            android:background="#5F9EA0"
+            <Button
+                android:text="Done"
+                android:textColor="#C0C0C0"
+                android:id="@+id/done"
+                android:background="#87A96B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/n8"
+                android:layout_toRightOf="@+id/n8"
+                android:layout_toEndOf="@+id/n8"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="Del"
+                android:textColor="#C0C0C0"
+                android:id="@+id/del"
+                android:background="#B22222"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/done"
+                android:layout_toLeftOf="@+id/done"
+                android:layout_toStartOf="@+id/done"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="0"
+                android:textColor="#C0C0C0"
+                android:id="@+id/n0"
+                android:background="#5F9EA0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/del"
+                android:layout_toLeftOf="@+id/del"
+                android:layout_toStartOf="@+id/del"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/del"
-            android:layout_toLeftOf="@+id/del"
-            android:layout_toStartOf="@+id/del" />
+            android:layout_above="@+id/linearLayout2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+
+            <Button
+                android:text="7"
+                android:textColor="#C0C0C0"
+                android:id="@+id/n7"
+                android:background="#5F9EA0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/n4"
+                android:layout_gravity="bottom"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="8"
+                android:textColor="#C0C0C0"
+                android:id="@+id/n8"
+                android:background="#5F9EA0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/n4"
+                android:layout_toRightOf="@id/n1"
+                android:layout_gravity="bottom"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="9"
+                android:textColor="#C0C0C0"
+                android:id="@+id/n9"
+                android:background="#5F9EA0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/n4"
+                android:layout_toRightOf="@id/n2"
+                android:layout_gravity="bottom"
+                android:layout_weight="1" />
+        </LinearLayout>
     </RelativeLayout>
 
 </RelativeLayout>
