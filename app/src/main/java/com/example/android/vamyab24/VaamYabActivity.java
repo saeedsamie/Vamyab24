@@ -1,5 +1,6 @@
 package com.example.android.vamyab24;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -43,6 +44,7 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vam_yab);
+        getSupportActionBar().hide();
         enteringNumber = new EnteringNumber();
         enteringNumber.setVaamYabActivity(this);
         TextView textView;
@@ -121,5 +123,11 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
         et.setText(String.valueOf(tedadezamen));
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent( this , MainActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.push_down_in ,R.anim.push_down_out);
+    }
 }
 

@@ -7,6 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#7BBA7B"
     tools:context="com.example.android.vamyab24.MainActivity">
 
     <ScrollView
@@ -300,7 +301,8 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
+            android:inputType="none"
+            android:editable="false"
             android:ems="10"
             android:id="@+id/enter_mablagh"
             android:layout_alignParentTop="true"
@@ -312,7 +314,8 @@
         <EditText
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
+            android:inputType="none"
+            android:editable="false"
             android:ems="10"
             android:id="@+id/enter_modate_sepordegozari"
             android:layout_below="@+id/enter_mablagh"
@@ -345,7 +348,8 @@
         <EditText
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
+            android:inputType="none"
+            android:editable="false"
             android:ems="10"
             android:id="@+id/enter_mablaghe_ghest_varizi"
             android:layout_below="@+id/enter_modate_sepordegozari"
@@ -368,7 +372,8 @@
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:foregroundGravity="right"
-            android:inputType="numberDecimal"
+            android:inputType="none"
+            android:editable="false"
             android:ems="10"
             android:id="@+id/enter_pardakhte_ghest_har"
             android:layout_below="@+id/enter_mablaghe_ghest_varizi"

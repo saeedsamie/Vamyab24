@@ -2,6 +2,7 @@ package com.example.android.vamyab24;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.content.Intent;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sood_yab);
+        getSupportActionBar().hide();
         Button button = (Button) findViewById(R.id.SoodYab_go);
         button.setOnClickListener(this);
     }
@@ -248,6 +250,11 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
                     .setListener(null);
         }else {textView.setAlpha(1f);}
     }
-
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent( this , MainActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out);
+    }
 
 }

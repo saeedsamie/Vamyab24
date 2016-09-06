@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ib.setOnClickListener(this);
         ImageButton ib2 = (ImageButton) findViewById(R.id.imageButton2);
         ib2.setOnClickListener(this);
-        Button button = (Button) findViewById(R.id.button4);
-        button.setOnClickListener(this);
+//        Button button = (Button) findViewById(R.id.button4);
+//        button.setOnClickListener(this);
 
     }
 
@@ -40,18 +40,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.imageButton:
                 intent= new Intent( this , myActivityManager.getSoodYabActivity().getClass());
                 startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                overridePendingTransition(R.anim.push_down_in ,R.anim.push_down_out);
                 break;
             case R.id.imageButton2:
                 intent = new Intent( this , myActivityManager.getVaamYabActivity().getClass());
                 startActivity(intent);
                 overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out);
                 break;
-            case R.id.button4:
-                intent = new Intent( this , EnteringNumber.class);
-                intent.putExtra("class","VaamYabActivity");
-                startActivity(intent);
-                break;
+//            case R.id.button4:
+//                intent = new Intent( this , EnteringNumber.class);
+//                intent.putExtra("class","VaamYabActivity");
+//                startActivity(intent);
+//                break;
         }
 
     }
