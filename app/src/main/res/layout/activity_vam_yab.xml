@@ -290,6 +290,105 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true">
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:id="@+id/Bank"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:text="بانک:"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/BankName"
+                    android:paddingRight="5dp"
+                    android:layout_toLeftOf="@+id/Bank"
+                    android:textSize="20dp"
+                    android:text="سامان"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Karmozd"
+                    android:text="کارمزد:"
+                    android:textSize="20dp"
+                    android:layout_below="@+id/Bank"
+                    android:layout_alignParentRight="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/NDarsad"
+                    android:paddingRight="5dp"
+                    android:text="20"
+                    android:textSize="20dp"
+                    android:layout_below="@+id/Bank"
+                    android:layout_toLeftOf="@+id/Karmozd"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:id="@+id/Darsad"
+                    android:text="درصد"
+                    android:textSize="20dp"
+                    android:layout_below="@+id/Bank"
+                    android:layout_toLeftOf="@+id/NDarsad"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/NoeHesab"
+                    android:text="نوع حساب:"
+                    android:textSize="20dp"
+                    android:layout_below="@+id/Karmozd"
+                    android:layout_alignParentRight="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Goone"
+                    android:paddingRight="5dp"
+                    android:text="سپرده کوتاه مدت"
+                    android:textSize="20dp"
+                    android:layout_below="@+id/Karmozd"
+                    android:layout_toLeftOf="@+id/NoeHesab"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Tozihat"
+                    android:text="توضیحات:"
+                    android:textSize="20dp"
+                    android:layout_below="@+id/NoeHesab"
+                    android:layout_alignParentRight="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Tozih"
+                    android:paddingRight="5dp"
+                    android:text="..."
+                    android:textSize="20dp"
+                    android:layout_below="@+id/NoeHesab"
+                    android:layout_toLeftOf="@+id/Tozihat"/>
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="90dp"
+                    android:id="@+id/imageView"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/saman_logo"
+                    />
+            </RelativeLayout>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

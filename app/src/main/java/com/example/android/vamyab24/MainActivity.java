@@ -1,8 +1,14 @@
 package com.example.android.vamyab24;
 
 import android.content.Intent;
+import android.os.Build;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.transition.Fade;
+import android.transition.Transition;
+import android.transition.TransitionInflater;
+import android.transition.TransitionManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -12,6 +18,7 @@ import com.example.android.vamyab24.Back.MyActivityManager;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     public MyActivityManager myActivityManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,26 +40,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
 
-        Intent intent ;
+        Intent intent;
         myActivityManager = new MyActivityManager();
-        switch (v.getId()){
+        switch (v.getId()) {
 
             case R.id.imageButton:
-                intent= new Intent( this , myActivityManager.getSoodYabActivity().getClass());
+                intent = new Intent(this, myActivityManager.getSoodYabActivity().getClass());
                 startActivity(intent);
-                overridePendingTransition(R.anim.push_down_in ,R.anim.push_down_out);
+                overridePendingTransition(R.anim.push_down_in, R.anim.push_down_out);
                 break;
             case R.id.imageButton2:
-                intent = new Intent( this , myActivityManager.getVaamYabActivity().getClass());
+                intent = new Intent(this, myActivityManager.getVaamYabActivity().getClass());
                 startActivity(intent);
                 overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out);
                 break;
-//            case R.id.button4:
-//                intent = new Intent( this , EnteringNumber.class);
-//                intent.putExtra("class","VaamYabActivity");
-//                startActivity(intent);
-//                break;
         }
+
 
     }
 }
