@@ -385,7 +385,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:src="@drawable/saman_logo"
+                    android:src="@drawable/logo_saman"
                     />
             </RelativeLayout>
 
