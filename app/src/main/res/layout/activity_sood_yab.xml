@@ -6,24 +6,23 @@
     android:padding="10dp"
     android:background="#7BBA7B"
     tools:context="com.example.android.vamyab24.MainActivity">
-        <RelativeLayout
-            android:layout_width="match_parent"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/box_border2" >
+
+        <Button
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/box_border2"
-            >
+            android:text="جستجو"
+            android:id="@+id/SoodYab_go"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="جستجو"
-                android:id="@+id/SoodYab_go"
-                android:layout_below="@+id/relativeLayout"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
-
-            <ScrollView
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             android:layout_gravity="center_horizontal|bottom"
@@ -36,8 +35,7 @@
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="800dp"
-                android:layout_gravity="center_horizontal|bottom">
+                android:layout_height="800dp">
                 <RelativeLayout
                     android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
@@ -145,17 +143,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/box_border"
-                    >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:id="@+id/Bank6"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentTop="true"
-                        android:text="بانک:"
-                        />
+                    ><TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:id="@+id/Bank6"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:text="بانک:"                    />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -479,21 +474,19 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignRight="@+id/enter_modate_sepordegozari"
-                android:layout_alignEnd="@+id/enter_modate_sepordegozari" />
-
-            <EditText
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:inputType="none"
-                android:editable="false"
-                android:ems="10"
-                android:id="@+id/enter_modate_sepordegozari"
-                android:layout_below="@+id/enter_mablagh"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_toLeftOf="@+id/modate_sepordegozari"
-                android:layout_toStartOf="@+id/modate_sepordegozari"
-                android:layout_marginRight="30dp" />
+                android:layout_alignEnd="@+id/enter_modate_sepordegozari" /><EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:editable="false"
+            android:ems="10"
+            android:id="@+id/enter_modate_sepordegozari"
+            android:layout_below="@+id/enter_mablagh"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/modate_sepordegozari"
+            android:layout_toStartOf="@+id/modate_sepordegozari"
+            android:layout_marginRight="30dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -558,18 +551,16 @@
                 android:id="@+id/mah"
                 android:layout_alignBottom="@+id/enter_pardakhte_ghest_har"
                 android:layout_toLeftOf="@+id/enter_pardakhte_ghest_har"
-                android:layout_toStartOf="@+id/enter_pardakhte_ghest_har" />
-
-            Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Button"
-                android:id="@+id/button"
-                android:minHeight="600dp"
-                android:layout_above="@+id/enter_pardakhte_ghest_har"
-                android:layout_alignLeft="@+id/mah"
-                android:layout_alignStart="@+id/mah" />
+                android:layout_toStartOf="@+id/enter_pardakhte_ghest_har" />Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button"
+            android:minHeight="600dp"
+            android:layout_above="@+id/enter_pardakhte_ghest_har"
+            android:layout_alignLeft="@+id/mah"
+            android:layout_alignStart="@+id/mah" />
 
         </RelativeLayout>
-        </RelativeLayout>
+    </RelativeLayout>
 </RelativeLayout>

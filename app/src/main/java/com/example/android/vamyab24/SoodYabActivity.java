@@ -291,7 +291,9 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
     }
     @Override
     public void onBackPressed() {
+        finish();
         Intent intent = new Intent( this , MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(intent);
         overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out);
     }
