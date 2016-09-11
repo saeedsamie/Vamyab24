@@ -48,7 +48,7 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
         enteringNumber = new EnteringNumber();
         enteringNumber.setVaamYabActivity(this);
         TextView textView;
-        textView = (TextView)findViewById(R.id.textView33);
+     //   textView = (TextView)findViewById(R.id.textView33);
         ;
 
         Button button = (Button)findViewById(R.id.VamYab_go);
