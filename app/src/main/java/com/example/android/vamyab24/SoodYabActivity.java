@@ -20,14 +20,25 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sood_yab);
         getSupportActionBar().hide();
-        Button button = (Button) findViewById(R.id.SoodYab_go);
+        Button button ;
+        button = (Button) findViewById(R.id.SoodYab_go);
         button.setOnClickListener(this);
+        EditText editText;
+        editText = (EditText) findViewById(R.id.enter_mablagh);
+        editText.setOnClickListener(this);
+        editText = (EditText) findViewById(R.id.enter_modate_sepordegozari);
+        editText.setOnClickListener(this);
+        editText = (EditText) findViewById(R.id.enter_pardakhte_ghest_har);
+        editText.setOnClickListener(this);
+        editText = (EditText) findViewById(R.id.enter_mablaghe_ghest_varizi);
+        editText.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
 
-
+        Intent intent;
+        EnteringNumber enteringNumber = new EnteringNumber();
         switch (v.getId()){
 
             case R.id.SoodYab_go:
@@ -36,6 +47,33 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
                 else
                 fadeInEverythings();
                 i++;
+                break;
+            case R.id.editText5:
+
+                intent = new Intent( this , EnteringNumber.class);
+                intent.putExtra("field","mablagh");
+                startActivityForResult(intent,101);
+                break;
+            case R.id.enter_mablagh:
+                intent = new Intent( this , EnteringNumber.class);
+                intent.putExtra("field","enter_mablagh");
+                startActivityForResult(intent,102);
+                break;
+            case R.id.enter_mablaghe_ghest_varizi:
+                intent = new Intent( this , EnteringNumber.class);
+                intent.putExtra("field","enter_mablaghe_ghest_varizi");
+                startActivityForResult(intent,103);
+                break;
+            case R.id.enter_modate_sepordegozari:
+                intent = new Intent( this , EnteringNumber.class);
+                intent.putExtra("field","enter_modate_sepordegozari");
+                startActivityForResult(intent,104);
+                break;
+            case R.id.enter_pardakhte_ghest_har:
+                intent = new Intent( this , EnteringNumber.class);
+                intent.putExtra("field","enter_pardakhte_ghest_har");
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                startActivityForResult(intent,105);
                 break;
         }
     }
