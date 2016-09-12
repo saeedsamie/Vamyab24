@@ -43,6 +43,7 @@ public class EnteringNumber extends Activity {
 
 
         editText = (EditText)findViewById(R.id.editText9);
+        editText.setText(getIntent().getStringExtra("value").toString());
         b1 = (Button)findViewById(R.id.n1);
         b2 = (Button)findViewById(R.id.n2);
         b3 = (Button)findViewById(R.id.n3);
@@ -128,24 +129,33 @@ public class EnteringNumber extends Activity {
             @Override
             public void onClick(View view) {
 
-                switch (getIntent().getExtras().get("field").toString()){
-                    case "mablagh":
-                        try{vaamYabActivity.setMablagh(Integer.parseInt(editText.getText().toString()));}catch (Exception e){}
-                        break;
-                    case "bazpardakht":
-                        try{vaamYabActivity.setBazpardakht(Integer.parseInt(editText.getText().toString()));}catch (Exception e){}
-                        break;
-                    case "mablagheharghest":
-                        try{vaamYabActivity.setMablagheharghest(Integer.parseInt(editText.getText().toString()));}catch (Exception e){}
-                        break;
-                    case "hadeaksarkarmozd":
-                        try{vaamYabActivity.setHadeaksarkarmozd(Integer.parseInt(editText.getText().toString()));}catch (Exception e){}
-                        break;
-                    case "tedadezamen":
-                        try{vaamYabActivity.setTedadezamen(Integer.parseInt(editText.getText().toString()));}catch (Exception e){}
-                        break;
-                }
+//                Intent intent = new Intent();
+//                setResult(Activity.RESULT_OK,returnIntent);
+//                startActivityForResult(intent,1002);
+                Intent returnIntent =new Intent();
+                returnIntent.putExtra("code", editText.getText().toString());
+                setResult(Activity.RESULT_OK,returnIntent);
                 finish();
+
+//                intent.putExtra("code",editText.getText().toString());
+//                switch (getIntent().getExtras().get("field").toString()){
+//                    case "mablagh":
+//                        try{vaamYabActivity.setMablagh(Integer.parseInt(editText.getText().toString()));}catch (Exception e){}
+//                        break;
+//                    case "bazpardakht":
+//                        try{vaamYabActivity.setBazpardakht(Integer.parseInt(editText.getText().toString()));}catch (Exception e){}
+//                        break;
+//                    case "mablagheharghest":
+//                        try{vaamYabActivity.setMablagheharghest(Integer.parseInt(editText.getText().toString()));}catch (Exception e){}
+//                        break;
+//                    case "hadeaksarkarmozd":
+//                        try{vaamYabActivity.setHadeaksarkarmozd(Integer.parseInt(editText.getText().toString()));}catch (Exception e){}
+//                        break;
+//                    case "tedadezamen":
+//                        try{vaamYabActivity.setTedadezamen(Integer.parseInt(editText.getText().toString()));}catch (Exception e){}
+//                        break;
+//                }
+//                finish();
 
 
 

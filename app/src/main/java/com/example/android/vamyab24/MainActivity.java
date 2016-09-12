@@ -48,11 +48,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(this, myActivityManager.getSoodYabActivity().getClass());
                 startActivity(intent);
                 overridePendingTransition(R.anim.push_down_in, R.anim.push_down_out);
+                finish();
                 break;
             case R.id.imageButton2:
                 intent = new Intent(this, myActivityManager.getVaamYabActivity().getClass());
                 startActivity(intent);
                 overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out);
+                finish();
                 break;
         }
 

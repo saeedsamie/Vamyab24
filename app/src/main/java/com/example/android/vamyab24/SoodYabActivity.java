@@ -39,6 +39,7 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
 
         Intent intent;
         EnteringNumber enteringNumber = new EnteringNumber();
+        EditText editText;
         switch (v.getId()){
 
             case R.id.SoodYab_go:
@@ -49,31 +50,35 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
                 i++;
                 break;
             case R.id.editText5:
-
                 intent = new Intent( this , EnteringNumber.class);
-                intent.putExtra("field","mablagh");
-                startActivityForResult(intent,101);
+//                intent.putExtra("field","mablagh");
+                startActivityForResult(intent,1000);
                 break;
             case R.id.enter_mablagh:
                 intent = new Intent( this , EnteringNumber.class);
-                intent.putExtra("field","enter_mablagh");
-                startActivityForResult(intent,102);
+//                intent.putExtra("field","enter_mablagh");
+                editText = (EditText)findViewById(R.id.enter_mablagh);
+                intent.putExtra("value",editText.getText().toString());
+                startActivityForResult(intent,1001);
+            break;
+            case R.id.enter_modate_sepordegozari:
+                intent = new Intent( this , EnteringNumber.class);
+                editText = (EditText)findViewById(R.id.enter_modate_sepordegozari);
+                intent.putExtra("value",editText.getText().toString());
+                startActivityForResult(intent,1002);
                 break;
             case R.id.enter_mablaghe_ghest_varizi:
                 intent = new Intent( this , EnteringNumber.class);
-                intent.putExtra("field","enter_mablaghe_ghest_varizi");
-                startActivityForResult(intent,103);
-                break;
-            case R.id.enter_modate_sepordegozari:
-                intent = new Intent( this , EnteringNumber.class);
-                intent.putExtra("field","enter_modate_sepordegozari");
-                startActivityForResult(intent,104);
+                editText = (EditText)findViewById(R.id.enter_mablaghe_ghest_varizi);
+                intent.putExtra("value",editText.getText().toString());
+                startActivityForResult(intent,1003);
                 break;
             case R.id.enter_pardakhte_ghest_har:
                 intent = new Intent( this , EnteringNumber.class);
-                intent.putExtra("field","enter_pardakhte_ghest_har");
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                startActivityForResult(intent,105);
+                editText = (EditText)findViewById(R.id.enter_pardakhte_ghest_har);
+                intent.putExtra("value",editText.getText().toString());
+//                intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                startActivityForResult(intent,1004);
                 break;
         }
     }
@@ -298,4 +303,26 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
         overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out);
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == RESULT_OK){
+            if(requestCode == 1001){
+                EditText editText = (EditText) findViewById(R.id.enter_mablagh);
+                editText.setText( data.getStringExtra("code").toString());
+            }
+            else if(requestCode == 1002){
+                EditText editText = (EditText) findViewById(R.id.enter_modate_sepordegozari);
+                editText.setText( data.getStringExtra("code").toString());
+            }
+            else if(requestCode == 1003){
+                EditText editText = (EditText) findViewById(R.id.enter_mablaghe_ghest_varizi);
+                editText.setText( data.getStringExtra("code").toString());
+            }
+            else if(requestCode == 1004){
+                EditText editText = (EditText) findViewById(R.id.enter_pardakhte_ghest_har);
+                editText.setText( data.getStringExtra("code").toString());
+            }
+        }
+    }
 }
