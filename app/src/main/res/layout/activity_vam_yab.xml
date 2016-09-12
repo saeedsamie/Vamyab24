@@ -204,35 +204,41 @@
                 android:layout_toStartOf="@+id/textView29">
 
                 <ImageButton
-                    android:layout_width="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:id="@+id/imageButton3"
+                    android:background="@drawable/logo_mellat"
                     android:layout_below="@+id/vamYab_searchLayout"
                     android:layout_centerHorizontal="true" />
 
                 <ImageButton
-                    android:layout_width="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:background="@drawable/logo_melli"
                     android:id="@+id/imageButton4" />
 
                 <ImageButton
-                    android:layout_width="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:background="@drawable/logo_sarmaye"
                     android:id="@+id/imageButton5" />
 
                 <ImageButton
-                    android:layout_width="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:background="@drawable/logo_parsian"
                     android:id="@+id/imageButton6" />
 
                 <ImageButton
-                    android:layout_width="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:background="@drawable/logo_tejarat"
                     android:id="@+id/imageButton7" />
 
                 <ImageButton
-                    android:layout_width="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:background="@drawable/logo_saman"
                     android:id="@+id/imageButton8" />
 
                 <ImageButton

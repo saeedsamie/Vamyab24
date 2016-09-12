@@ -1,13 +1,11 @@
 package com.example.android.vamyab24;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 public class VaamYabActivity extends AppCompatActivity implements View.OnClickListener {
     int mablagh;
@@ -44,12 +42,29 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vam_yab);
+
         getSupportActionBar().hide();
         enteringNumber = new EnteringNumber();
         enteringNumber.setVaamYabActivity(this);
+      /* FontsOverride.setDefaultFont(this, "DEFAULT", "fonts/BNazanin.ttf");
         TextView textView;
-     //   textView = (TextView)findViewById(R.id.textView33);
-        ;
+        textView = (TextView)findViewById(R.id.textView23);
+        Typeface tf = Typeface.createFromAsset(getAssets(),"fonts/BNazanin+Regular.ttf");
+        textView.setTypeface(tf);
+        textView = (TextView)findViewById(R.id.textView22);
+        textView.setTypeface(tf);
+        textView = (TextView)findViewById(R.id.textView24);
+        textView.setTypeface(tf);
+        textView = (TextView)findViewById(R.id.textView25);
+        textView.setTypeface(tf);
+        textView = (TextView)findViewById(R.id.textView28);
+        textView.setTypeface(tf);
+        textView = (TextView)findViewById(R.id.textView29);
+        textView.setTypeface(tf);
+        textView = (TextView)findViewById(R.id.textView30);
+        textView.setTypeface(tf);
+        */
+
 
         Button button = (Button)findViewById(R.id.VamYab_go);
         button.setOnClickListener(this);
