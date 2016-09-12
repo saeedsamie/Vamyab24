@@ -47,7 +47,6 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
 
         Intent intent;
-        EnteringNumber enteringNumber = new EnteringNumber();
         EditText editText;
         switch (v.getId()){
 
@@ -58,14 +57,8 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
                 fadeInEverythings();
                 i++;
                 break;
-            case R.id.editText5:
-                intent = new Intent( this , EnteringNumber.class);
-//                intent.putExtra("field","mablagh");
-                startActivityForResult(intent,1000);
-                break;
             case R.id.enter_mablagh:
                 intent = new Intent( this , EnteringNumber.class);
-//                intent.putExtra("field","enter_mablagh");
                 editText = (EditText)findViewById(R.id.enter_mablagh);
                 intent.putExtra("value",editText.getText().toString());
                 startActivityForResult(intent,1001);
@@ -86,7 +79,6 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
                 intent = new Intent( this , EnteringNumber.class);
                 editText = (EditText)findViewById(R.id.enter_pardakhte_ghest_har);
                 intent.putExtra("value",editText.getText().toString());
-//                intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivityForResult(intent,1004);
                 break;
         }
