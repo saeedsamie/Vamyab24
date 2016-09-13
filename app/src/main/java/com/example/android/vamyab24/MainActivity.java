@@ -1,5 +1,6 @@
 package com.example.android.vamyab24;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.support.v4.app.ActivityOptionsCompat;
@@ -15,9 +16,16 @@ import android.widget.ImageButton;
 
 import com.example.android.vamyab24.Back.MyActivityManager;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     public MyActivityManager myActivityManager;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

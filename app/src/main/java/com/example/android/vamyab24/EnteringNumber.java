@@ -2,6 +2,7 @@ package com.example.android.vamyab24;
 
 import android.app.Activity;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class EnteringNumber extends Activity {
     EditText editText;
@@ -33,6 +36,10 @@ public class EnteringNumber extends Activity {
 
     public void setSoodYabActivity(SoodYabActivity soodYabActivity) {
         this.soodYabActivity = soodYabActivity;
+    }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     @Override

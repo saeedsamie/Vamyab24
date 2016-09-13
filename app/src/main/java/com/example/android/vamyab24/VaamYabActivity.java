@@ -1,11 +1,14 @@
 package com.example.android.vamyab24;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class VaamYabActivity extends AppCompatActivity implements View.OnClickListener {
     int mablagh;
@@ -38,6 +41,11 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
     public int geti(){
         return i;
     }
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
