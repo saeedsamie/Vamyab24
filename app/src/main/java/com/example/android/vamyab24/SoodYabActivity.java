@@ -334,4 +334,4 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
             }
         }
     }
-}
+}//

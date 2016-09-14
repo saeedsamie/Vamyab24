@@ -154,5 +154,5 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
         startActivity(intent);
         overridePendingTransition(R.anim.push_down_in ,R.anim.push_down_out);
     }
-}
+}//
 
