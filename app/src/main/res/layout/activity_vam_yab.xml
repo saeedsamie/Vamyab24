@@ -158,9 +158,9 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="نفر"
                 android:id="@+id/textView31"
-                android:layout_all="@+id/linearLayout"
-                android:layout_alignLeft="@+id/editText8"
-                android:layout_alignStart="@+id/editText8" />
+                android:layout_alignBottom="@+id/editText11"
+                android:layout_toLeftOf="@+id/editText11"
+                android:layout_toStartOf="@+id/editText11" />
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -297,11 +297,6 @@
                     android:layout_height="40dp"
                     android:background="@drawable/logo_tourism"
                     android:id="@+id/imageButton14" />
-
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:id="@+id/imageButton15" />
 
             </LinearLayout>
             </HorizontalScrollView>

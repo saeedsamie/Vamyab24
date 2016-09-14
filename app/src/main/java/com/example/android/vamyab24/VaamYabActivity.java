@@ -74,7 +74,7 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
                     findViewById(R.id.vamYab_searchLayout).requestLayout();
 
                 }else {
-                    findViewById(R.id.vamYab_searchLayout).getLayoutParams().height = 580 ;
+                    findViewById(R.id.vamYab_searchLayout).getLayoutParams().height = 600 ;
                 }
                 findViewById(R.id.vamYab_searchLayout).requestLayout();
                 i++;
