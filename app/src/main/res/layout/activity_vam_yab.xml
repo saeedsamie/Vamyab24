@@ -418,7 +418,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:src="@drawable/logo_saman"
+                        android:src="@drawable/logo_saman2"
                         />
                 </RelativeLayout>
 
@@ -520,7 +520,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:src="@drawable/logo_saman"
+                        android:src="@drawable/logo_saman2"
                         />
                 </RelativeLayout>
 
@@ -622,7 +622,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:src="@drawable/logo_saman"
+                        android:src="@drawable/logo_saman2"
                         />
                 </RelativeLayout>
 
@@ -724,7 +724,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:src="@drawable/logo_saman"
+                        android:src="@drawable/logo_saman2"
                         />
                 </RelativeLayout>
 
