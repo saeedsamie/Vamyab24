@@ -247,33 +247,39 @@
                     android:id="@+id/imageButton8" />
 
                 <ImageButton
-                    android:layout_width="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:background="@drawable/logo_day"
                     android:id="@+id/imageButton9" />
 
                 <ImageButton
-                    android:layout_width="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:background="@drawable/logo_karafarin"
                     android:id="@+id/imageButton11" />
 
                 <ImageButton
-                    android:layout_width="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:background="@drawable/logo_maskan"
                     android:id="@+id/imageButton12" />
 
                 <ImageButton
-                    android:layout_width="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:background="@drawable/logo_pasargad"
                     android:id="@+id/imageButton10" />
 
                 <ImageButton
-                    android:layout_width="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:background="@drawable/logo_sina"
                     android:id="@+id/imageButton13" />
 
                 <ImageButton
-                    android:layout_width="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:background="@drawable/logo_tourism"
                     android:id="@+id/imageButton14" />
 
                 <ImageButton
