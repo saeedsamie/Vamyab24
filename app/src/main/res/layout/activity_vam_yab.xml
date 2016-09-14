@@ -209,76 +209,88 @@
                 android:layout_toStartOf="@+id/textView29">
 
                 <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:id="@+id/imageButton3"
                     android:background="@drawable/logo_mellat"
                     android:layout_below="@+id/vamYab_searchLayout"
                     android:layout_centerHorizontal="true" />
 
                 <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:background="@drawable/logo_melli"
                     android:id="@+id/imageButton4" />
 
                 <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:background="@drawable/logo_sarmaye"
                     android:id="@+id/imageButton5" />
 
                 <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:background="@drawable/logo_parsian"
                     android:id="@+id/imageButton6" />
 
                 <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:background="@drawable/logo_tejarat"
                     android:id="@+id/imageButton7" />
 
                 <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:background="@drawable/logo_saman"
                     android:id="@+id/imageButton8" />
 
                 <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:background="@drawable/logo_day"
                     android:id="@+id/imageButton9" />
 
                 <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:background="@drawable/logo_karafarin"
                     android:id="@+id/imageButton11" />
 
                 <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:background="@drawable/logo_maskan"
                     android:id="@+id/imageButton12" />
 
                 <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:background="@drawable/logo_pasargad"
                     android:id="@+id/imageButton10" />
 
                 <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:background="@drawable/logo_sina"
                     android:id="@+id/imageButton13" />
 
                 <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:background="@drawable/logo_tourism"
                     android:id="@+id/imageButton14" />
 
