@@ -11,31 +11,6 @@ import android.widget.EditText;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class VaamYabActivity extends AppCompatActivity implements View.OnClickListener {
-    int mablagh;
-    int bazpardakht;
-    int mablagheharghest;
-    int hadeaksarkarmozd;
-    int tedadezamen;
-    EnteringNumber enteringNumber;
-    public void setBazpardakht(int bazpardakht) {
-        this.bazpardakht = bazpardakht;
-    }
-
-    public void setHadeaksarkarmozd(int hadeaksarkarmozd) {
-        this.hadeaksarkarmozd = hadeaksarkarmozd;
-    }
-
-    public void setMablagh(int mablagh) {
-        this.mablagh = mablagh;
-    }
-
-    public void setMablagheharghest(int mablagheharghest) {
-        this.mablagheharghest = mablagheharghest;
-    }
-
-    public void setTedadezamen(int tedadezamen) {
-        this.tedadezamen = tedadezamen;
-    }
 
     int i=0;
     public int geti(){
@@ -52,8 +27,6 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_vam_yab);
 
         getSupportActionBar().hide();
-        enteringNumber = new EnteringNumber();
-        enteringNumber.setVaamYabActivity(this);
       /* FontsOverride.setDefaultFont(this, "DEFAULT", "fonts/BNazanin.ttf");
         TextView textView;
         textView = (TextView)findViewById(R.id.textView23);
@@ -93,6 +66,7 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
 
         Intent intent ;
+        EditText editText;
         switch (v.getId()){
             case R.id.VamYab_go:
                 if(i%2==0){
@@ -106,44 +80,36 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
                 i++;
                 break;
             case R.id.editText5:
-
-                intent = new Intent( this , enteringNumber.getClass());
-                intent.putExtra("field","mablagh");
-                startActivityForResult(intent,1);
+                intent = new Intent( this , EnteringNumber.class);
+                editText = (EditText)findViewById(R.id.editText5);
+                intent.putExtra("value",editText.getText().toString());
+                startActivityForResult(intent,2001);
                 break;
             case R.id.editText6:
                 intent = new Intent( this , EnteringNumber.class);
-                intent.putExtra("field","bazpardakht");
-                startActivityForResult(intent,2);
+                editText = (EditText)findViewById(R.id.editText6);
+                intent.putExtra("value",editText.getText().toString());
+                startActivityForResult(intent,2002);
                 break;
             case R.id.editText7:
                 intent = new Intent( this , EnteringNumber.class);
-                intent.putExtra("field","mablagheharghest");
-                startActivityForResult(intent,3);
+                editText = (EditText)findViewById(R.id.editText7);
+                intent.putExtra("value",editText.getText().toString());
+                startActivityForResult(intent,2003);
                 break;
             case R.id.editText8:
                 intent = new Intent( this , EnteringNumber.class);
-                intent.putExtra("field","hadeaksarkarmozd");
-                startActivityForResult(intent,4);
+                editText = (EditText)findViewById(R.id.editText8);
+                intent.putExtra("value",editText.getText().toString());
+                startActivityForResult(intent,2004);
                 break;
             case R.id.editText11:
                 intent = new Intent( this , EnteringNumber.class);
-                intent.putExtra("field","tedadezamen");
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                startActivityForResult(intent,5);
+                editText = (EditText)findViewById(R.id.editText11);
+                intent.putExtra("value",editText.getText().toString());
+                startActivityForResult(intent,2005);
                 break;
         }
-        EditText et = new EditText(this);
-        et = (EditText) findViewById(R.id.editText5);
-        et.setText(String.valueOf(mablagh));
-        et = (EditText) findViewById(R.id.editText6);
-        et.setText(String.valueOf(bazpardakht));
-        et = (EditText) findViewById(R.id.editText7);
-        et.setText(String.valueOf(mablagheharghest));
-        et = (EditText) findViewById(R.id.editText8);
-        et.setText(String.valueOf(hadeaksarkarmozd));
-        et = (EditText) findViewById(R.id.editText11);
-        et.setText(String.valueOf(tedadezamen));
     }
 
     @Override
@@ -154,5 +120,32 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
         startActivity(intent);
         overridePendingTransition(R.anim.push_down_in ,R.anim.push_down_out);
     }
-}//
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == RESULT_OK){
+            if(requestCode == 2001){
+                EditText editText = (EditText) findViewById(R.id.editText5);
+                editText.setText( data.getStringExtra("code").toString());
+            }
+            else if(requestCode == 2002){
+                EditText editText = (EditText) findViewById(R.id.editText6);
+                editText.setText( data.getStringExtra("code").toString());
+            }
+            else if(requestCode == 2003){
+                EditText editText = (EditText) findViewById(R.id.editText7);
+                editText.setText( data.getStringExtra("code").toString());
+            }
+            else if(requestCode == 2004){
+                EditText editText = (EditText) findViewById(R.id.editText8);
+                editText.setText( data.getStringExtra("code").toString());
+            }
+            else if(requestCode == 2005){
+                EditText editText = (EditText) findViewById(R.id.editText11);
+                editText.setText( data.getStringExtra("code").toString());
+            }
+        }
+    }
+}
+
 
