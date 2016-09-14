@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textView = (TextView)findViewById(R.id.textView);
         Typeface tf = Typeface.createFromAsset(getAssets(),"fonts/BNazanin+Bold.ttf");
         textView.setTypeface(tf);
-        textView = (TextView)findViewById(R.id.textView);
+        textView = (TextView)findViewById(R.id.textView2);
         textView.setTypeface(tf);
 
     }
