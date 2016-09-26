@@ -13,9 +13,6 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public class VaamYabActivity extends AppCompatActivity implements View.OnClickListener {
 
     int i=0;
-    public int geti(){
-        return i;
-    }
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
@@ -27,25 +24,6 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_vam_yab);
 
         getSupportActionBar().hide();
-      /* FontsOverride.setDefaultFont(this, "DEFAULT", "fonts/BNazanin.ttf");
-        TextView textView;
-        textView = (TextView)findViewById(R.id.textView23);
-        Typeface tf = Typeface.createFromAsset(getAssets(),"fonts/BNazanin+Regular.ttf");
-        textView.setTypeface(tf);
-        textView = (TextView)findViewById(R.id.textView22);
-        textView.setTypeface(tf);
-        textView = (TextView)findViewById(R.id.textView24);
-        textView.setTypeface(tf);
-        textView = (TextView)findViewById(R.id.textView25);
-        textView.setTypeface(tf);
-        textView = (TextView)findViewById(R.id.textView28);
-        textView.setTypeface(tf);
-        textView = (TextView)findViewById(R.id.textView29);
-        textView.setTypeface(tf);
-        textView = (TextView)findViewById(R.id.textView30);
-        textView.setTypeface(tf);
-        */
-
 
         Button button = (Button)findViewById(R.id.VamYab_go);
         button.setOnClickListener(this);
