@@ -4,18 +4,25 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
+
+import com.example.android.vamyab24.Back.VaamyabDatabaseHandler;
+import com.example.android.vamyab24.Back.VaamyabRow;
+
+import java.io.IOException;
+import java.util.Vector;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class VaamYabActivity extends AppCompatActivity implements View.OnClickListener {
 
     int i=0;
-    public int geti(){
-        return i;
-    }
+    private static final String TABLE_MELLI_BANK = "BankMelli";
+    VaamyabDatabaseHandler vaamyabDatabaseHandler;
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
@@ -25,27 +32,7 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vam_yab);
-
         getSupportActionBar().hide();
-      /* FontsOverride.setDefaultFont(this, "DEFAULT", "fonts/BNazanin.ttf");
-        TextView textView;
-        textView = (TextView)findViewById(R.id.textView23);
-        Typeface tf = Typeface.createFromAsset(getAssets(),"fonts/BNazanin+Regular.ttf");
-        textView.setTypeface(tf);
-        textView = (TextView)findViewById(R.id.textView22);
-        textView.setTypeface(tf);
-        textView = (TextView)findViewById(R.id.textView24);
-        textView.setTypeface(tf);
-        textView = (TextView)findViewById(R.id.textView25);
-        textView.setTypeface(tf);
-        textView = (TextView)findViewById(R.id.textView28);
-        textView.setTypeface(tf);
-        textView = (TextView)findViewById(R.id.textView29);
-        textView.setTypeface(tf);
-        textView = (TextView)findViewById(R.id.textView30);
-        textView.setTypeface(tf);
-        */
-
 
         Button button = (Button)findViewById(R.id.VamYab_go);
         button.setOnClickListener(this);
@@ -59,7 +46,12 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
         editText.setOnClickListener(this);
         editText = (EditText)findViewById(R.id.editText8);
         editText.setOnClickListener(this);
-
+        vaamyabDatabaseHandler = new VaamyabDatabaseHandler(this);
+        try {
+            vaamyabDatabaseHandler.createDataBase();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -67,14 +59,88 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
 
         Intent intent ;
         EditText editText;
+        int height = 900;
         switch (v.getId()){
-            case R.id.VamYab_go:
+            case R.id.VamYab_go: //search
                 if(i%2==0){
+
                     findViewById(R.id.vamYab_searchLayout).getLayoutParams().height = 0 ;
                     findViewById(R.id.vamYab_searchLayout).requestLayout();
 
+
+                    Vector<VaamyabRow> tmp = vaamyabDatabaseHandler.getAllBranchRows(TABLE_MELLI_BANK);
+                    EditText mablagh = (EditText) findViewById(R.id.editText5);
+                    EditText bazpardakht = (EditText) findViewById(R.id.editText6);
+                    EditText mablaghe_har_ghest = (EditText) findViewById(R.id.editText7);
+                    EditText hadeaksare_karmozd = (EditText) findViewById(R.id.editText8);
+                    EditText tedad_zamen = (EditText) findViewById(R.id.editText11);
+                    CheckBox niyaz_be_seporde = (CheckBox) findViewById(R.id.checkBox2);
+                    CheckBox niyaz_be_sanad = (CheckBox) findViewById(R.id.checkBox);
+                    int j=0;
+                    for (int i=0;j<5&&i<5;i++,j++) {
+                        VaamyabRow r = tmp.elementAt(i);
+                        if(!mablagh.getText().toString().equals(""))
+                        try{
+                            if (!(mablagh.getText().toString()).equals(String.valueOf(r.getMablagh()))) {
+                                tmp.remove(tmp.indexOf(r));
+                                i--;
+                                continue;
+                            }
+                        }catch (Exception e){}
+                        if(!bazpardakht.getText().toString().equals(""))
+                        try {
+                            if (!(bazpardakht.getText().toString()).equals(String.valueOf(r.getBazpardakht()))) {
+                                tmp.remove(tmp.indexOf(r));
+                                i--;
+                                continue;
+                            }
+                        }catch (Exception e){}
+                        if(!mablaghe_har_ghest.getText().toString().equals(""))
+                        try{
+                            if (!(mablaghe_har_ghest.getText().toString()).equals(String.valueOf(r.getMablagh_har_ghest()))) {
+                                tmp.remove(tmp.indexOf(r));
+                                i--;
+                                continue;
+                            }
+                        }catch(Exception e){}
+                        if(!hadeaksare_karmozd.getText().toString().equals(""))
+                            try{
+                                if (!(hadeaksare_karmozd.getText().toString()).equals(String.valueOf(r.getHadeaksar_karmozd()))) {
+                                    tmp.remove(tmp.indexOf(r));
+                                    i--;
+                                    continue;
+                                }
+                            }catch(Exception e){}
+
+                        if(!tedad_zamen.getText().toString().equals(""))
+                        try{
+                            if (!(tedad_zamen.getText().toString()).equals(String.valueOf(r.getTedad_zamen()))) {
+                                tmp.remove(tmp.indexOf(r));
+                                i--;
+                                continue;
+                            }
+                        }catch(Exception e){}
+
+//                        if(niyaz_be_seporde.getText()!=null)
+//                        try {
+//                        if (niyaz_be_seporde.isChecked()!=Boolean.parseBoolean(r.getNiyaz_be_seporde())){
+//                            tmp.remove(tmp.indexOf(r));
+//                            i--;
+//                            continue;
+//                        }
+//                        }catch (Exception e){}
+//                        if(niyaz_be_sanad.getText()!=null)
+//                        try{
+//                          if (niyaz_be_sanad.isChecked()!=Boolean.parseBoolean(r.getNiyaz_be_sanad())){
+//                            tmp.remove(tmp.indexOf(r));
+//                            i--;
+//                            continue;
+//                        }
+//                        }catch (Exception e){}
+                    }
+                    show(tmp);
                 }else {
-                    findViewById(R.id.vamYab_searchLayout).getLayoutParams().height = 600 ;
+                    findViewById(R.id.vamYab_searchLayout).getLayoutParams().height = height ;
                 }
                 findViewById(R.id.vamYab_searchLayout).requestLayout();
                 i++;
@@ -109,6 +175,14 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
                 intent.putExtra("value",editText.getText().toString());
                 startActivityForResult(intent,2005);
                 break;
+        }
+    }
+
+    private void show(Vector<VaamyabRow> tmp) {
+        //// TODO: 9/30/2016
+        for (VaamyabRow r : tmp) {
+            String log = "Mablagh: " + r.getMablagh() + " ,ID: " + r.getId() + ",hadeaksar karmozd: "+r.getHadeaksar_karmozd()+" ,bazpardakht: " + r.getBazpardakht() + " mablaghe_har_ghest: " + r.getMablagh_har_ghest() + " tedad_zamen: " + r.getTedad_zamen() + " niyaz_be_seporde: " + r.getNiyaz_be_seporde()+ " niyaz_be_sanad: " + r.getNiyaz_be_sanad();
+            Log.d("BBBB: ", log);
         }
     }
 
