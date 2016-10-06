@@ -9,9 +9,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.android.vamyab24.Back.VaamyabDatabaseHandler;
 import com.example.android.vamyab24.Back.VaamyabRow;
+
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.util.Vector;
@@ -46,6 +50,32 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
         editText.setOnClickListener(this);
         editText = (EditText)findViewById(R.id.editText8);
         editText.setOnClickListener(this);
+
+        ImageButton imageButton = (ImageButton)findViewById(R.id.logo_tourism);
+        imageButton.setOnClickListener(this);
+        imageButton = (ImageButton)findViewById(R.id.logo_day);
+        imageButton.setOnClickListener(this);
+        imageButton = (ImageButton)findViewById(R.id.logo_melli);
+        imageButton.setOnClickListener(this);
+        imageButton = (ImageButton)findViewById(R.id.logo_mellat);
+        imageButton.setOnClickListener(this);
+        imageButton = (ImageButton)findViewById(R.id.logo_tejarat);
+        imageButton.setOnClickListener(this);
+        imageButton = (ImageButton)findViewById(R.id.logo_pasargad);
+        imageButton.setOnClickListener(this);
+        imageButton = (ImageButton)findViewById(R.id.logo_karafarin);
+        imageButton.setOnClickListener(this);
+        imageButton = (ImageButton)findViewById(R.id.logo_maskan);
+        imageButton.setOnClickListener(this);
+        imageButton = (ImageButton)findViewById(R.id.logo_parsian);
+        imageButton.setOnClickListener(this);
+        imageButton = (ImageButton)findViewById(R.id.logo_saman);
+        imageButton.setOnClickListener(this);
+        imageButton = (ImageButton)findViewById(R.id.logo_sarmaye);
+        imageButton.setOnClickListener(this);
+        imageButton = (ImageButton)findViewById(R.id.logo_sina);
+        imageButton.setOnClickListener(this);
+
         vaamyabDatabaseHandler = new VaamyabDatabaseHandler(this);
         try {
             vaamyabDatabaseHandler.createDataBase();
@@ -180,9 +210,68 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
 
     private void show(Vector<VaamyabRow> tmp) {
         //// TODO: 9/30/2016
+        int i = 1;
         for (VaamyabRow r : tmp) {
             String log = "Mablagh: " + r.getMablagh() + " ,ID: " + r.getId() + ",hadeaksar karmozd: "+r.getHadeaksar_karmozd()+" ,bazpardakht: " + r.getBazpardakht() + " mablaghe_har_ghest: " + r.getMablagh_har_ghest() + " tedad_zamen: " + r.getTedad_zamen() + " niyaz_be_seporde: " + r.getNiyaz_be_seporde()+ " niyaz_be_sanad: " + r.getNiyaz_be_sanad();
             Log.d("BBBB: ", log);
+            if(i == 1) {
+                TextView textView = (TextView) findViewById(R.id.BankName);
+                textView.setText("ملٌی");
+                textView = (TextView) findViewById(R.id.VMblagh);
+                textView.setText(Integer.toString(r.getMablagh()));
+                textView = (TextView) findViewById(R.id.NDarsad);
+                textView.setText(Integer.toString(r.getHadeaksar_karmozd()));
+                textView = (TextView) findViewById(R.id.Mohlat);
+                textView.setText(Integer.toString(r.getBazpardakht()));
+                textView = (TextView) findViewById(R.id.VMblagh_har_ghest);
+                textView.setText(Integer.toString(r.getMablagh_har_ghest()));
+            }else if(i == 2) {
+                TextView textView = (TextView) findViewById(R.id.BankName2);
+                textView.setText("ملٌی");
+                textView = (TextView) findViewById(R.id.VMblagh2);
+                textView.setText(Integer.toString(r.getMablagh()));
+                textView = (TextView) findViewById(R.id.NDarsad2);
+                textView.setText(Integer.toString(r.getHadeaksar_karmozd()));
+                textView = (TextView) findViewById(R.id.Mohlat2);
+                textView.setText(Integer.toString(r.getBazpardakht()));
+                textView = (TextView) findViewById(R.id.VMblagh_har_ghest2);
+                textView.setText(Integer.toString(r.getMablagh_har_ghest()));
+            }else if(i == 3) {
+                TextView textView = (TextView) findViewById(R.id.BankName3);
+                textView.setText("ملٌی");
+                textView = (TextView) findViewById(R.id.VMblagh3);
+                textView.setText(Integer.toString(r.getMablagh()));
+                textView = (TextView) findViewById(R.id.NDarsad3);
+                textView.setText(Integer.toString(r.getHadeaksar_karmozd()));
+                textView = (TextView) findViewById(R.id.Mohlat3);
+                textView.setText(Integer.toString(r.getBazpardakht()));
+                textView = (TextView) findViewById(R.id.VMblagh_har_ghest3);
+                textView.setText(Integer.toString(r.getMablagh_har_ghest()));
+            } else if(i == 4) {
+                TextView textView = (TextView) findViewById(R.id.BankName4);
+                textView.setText("ملٌی");
+                textView = (TextView) findViewById(R.id.VMblagh4);
+                textView.setText(Integer.toString(r.getMablagh()));
+                textView = (TextView) findViewById(R.id.NDarsad4);
+                textView.setText(Integer.toString(r.getHadeaksar_karmozd()));
+                textView = (TextView) findViewById(R.id.Mohlat4);
+                textView.setText(Integer.toString(r.getBazpardakht()));
+                textView = (TextView) findViewById(R.id.VMblagh_har_ghest4);
+                textView.setText(Integer.toString(r.getMablagh_har_ghest()));
+            } else if(i == 5) {
+                TextView textView = (TextView) findViewById(R.id.BankName5);
+                textView.setText("ملٌی");
+                textView = (TextView) findViewById(R.id.VMblagh5);
+                textView.setText(Integer.toString(r.getMablagh()));
+                textView = (TextView) findViewById(R.id.NDarsad5);
+                textView.setText(Integer.toString(r.getHadeaksar_karmozd()));
+                textView = (TextView) findViewById(R.id.Mohlat5);
+                textView.setText(Integer.toString(r.getBazpardakht()));
+                textView = (TextView) findViewById(R.id.VMblagh_har_ghest5);
+                textView.setText(Integer.toString(r.getMablagh_har_ghest()));
+            }
+
+            i++;
         }
     }
 

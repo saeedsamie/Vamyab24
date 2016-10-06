@@ -13,7 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.android.vamyab24.Back.SoodYabRow;
-import com.example.android.vamyab24.Back.SoodyabDatabaseHandler;
+//import com.example.android.vamyab24.Back.SoodyabDatabaseHandler;
 import com.example.android.vamyab24.Back.VaamyabRow;
 
 import java.io.IOException;
@@ -24,7 +24,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public class SoodYabActivity extends AppCompatActivity implements View.OnClickListener {
 
     int i=0;
-    SoodyabDatabaseHandler soodyabDatabaseHandler =new SoodyabDatabaseHandler(this);
+   // SoodyabDatabaseHandler soodyabDatabaseHandler =new SoodyabDatabaseHandler(this);
     private static final String TABLE_MELLI_BANK_SOODYAB = "BankMelli_SoodYab";
 
     @Override
@@ -50,11 +50,11 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
         editText.setOnClickListener(this);
 
 
-        try {
+ /*       try {
             soodyabDatabaseHandler.createDataBase();
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
     @Override
@@ -64,16 +64,16 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
         EditText editText;
         switch (v.getId()){
 
-            case R.id.SoodYab_go:
-                if(i%2==0) {
-                    fadeOutEverythings();
-
-                    Vector<SoodYabRow> tmp = soodyabDatabaseHandler.getAllBranchRows(TABLE_MELLI_BANK_SOODYAB);
-                }
-                else
-                fadeInEverythings();
-                i++;
-                break;
+ //           case R.id.SoodYab_go:
+ //               if(i%2==0) {
+ //                   fadeOutEverythings();
+//
+ //                   Vector<SoodYabRow> tmp = soodyabDatabaseHandler.getAllBranchRows(TABLE_MELLI_BANK_SOODYAB);
+ //               }
+ //               else
+ //               fadeInEverythings();
+  //              i++;
+  //              break;
             case R.id.enter_mablagh:
                 intent = new Intent( this , EnteringNumber.class);
                 editText = (EditText)findViewById(R.id.enter_mablagh);

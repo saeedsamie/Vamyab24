@@ -216,38 +216,42 @@
                     android:layout_marginRight="5dp"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
-                    android:id="@+id/logo_mellat"
                     android:background="@drawable/logo_selector"
+                    android:id="@+id/logo_mellat"
                     android:src="@drawable/logo_mellat2"
                     android:layout_below="@+id/vamYab_searchLayout"
                     android:layout_centerHorizontal="true" />
 
                 <ImageButton
-                    android:layout_marginRight="2dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/logo_melli2"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/logo_selector"
+                    android:src="@drawable/logo_melli2"
                     android:id="@+id/logo_melli" />
 
                 <ImageButton
-                    android:layout_marginRight="2dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/logo_sarmaye2"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/logo_selector"
+                    android:src="@drawable/logo_sarmaye2"
                     android:id="@+id/logo_sarmaye" />
 
                 <ImageButton
-                    android:layout_marginRight="2dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/logo_parsian2"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/logo_selector"
+                    android:src="@drawable/logo_parsian2"
                     android:id="@+id/logo_parsian" />
 
                 <ImageButton
-                    android:layout_marginRight="3dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/logo_tejarat2"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/logo_selector"
+                    android:src="@drawable/logo_tejarat2"
                     android:id="@+id/logo_tejarat" />
 
                 <ImageButton
@@ -259,45 +263,51 @@
                     android:id="@+id/logo_saman" />
 
                 <ImageButton
-                    android:layout_marginRight="2dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/logo_day2"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/logo_selector"
+                    android:src="@drawable/logo_day2"
                     android:id="@+id/logo_day" />
 
                 <ImageButton
-                    android:layout_marginRight="2dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/logo_karafarin2"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/logo_selector"
+                    android:src="@drawable/logo_karafarin2"
                     android:id="@+id/logo_karafarin" />
 
                 <ImageButton
-                    android:layout_marginRight="2dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/logo_maskan2"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/logo_selector"
+                    android:src="@drawable/logo_maskan2"
                     android:id="@+id/logo_maskan" />
 
                 <ImageButton
-                    android:layout_marginRight="2dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/logo_pasargad2"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/logo_selector"
+                    android:src="@drawable/logo_pasargad2"
                     android:id="@+id/logo_pasargad" />
 
                 <ImageButton
-                    android:layout_marginRight="2dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/logo_sina2"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/logo_selector"
+                    android:src="@drawable/logo_sina2"
                     android:id="@+id/logo_sina" />
 
                 <ImageButton
-                    android:layout_marginRight="2dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/logo_tourism2"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/logo_selector"
+                    android:src="@drawable/logo_tourism2"
                     android:id="@+id/logo_tourism" />
 
             </LinearLayout>
@@ -322,10 +332,12 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true">
 
+
                 <RelativeLayout
                     android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/info1"
                     android:background="@drawable/box_border"
                     >
 
@@ -350,10 +362,27 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/Karmozd"
-                        android:text="کارمزد:"
+                        android:id="@+id/Mblagh"
+                        android:text="مبلغ:"
                         android:textSize="20dp"
                         android:layout_below="@+id/Bank"
+                        android:layout_alignParentRight="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/VMblagh"
+                        android:inputType="number"
+                        android:text="100"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Bank"
+                        android:layout_toLeftOf="@+id/Mblagh" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Karmozd"
+                        android:text="حداکثر کارمزد:"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Mblagh"
                         android:layout_alignParentRight="true"
                         />
                     <TextView
@@ -361,9 +390,10 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/NDarsad"
                         android:paddingRight="5dp"
-                        android:text="20"
+                        android:inputType="number"
+                        android:text="0"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Bank"
+                        android:layout_below="@+id/Mblagh"
                         android:layout_toLeftOf="@+id/Karmozd"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -372,15 +402,59 @@
                         android:id="@+id/Darsad"
                         android:text="درصد"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Bank"
+                        android:layout_below="@+id/Mblagh"
                         android:layout_toLeftOf="@+id/NDarsad"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Bazpardakht"
+                        android:text="مهلت بازپرداخت:"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Karmozd"
+                        android:layout_alignParentRight="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Mohlat"
+                        android:inputType="number"
+                        android:text="60"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Karmozd"
+                        android:layout_toLeftOf="@+id/Bazpardakht" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Mahe"
+                        android:inputType="number"
+                        android:text="ماهه"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Karmozd"
+                        android:layout_toLeftOf="@+id/Mohlat"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Mblagh_har_ghest"
+                        android:text="مبلغ هر قسط:"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Bazpardakht"
+                        android:layout_alignParentRight="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/VMblagh_har_ghest"
+                        android:inputType="number"
+                        android:text="100"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Bazpardakht"
+                        android:layout_toLeftOf="@+id/Mblagh_har_ghest" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/NoeHesab"
                         android:text="نوع حساب:"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Karmozd"
+                        android:layout_below="@+id/Mblagh_har_ghest"
                         android:layout_alignParentRight="true"
                         />
                     <TextView
@@ -390,7 +464,7 @@
                         android:paddingRight="5dp"
                         android:text="سپرده کوتاه مدت"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Karmozd"
+                        android:layout_below="@+id/Mblagh_har_ghest"
                         android:layout_toLeftOf="@+id/NoeHesab"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -423,11 +497,11 @@
                         android:src="@drawable/logo_saman3"
                         />
                 </RelativeLayout>
-
                 <RelativeLayout
                     android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/info2"
                     android:background="@drawable/box_border"
                     >
 
@@ -452,10 +526,27 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/Karmozd2"
-                        android:text="کارمزد:"
+                        android:id="@+id/Mblagh2"
+                        android:text="مبلغ:"
                         android:textSize="20dp"
                         android:layout_below="@+id/Bank2"
+                        android:layout_alignParentRight="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/VMblagh2"
+                        android:inputType="number"
+                        android:text="100"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Bank2"
+                        android:layout_toLeftOf="@+id/Mblagh2" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Karmozd2"
+                        android:text="حداکثر کارمزد:"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Mblagh2"
                         android:layout_alignParentRight="true"
                         />
                     <TextView
@@ -463,9 +554,10 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/NDarsad2"
                         android:paddingRight="5dp"
-                        android:text="20"
+                        android:inputType="number"
+                        android:text="0"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Bank2"
+                        android:layout_below="@+id/Mblagh2"
                         android:layout_toLeftOf="@+id/Karmozd2"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -474,15 +566,59 @@
                         android:id="@+id/Darsad2"
                         android:text="درصد"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Bank2"
+                        android:layout_below="@+id/Mblagh2"
                         android:layout_toLeftOf="@+id/NDarsad2"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Bazpardakht2"
+                        android:text="مهلت بازپرداخت:"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Karmozd2"
+                        android:layout_alignParentRight="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Mohlat2"
+                        android:inputType="number"
+                        android:text="60"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Karmozd2"
+                        android:layout_toLeftOf="@+id/Bazpardakht2" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Mahe2"
+                        android:inputType="number"
+                        android:text="ماهه"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Karmozd2"
+                        android:layout_toLeftOf="@+id/Mohlat2"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Mblagh_har_ghest2"
+                        android:text="مبلغ هر قسط:"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Bazpardakht2"
+                        android:layout_alignParentRight="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/VMblagh_har_ghest2"
+                        android:inputType="number"
+                        android:text="100"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Bazpardakht2"
+                        android:layout_toLeftOf="@+id/Mblagh_har_ghest2" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/NoeHesab2"
                         android:text="نوع حساب:"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Karmozd2"
+                        android:layout_below="@+id/Mblagh_har_ghest2"
                         android:layout_alignParentRight="true"
                         />
                     <TextView
@@ -492,7 +628,7 @@
                         android:paddingRight="5dp"
                         android:text="سپرده کوتاه مدت"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Karmozd2"
+                        android:layout_below="@+id/Mblagh_har_ghest2"
                         android:layout_toLeftOf="@+id/NoeHesab2"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -530,6 +666,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/info3"
                     android:background="@drawable/box_border"
                     >
 
@@ -554,10 +691,27 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/Karmozd3"
-                        android:text="کارمزد:"
+                        android:id="@+id/Mblagh3"
+                        android:text="مبلغ:"
                         android:textSize="20dp"
                         android:layout_below="@+id/Bank3"
+                        android:layout_alignParentRight="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/VMblagh3"
+                        android:inputType="number"
+                        android:text="100"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Bank3"
+                        android:layout_toLeftOf="@+id/Mblagh3" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Karmozd3"
+                        android:text="حداکثر کارمزد:"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Mblagh3"
                         android:layout_alignParentRight="true"
                         />
                     <TextView
@@ -565,9 +719,10 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/NDarsad3"
                         android:paddingRight="5dp"
-                        android:text="20"
+                        android:inputType="number"
+                        android:text="0"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Bank3"
+                        android:layout_below="@+id/Mblagh3"
                         android:layout_toLeftOf="@+id/Karmozd3"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -576,15 +731,58 @@
                         android:id="@+id/Darsad3"
                         android:text="درصد"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Bank3"
+                        android:layout_below="@+id/Mblagh3"
                         android:layout_toLeftOf="@+id/NDarsad3"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Bazpardakht3"
+                        android:text="مهلت بازپرداخت:"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Karmozd3"
+                        android:layout_alignParentRight="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Mohlat3"
+                        android:inputType="number"
+                        android:text="60"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Karmozd3"
+                        android:layout_toLeftOf="@+id/Bazpardakht3" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Mahe3"
+                        android:inputType="number"
+                        android:text="ماهه"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Karmozd3"
+                        android:layout_toLeftOf="@+id/Mohlat3" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Mblagh_har_ghest3"
+                        android:text="مبلغ هر قسط:"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Bazpardakht3"
+                        android:layout_alignParentRight="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/VMblagh_har_ghest3"
+                        android:inputType="number"
+                        android:text="100"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Bazpardakht3"
+                        android:layout_toLeftOf="@+id/Mblagh_har_ghest3" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/NoeHesab3"
                         android:text="نوع حساب:"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Karmozd3"
+                        android:layout_below="@+id/Mblagh_har_ghest3"
                         android:layout_alignParentRight="true"
                         />
                     <TextView
@@ -594,7 +792,7 @@
                         android:paddingRight="5dp"
                         android:text="سپرده کوتاه مدت"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Karmozd3"
+                        android:layout_below="@+id/Mblagh_har_ghest3"
                         android:layout_toLeftOf="@+id/NoeHesab3"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -632,6 +830,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/info4"
                     android:background="@drawable/box_border"
                     >
 
@@ -656,10 +855,27 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/Karmozd4"
-                        android:text="کارمزد:"
+                        android:id="@+id/Mblagh4"
+                        android:text="مبلغ:"
                         android:textSize="20dp"
                         android:layout_below="@+id/Bank4"
+                        android:layout_alignParentRight="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/VMblagh4"
+                        android:inputType="number"
+                        android:text="100"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Bank4"
+                        android:layout_toLeftOf="@+id/Mblagh4" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Karmozd4"
+                        android:text="حداکثر کارمزد:"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Mblagh4"
                         android:layout_alignParentRight="true"
                         />
                     <TextView
@@ -667,9 +883,10 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/NDarsad4"
                         android:paddingRight="5dp"
-                        android:text="20"
+                        android:inputType="number"
+                        android:text="0"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Bank4"
+                        android:layout_below="@+id/Mblagh4"
                         android:layout_toLeftOf="@+id/Karmozd4"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -678,15 +895,59 @@
                         android:id="@+id/Darsad4"
                         android:text="درصد"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Bank4"
+                        android:layout_below="@+id/Mblagh4"
                         android:layout_toLeftOf="@+id/NDarsad4"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Bazpardakht4"
+                        android:text="مهلت بازپرداخت:"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Karmozd4"
+                        android:layout_alignParentRight="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Mohlat4"
+                        android:inputType="number"
+                        android:text="60"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Karmozd4"
+                        android:layout_toLeftOf="@+id/Bazpardakht4" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Mahe4"
+                        android:inputType="number"
+                        android:text="ماهه"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Karmozd4"
+                        android:layout_toLeftOf="@+id/Mohlat4"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Mblagh_har_ghest4"
+                        android:text="مبلغ هر قسط:"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Bazpardakht4"
+                        android:layout_alignParentRight="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/VMblagh_har_ghest4"
+                        android:inputType="number"
+                        android:text="100"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Bazpardakht4"
+                        android:layout_toLeftOf="@+id/Mblagh_har_ghest4" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/NoeHesab4"
                         android:text="نوع حساب:"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Karmozd4"
+                        android:layout_below="@+id/Mblagh_har_ghest4"
                         android:layout_alignParentRight="true"
                         />
                     <TextView
@@ -696,7 +957,7 @@
                         android:paddingRight="5dp"
                         android:text="سپرده کوتاه مدت"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Karmozd4"
+                        android:layout_below="@+id/Mblagh_har_ghest4"
                         android:layout_toLeftOf="@+id/NoeHesab4"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -723,6 +984,171 @@
                         android:paddingLeft="-20dp"
                         android:paddingTop="-15dp"
                         android:id="@+id/imageView4"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:src="@drawable/logo_saman3"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/info5"
+                    android:background="@drawable/box_border"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:id="@+id/Bank5"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:text="بانک:"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/BankName5"
+                        android:paddingRight="5dp"
+                        android:layout_toLeftOf="@+id/Bank5"
+                        android:textSize="20dp"
+                        android:text="سامان"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Mblagh5"
+                        android:text="مبلغ:"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Bank5"
+                        android:layout_alignParentRight="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/VMblagh5"
+                        android:inputType="number"
+                        android:text="100"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Bank5"
+                        android:layout_toLeftOf="@+id/Mblagh5" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Karmozd5"
+                        android:text="حداکثر کارمزد:"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Mblagh5"
+                        android:layout_alignParentRight="true"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/NDarsad5"
+                        android:paddingRight="5dp"
+                        android:inputType="number"
+                        android:text="0"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Mblagh5"
+                        android:layout_toLeftOf="@+id/Karmozd5"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:id="@+id/Darsad5"
+                        android:text="درصد"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Mblagh5"
+                        android:layout_toLeftOf="@+id/NDarsad5"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Bazpardakht5"
+                        android:text="مهلت بازپرداخت:"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Karmozd5"
+                        android:layout_alignParentRight="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Mohlat5"
+                        android:inputType="number"
+                        android:text="60"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Karmozd5"
+                        android:layout_toLeftOf="@+id/Bazpardakht5" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Mahe5"
+                        android:inputType="number"
+                        android:text="ماهه"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Karmozd5"
+                        android:layout_toLeftOf="@+id/Mohlat5"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Mblagh_har_ghest5"
+                        android:text="مبلغ هر قسط:"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Bazpardakht5"
+                        android:layout_alignParentRight="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/VMblagh_har_ghest5"
+                        android:inputType="number"
+                        android:text="100"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Bazpardakht5"
+                        android:layout_toLeftOf="@+id/Mblagh_har_ghest5" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/NoeHesab5"
+                        android:text="نوع حساب:"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Mblagh_har_ghest5"
+                        android:layout_alignParentRight="true"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Goone5"
+                        android:paddingRight="5dp"
+                        android:text="سپرده کوتاه مدت"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Mblagh_har_ghest5"
+                        android:layout_toLeftOf="@+id/NoeHesab5"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Tozihat5"
+                        android:text="توضیحات:"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/NoeHesab5"
+                        android:layout_alignParentRight="true"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Tozih5"
+                        android:paddingRight="5dp"
+                        android:text="..."
+                        android:textSize="20dp"
+                        android:layout_below="@+id/NoeHesab5"
+                        android:layout_toLeftOf="@+id/Tozihat5"/>
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:paddingLeft="-20dp"
+                        android:paddingTop="-15dp"
+                        android:id="@+id/imageView5"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
