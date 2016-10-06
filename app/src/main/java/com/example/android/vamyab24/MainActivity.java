@@ -1,29 +1,29 @@
 package com.example.android.vamyab24;
 
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
-import android.os.Build;
-import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.transition.Fade;
-import android.transition.Transition;
-import android.transition.TransitionInflater;
-import android.transition.TransitionManager;
+import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.android.vamyab24.Back.VaamyabDatabaseHandler;
 import com.example.android.vamyab24.Back.MyActivityManager;
+import com.example.android.vamyab24.Back.VaamyabRow;
 
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+import java.io.IOException;
+import java.util.Vector;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     public MyActivityManager myActivityManager;
+    private static final String TABLE_MELLI_BANK = "BankMelli";
+    public Vector<VaamyabRow> vaamha;
 
+    public Vector<VaamyabRow> getVaamha() {
+        return vaamha;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
 //        decorView.setSystemUiVisibility(uiOptions);
         getSupportActionBar().hide();
+
+        VaamyabDatabaseHandler vaamyabDatabaseHandler = new VaamyabDatabaseHandler(this);
+        try {
+            vaamyabDatabaseHandler.createDataBase();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        vaamha = vaamyabDatabaseHandler.getAllBranchRows(TABLE_MELLI_BANK);
+        for (VaamyabRow r : vaamha) {
+            String log = "Mablagh: " + r.getMablagh() + " ,ID: " + r.getId() + ",hadeaksar karmozd: "+r.getHadeaksar_karmozd()+" ,bazpardakht: " + r.getBazpardakht() + " mablaghe_har_ghest: " + r.getMablagh_har_ghest() + " tedad_zamen: " + r.getTedad_zamen() + " niyaz_be_seporde: " + r.getNiyaz_be_seporde()+ " niyaz_be_sanad: " + r.getNiyaz_be_sanad();
+            Log.d("AAAAA: ", log);
+        }
+
 
         TextView textView;
         textView = (TextView) findViewById(R.id.textView);
