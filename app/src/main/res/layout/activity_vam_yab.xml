@@ -213,11 +213,12 @@
                 >
 
                 <ImageButton
-                    android:layout_marginRight="2dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:id="@+id/imageButton3"
-                    android:background="@drawable/logo_mellat"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:id="@+id/logo_mellat"
+                    android:background="@drawable/logo_selector"
+                    android:src="@drawable/logo_mellat2"
                     android:layout_below="@+id/vamYab_searchLayout"
                     android:layout_centerHorizontal="true" />
 
@@ -225,78 +226,79 @@
                     android:layout_marginRight="2dp"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/logo_melli"
-                    android:id="@+id/imageButton4" />
+                    android:background="@drawable/logo_melli2"
+                    android:id="@+id/logo_melli" />
 
                 <ImageButton
                     android:layout_marginRight="2dp"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/logo_sarmaye"
-                    android:id="@+id/imageButton5" />
+                    android:background="@drawable/logo_sarmaye2"
+                    android:id="@+id/logo_sarmaye" />
 
                 <ImageButton
                     android:layout_marginRight="2dp"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/logo_parsian"
-                    android:id="@+id/imageButton6" />
+                    android:background="@drawable/logo_parsian2"
+                    android:id="@+id/logo_parsian" />
+
+                <ImageButton
+                    android:layout_marginRight="3dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/logo_tejarat2"
+                    android:id="@+id/logo_tejarat" />
+
+                <ImageButton
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/logo_selector"
+                    android:src="@drawable/logo_saman2"
+                    android:id="@+id/logo_saman" />
 
                 <ImageButton
                     android:layout_marginRight="2dp"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/logo_tejarat"
-                    android:id="@+id/imageButton7" />
+                    android:background="@drawable/logo_day2"
+                    android:id="@+id/logo_day" />
 
                 <ImageButton
                     android:layout_marginRight="2dp"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/logo_saman"
-                    android:id="@+id/imageButton8" />
+                    android:background="@drawable/logo_karafarin2"
+                    android:id="@+id/logo_karafarin" />
 
                 <ImageButton
                     android:layout_marginRight="2dp"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/logo_day"
-                    android:id="@+id/imageButton9" />
+                    android:background="@drawable/logo_maskan2"
+                    android:id="@+id/logo_maskan" />
 
                 <ImageButton
                     android:layout_marginRight="2dp"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/logo_karafarin"
-                    android:id="@+id/imageButton11" />
+                    android:background="@drawable/logo_pasargad2"
+                    android:id="@+id/logo_pasargad" />
 
                 <ImageButton
                     android:layout_marginRight="2dp"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/logo_maskan"
-                    android:id="@+id/imageButton12" />
+                    android:background="@drawable/logo_sina2"
+                    android:id="@+id/logo_sina" />
 
                 <ImageButton
                     android:layout_marginRight="2dp"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/logo_pasargad"
-                    android:id="@+id/imageButton10" />
-
-                <ImageButton
-                    android:layout_marginRight="2dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/logo_sina"
-                    android:id="@+id/imageButton13" />
-
-                <ImageButton
-                    android:layout_marginRight="2dp"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/logo_tourism"
-                    android:id="@+id/imageButton14" />
+                    android:background="@drawable/logo_tourism2"
+                    android:id="@+id/logo_tourism" />
 
             </LinearLayout>
             </HorizontalScrollView>
@@ -418,7 +420,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:src="@drawable/logo_saman2"
+                        android:src="@drawable/logo_saman3"
                         />
                 </RelativeLayout>
 
@@ -520,7 +522,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:src="@drawable/logo_saman2"
+                        android:src="@drawable/logo_saman3"
                         />
                 </RelativeLayout>
 
@@ -622,7 +624,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:src="@drawable/logo_saman2"
+                        android:src="@drawable/logo_saman3"
                         />
                 </RelativeLayout>
 
@@ -724,7 +726,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:src="@drawable/logo_saman2"
+                        android:src="@drawable/logo_saman3"
                         />
                 </RelativeLayout>
 
