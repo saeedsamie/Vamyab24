@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 
 import com.example.android.vamyab24.Back.SoodYabRow;
 //import com.example.android.vamyab24.Back.SoodyabDatabaseHandler;
+import com.example.android.vamyab24.Back.SoodyabDatabaseHandler;
 import com.example.android.vamyab24.Back.VaamyabRow;
 
 import java.io.IOException;
@@ -24,7 +26,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public class SoodYabActivity extends AppCompatActivity implements View.OnClickListener {
 
     int i=0;
-   // SoodyabDatabaseHandler soodyabDatabaseHandler =new SoodyabDatabaseHandler(this);
+    SoodyabDatabaseHandler soodyabDatabaseHandler;
     private static final String TABLE_MELLI_BANK_SOODYAB = "BankMelli_SoodYab";
 
     @Override
@@ -49,57 +51,173 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
         editText = (EditText) findViewById(R.id.enter_mablaghe_ghest_varizi);
         editText.setOnClickListener(this);
 
-
- /*       try {
+        soodyabDatabaseHandler = new SoodyabDatabaseHandler(this);
+        try {
             soodyabDatabaseHandler.createDataBase();
         } catch (IOException e) {
             e.printStackTrace();
-        }*/
+        }
     }
 
     @Override
     public void onClick(View v) {
 
         Intent intent;
+        int height = 900;
         EditText editText;
-        switch (v.getId()){
+        switch (v.getId()) {
 
- //           case R.id.SoodYab_go:
- //               if(i%2==0) {
- //                   fadeOutEverythings();
-//
- //                   Vector<SoodYabRow> tmp = soodyabDatabaseHandler.getAllBranchRows(TABLE_MELLI_BANK_SOODYAB);
- //               }
- //               else
- //               fadeInEverythings();
-  //              i++;
-  //              break;
+            case R.id.SoodYab_go:
+                if (i % 2 == 0) {
+                    findViewById(R.id.soodYab_SearchLayout).getLayoutParams().height = 0;
+                    findViewById(R.id.soodYab_SearchLayout).requestLayout();
+
+                    Vector<SoodYabRow> tmp = soodyabDatabaseHandler.getAllBranchRows(TABLE_MELLI_BANK_SOODYAB);
+                    EditText mablagh = (EditText) findViewById(R.id.enter_mablagh);
+                    EditText modate_sepordegozari = (EditText) findViewById(R.id.enter_modate_sepordegozari);
+                    EditText mablaghe_ghest_varizi = (EditText) findViewById(R.id.enter_mablaghe_ghest_varizi);
+                    EditText pardakhte_ghest_har = (EditText) findViewById(R.id.enter_pardakhte_ghest_har);
+                    int j = 0;
+                    for (int i = 0; j < 5 && i < 5; i++, j++) {
+                        SoodYabRow r = tmp.elementAt(i);
+                        if (!mablagh.getText().toString().equals(""))
+                            try {
+                                if (!(mablagh.getText().toString()).equals(String.valueOf(r.getMablagh()))) {
+                                    tmp.remove(tmp.indexOf(r));
+                                    i--;
+                                    continue;
+                                }
+                            } catch (Exception e) {
+                            }
+                        if (!modate_sepordegozari.getText().toString().equals(""))
+                            try {
+                                if (!(modate_sepordegozari.getText().toString()).equals(String.valueOf(r.getModdat_sepordegozari()))) {
+                                    tmp.remove(tmp.indexOf(r));
+                                    i--;
+                                    continue;
+                                }
+                            } catch (Exception e) {
+                            }
+                        if (!mablaghe_ghest_varizi.getText().toString().equals(""))
+                            try {
+                                if (!(mablaghe_ghest_varizi.getText().toString()).equals(String.valueOf(r.getMablagh_ghest_varizi()))) {
+                                    tmp.remove(tmp.indexOf(r));
+                                    i--;
+                                    continue;
+                                }
+                            } catch (Exception e) {
+                            }
+                        if (!pardakhte_ghest_har.getText().toString().equals(""))
+                            try {
+                                if (!(pardakhte_ghest_har.getText().toString()).equals(String.valueOf(r.getPardakht_ghest_har()))) {
+                                    tmp.remove(tmp.indexOf(r));
+                                    i--;
+                                    continue;
+                                }
+                            } catch (Exception e) {
+                            }
+                    }
+                    show(tmp);
+                } else {
+                    findViewById(R.id.vamYab_searchLayout).getLayoutParams().height = height;
+                }
+                findViewById(R.id.vamYab_searchLayout).requestLayout();
+                i++;
+                break;
             case R.id.enter_mablagh:
-                intent = new Intent( this , EnteringNumber.class);
-                editText = (EditText)findViewById(R.id.enter_mablagh);
-                intent.putExtra("value",editText.getText().toString());
-                startActivityForResult(intent,1001);
-            break;
+                intent = new Intent(this, EnteringNumber.class);
+                editText = (EditText) findViewById(R.id.enter_mablagh);
+                intent.putExtra("value", editText.getText().toString());
+                startActivityForResult(intent, 1001);
+                break;
             case R.id.enter_modate_sepordegozari:
-                intent = new Intent( this , EnteringNumber.class);
-                editText = (EditText)findViewById(R.id.enter_modate_sepordegozari);
-                intent.putExtra("value",editText.getText().toString());
-                startActivityForResult(intent,1002);
+                intent = new Intent(this, EnteringNumber.class);
+                editText = (EditText) findViewById(R.id.enter_modate_sepordegozari);
+                intent.putExtra("value", editText.getText().toString());
+                startActivityForResult(intent, 1002);
                 break;
             case R.id.enter_mablaghe_ghest_varizi:
-                intent = new Intent( this , EnteringNumber.class);
-                editText = (EditText)findViewById(R.id.enter_mablaghe_ghest_varizi);
-                intent.putExtra("value",editText.getText().toString());
-                startActivityForResult(intent,1003);
+                intent = new Intent(this, EnteringNumber.class);
+                editText = (EditText) findViewById(R.id.enter_mablaghe_ghest_varizi);
+                intent.putExtra("value", editText.getText().toString());
+                startActivityForResult(intent, 1003);
                 break;
             case R.id.enter_pardakhte_ghest_har:
-                intent = new Intent( this , EnteringNumber.class);
-                editText = (EditText)findViewById(R.id.enter_pardakhte_ghest_har);
-                intent.putExtra("value",editText.getText().toString());
-                startActivityForResult(intent,1004);
+                intent = new Intent(this, EnteringNumber.class);
+                editText = (EditText) findViewById(R.id.enter_pardakhte_ghest_har);
+                intent.putExtra("value", editText.getText().toString());
+                startActivityForResult(intent, 1004);
                 break;
         }
     }
+
+
+
+    private void show(Vector<SoodYabRow> tmp) {
+        //// TODO: 9/30/2016
+        int i = 1;
+        for (SoodYabRow r : tmp) {
+            String log = "Mablagh: " + r.getMablagh() + " ,ID: " + r.getId() + ",modate_sepordegozari: " + r.getModdat_sepordegozari() + " ,mablagh_ghest_varizi: " + r.getMablagh_ghest_varizi() + "pardakht_ghest_har: " + r.getPardakht_ghest_har() + " tedad_zamen: ";
+            Log.d("BBBB: ", log);
+            if (i == 1) {
+                TextView textView = (TextView) findViewById(R.id.BankName10);
+                textView.setText("ملٌی");
+                textView = (TextView) findViewById(R.id.VMblagh);
+                textView.setText(Integer.toString(r.getMablagh()));
+                textView = (TextView) findViewById(R.id.NDarsad);
+                textView.setText(Integer.toString(r.getModdat_sepordegozari()));
+                textView = (TextView) findViewById(R.id.Mohlat);
+                textView.setText(Integer.toString(r.getMablagh_ghest_varizi()));
+                textView = (TextView) findViewById(R.id.VMblagh_har_ghest);
+                textView.setText(Integer.toString(r.getPardakht_ghest_har()));
+            } else if (i == 2) {
+                TextView textView = (TextView) findViewById(R.id.BankName2);
+                textView.setText("ملٌی");
+                textView = (TextView) findViewById(R.id.VMblagh2);
+                textView.setText(Integer.toString(r.getMablagh()));
+                textView = (TextView) findViewById(R.id.NDarsad2);
+                textView.setText(Integer.toString(r.getModdat_sepordegozari()));
+                textView = (TextView) findViewById(R.id.Mohlat);
+                textView.setText(Integer.toString(r.getMablagh_ghest_varizi()));
+                textView = (TextView) findViewById(R.id.VMblagh_har_ghest);
+                textView.setText(Integer.toString(r.getPardakht_ghest_har()));
+            } else if (i == 3) {
+                TextView textView = (TextView) findViewById(R.id.BankName3);
+                textView.setText("ملٌی");
+                textView = (TextView) findViewById(R.id.VMblagh3);
+                textView.setText(Integer.toString(r.getMablagh()));
+                textView = (TextView) findViewById(R.id.NDarsad3);
+                textView.setText(Integer.toString(r.getModdat_sepordegozari()));
+                textView = (TextView) findViewById(R.id.Mohlat);
+                textView.setText(Integer.toString(r.getMablagh_ghest_varizi()));
+                textView = (TextView) findViewById(R.id.VMblagh_har_ghest);
+                textView.setText(Integer.toString(r.getPardakht_ghest_har()));
+            } else if (i == 4) {
+                TextView textView = (TextView) findViewById(R.id.BankName4);
+                textView.setText("ملٌی");
+                textView = (TextView) findViewById(R.id.VMblagh4);
+                textView.setText(Integer.toString(r.getMablagh()));
+                textView = (TextView) findViewById(R.id.NDarsad4);
+                textView.setText(Integer.toString(r.getModdat_sepordegozari()));
+                textView = (TextView) findViewById(R.id.Mohlat);
+                textView.setText(Integer.toString(r.getMablagh_ghest_varizi()));
+                textView = (TextView) findViewById(R.id.VMblagh_har_ghest);
+                textView.setText(Integer.toString(r.getPardakht_ghest_har()));
+            } else if (i == 5) {
+                TextView textView = (TextView) findViewById(R.id.BankName5);
+                textView.setText("ملٌی");
+                textView = (TextView) findViewById(R.id.VMblagh5);
+                textView.setText(Integer.toString(r.getMablagh()));
+                textView = (TextView) findViewById(R.id.NDarsad5);
+                textView.setText(Integer.toString(r.getModdat_sepordegozari()));
+                textView = (TextView) findViewById(R.id.Mohlat);
+                textView.setText(Integer.toString(r.getMablagh_ghest_varizi()));
+                textView = (TextView) findViewById(R.id.VMblagh_har_ghest);
+                textView.setText(Integer.toString(r.getPardakht_ghest_har()));
+            }
+        }
+    }
+
     void fadeOutEverythings(){
 
 

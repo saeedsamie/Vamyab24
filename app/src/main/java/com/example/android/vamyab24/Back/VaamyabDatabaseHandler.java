@@ -144,8 +144,8 @@ public class VaamyabDatabaseHandler extends SQLiteOpenHelper {
 
         if (cursor.moveToFirst()) {
             do {
-                VaamyabRow tempBranchVaamyabRow = new VaamyabRow(Integer.parseInt(cursor.getString(0)), Integer.parseInt(cursor.getString(1)), Integer.parseInt(cursor.getString(2)), Integer.parseInt(cursor.getString(3)), Integer.parseInt(cursor.getString(4)), Integer.parseInt(cursor.getString(5)),(cursor.getString(6)),(cursor.getString(7)));
-                BranchList.add(tempBranchVaamyabRow);
+                VaamyabRow tempBranchRow = new VaamyabRow(Integer.parseInt(cursor.getString(0)), Integer.parseInt(cursor.getString(1)), Integer.parseInt(cursor.getString(2)), Integer.parseInt(cursor.getString(3)), Integer.parseInt(cursor.getString(4)), Integer.parseInt(cursor.getString(5)),(cursor.getString(6)),(cursor.getString(7)));
+                BranchList.add(tempBranchRow);
             } while (cursor.moveToNext());
         }
         return BranchList;

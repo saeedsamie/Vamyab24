@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:text="جستجو"
             android:id="@+id/SoodYab_go"
-            android:layout_below="@+id/relativeLayout"
+            android:layout_below="@+id/soodYab_SearchLayout"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentLeft="true"
@@ -47,7 +47,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="20dp"
-                        android:id="@+id/Bank5"
+                        android:id="@+id/Bank10"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
                         android:text="بانک:"
@@ -55,82 +55,82 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/BankName5"
+                        android:id="@+id/BankName10"
                         android:paddingRight="5dp"
-                        android:layout_toLeftOf="@+id/Bank5"
+                        android:layout_toLeftOf="@+id/Bank10"
                         android:textSize="20dp"
                         android:text="سامان"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/Karmozd5"
-                        android:text="کارمزد:"
+                        android:id="@+id/moddat_seporde_gozari"
+                        android:text="مدت سپرده گذاری:"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Bank5"
+                        android:layout_below="@+id/Bank10"
                         android:layout_alignParentRight="true"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/NDarsad5"
+                        android:id="@+id/NDarsad10"
                         android:paddingRight="5dp"
                         android:text="20"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Bank5"
-                        android:layout_toLeftOf="@+id/Karmozd5"/>
+                        android:layout_below="@+id/Bank10"
+                        android:layout_toLeftOf="@+id/moddat_seporde_gozari"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="5dp"
-                        android:id="@+id/Darsad5"
-                        android:text="درصد"
+                        android:id="@+id/Mahh"
+                        android:text="ماه"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Bank5"
-                        android:layout_toLeftOf="@+id/NDarsad5"/>
+                        android:layout_below="@+id/Bank10"
+                        android:layout_toLeftOf="@+id/NDarsad10"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/NoeHesab5"
+                        android:id="@+id/NoeHesab10"
                         android:text="نوع حساب:"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Karmozd5"
+                        android:layout_below="@+id/moddat_seporde_gozari"
                         android:layout_alignParentRight="true"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/Goone5"
+                        android:id="@+id/Goone10"
                         android:paddingRight="5dp"
                         android:text="سپرده کوتاه مدت"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Karmozd5"
-                        android:layout_toLeftOf="@+id/NoeHesab5"/>
+                        android:layout_below="@+id/moddat_seporde_gozari"
+                        android:layout_toLeftOf="@+id/NoeHesab10"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/Tozihat5"
+                        android:id="@+id/Tozihat10"
                         android:text="توضیحات:"
                         android:textSize="20dp"
-                        android:layout_below="@+id/NoeHesab5"
+                        android:layout_below="@+id/NoeHesab10"
                         android:layout_alignParentRight="true"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/Tozih5"
+                        android:id="@+id/Tozih10"
                         android:paddingRight="5dp"
                         android:text="..."
                         android:textSize="20dp"
-                        android:layout_below="@+id/NoeHesab5"
-                        android:layout_toLeftOf="@+id/Tozihat5"/>
+                        android:layout_below="@+id/NoeHesab10"
+                        android:layout_toLeftOf="@+id/Tozihat10"/>
 
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="60dp"
                         android:paddingLeft="-20dp"
                         android:paddingTop="-15dp"
-                        android:id="@+id/imageView5"
+                        android:id="@+id/imageView10"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
@@ -163,8 +163,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/Karmozd6"
-                        android:text="کارمزد:"
+                        android:id="@+id/moddat_seporde_gozari2"
+                        android:text="مدت سپرده گذاری:"
                         android:textSize="20dp"
                         android:layout_below="@+id/Bank6"
                         android:layout_alignParentRight="true"
@@ -177,13 +177,13 @@
                         android:text="20"
                         android:textSize="20dp"
                         android:layout_below="@+id/Bank6"
-                        android:layout_toLeftOf="@+id/Karmozd6"/>
+                        android:layout_toLeftOf="@+id/moddat_seporde_gozari2"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="5dp"
-                        android:id="@+id/Darsad6"
-                        android:text="درصد"
+                        android:id="@+id/Mahh2"
+                        android:text="ماه"
                         android:textSize="20dp"
                         android:layout_below="@+id/Bank6"
                         android:layout_toLeftOf="@+id/NDarsad6"/>
@@ -193,7 +193,7 @@
                         android:id="@+id/NoeHesab6"
                         android:text="نوع حساب:"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Karmozd6"
+                        android:layout_below="@+id/moddat_seporde_gozari2"
                         android:layout_alignParentRight="true"
                         />
                     <TextView
@@ -203,7 +203,7 @@
                         android:paddingRight="5dp"
                         android:text="سپرده کوتاه مدت"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Karmozd6"
+                        android:layout_below="@+id/moddat_seporde_gozari2"
                         android:layout_toLeftOf="@+id/NoeHesab6"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -265,8 +265,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/Karmozd7"
-                        android:text="کارمزد:"
+                        android:id="@+id/moddat_seporde_gozari3"
+                        android:text="مدت سپرده گذازی:"
                         android:textSize="20dp"
                         android:layout_below="@+id/Bank7"
                         android:layout_alignParentRight="true"
@@ -279,13 +279,13 @@
                         android:text="20"
                         android:textSize="20dp"
                         android:layout_below="@+id/Bank7"
-                        android:layout_toLeftOf="@+id/Karmozd7"/>
+                        android:layout_toLeftOf="@+id/moddat_seporde_gozari3"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="5dp"
-                        android:id="@+id/Darsad7"
-                        android:text="درصد"
+                        android:id="@+id/Mahh3"
+                        android:text="ماه"
                         android:textSize="20dp"
                         android:layout_below="@+id/Bank7"
                         android:layout_toLeftOf="@+id/NDarsad7"/>
@@ -295,7 +295,7 @@
                         android:id="@+id/NoeHesab7"
                         android:text="نوع حساب:"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Karmozd7"
+                        android:layout_below="@+id/moddat_seporde_gozari3"
                         android:layout_alignParentRight="true"
                         />
                     <TextView
@@ -305,7 +305,7 @@
                         android:paddingRight="5dp"
                         android:text="سپرده کوتاه مدت"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Karmozd7"
+                        android:layout_below="@+id/moddat_seporde_gozari3"
                         android:layout_toLeftOf="@+id/NoeHesab7"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -367,8 +367,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/Karmozd8"
-                        android:text="کارمزد:"
+                        android:id="@+id/moddat_seporde_gozari4"
+                        android:text="مدت سپرده گذاری:"
                         android:textSize="20dp"
                         android:layout_below="@+id/Bank8"
                         android:layout_alignParentRight="true"
@@ -381,13 +381,13 @@
                         android:text="20"
                         android:textSize="20dp"
                         android:layout_below="@+id/Bank8"
-                        android:layout_toLeftOf="@+id/Karmozd8"/>
+                        android:layout_toLeftOf="@+id/moddat_seporde_gozari4"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingRight="5dp"
-                        android:id="@+id/Darsad8"
-                        android:text="درصد"
+                        android:id="@+id/Mahh4"
+                        android:text="ماه"
                         android:textSize="20dp"
                         android:layout_below="@+id/Bank8"
                         android:layout_toLeftOf="@+id/NDarsad8"/>
@@ -397,7 +397,7 @@
                         android:id="@+id/NoeHesab8"
                         android:text="نوع حساب:"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Karmozd8"
+                        android:layout_below="@+id/moddat_seporde_gozari4"
                         android:layout_alignParentRight="true"
                         />
                     <TextView
@@ -407,7 +407,7 @@
                         android:paddingRight="5dp"
                         android:text="سپرده کوتاه مدت"
                         android:textSize="20dp"
-                        android:layout_below="@+id/Karmozd8"
+                        android:layout_below="@+id/moddat_seporde_gozari4"
                         android:layout_toLeftOf="@+id/NoeHesab8"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -441,6 +441,108 @@
                         />
                 </RelativeLayout>
 
+                <RelativeLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/box_border"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:id="@+id/Bank9"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:text="بانک:"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/BankName9"
+                        android:paddingRight="5dp"
+                        android:layout_toLeftOf="@+id/Bank9"
+                        android:textSize="20dp"
+                        android:text="سامان"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/moddat_seporde_gozari5"
+                        android:text="مدت سپرده گذاری:"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Bank9"
+                        android:layout_alignParentRight="true"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/NDarsad9"
+                        android:paddingRight="5dp"
+                        android:text="20"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Bank9"
+                        android:layout_toLeftOf="@+id/moddat_seporde_gozari5"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:id="@+id/Mahh5"
+                        android:text="ماه"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/Bank9"
+                        android:layout_toLeftOf="@+id/NDarsad9"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/NoeHesab9"
+                        android:text="نوع حساب:"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/moddat_seporde_gozari5"
+                        android:layout_alignParentRight="true"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Goone9"
+                        android:paddingRight="5dp"
+                        android:text="سپرده کوتاه مدت"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/moddat_seporde_gozari5"
+                        android:layout_toLeftOf="@+id/NoeHesab9"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Tozihat9"
+                        android:text="توضیحات:"
+                        android:textSize="20dp"
+                        android:layout_below="@+id/NoeHesab9"
+                        android:layout_alignParentRight="true"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Tozih9"
+                        android:paddingRight="5dp"
+                        android:text="..."
+                        android:textSize="20dp"
+                        android:layout_below="@+id/NoeHesab9"
+                        android:layout_toLeftOf="@+id/Tozihat9"/>
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="60dp"
+                        android:paddingLeft="-20dp"
+                        android:paddingTop="-15dp"
+                        android:id="@+id/imageView9"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:src="@drawable/logo_saman"
+                        />
+                </RelativeLayout>
+
 
             </LinearLayout>
         </ScrollView>
@@ -449,7 +551,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|top"
-            android:id="@+id/relativeLayout"
+            android:id="@+id/soodYab_SearchLayout"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true">
 
@@ -474,19 +576,20 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignRight="@+id/enter_modate_sepordegozari"
-                android:layout_alignEnd="@+id/enter_modate_sepordegozari" /><EditText
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:inputType="none"
-            android:editable="false"
-            android:ems="10"
-            android:id="@+id/enter_modate_sepordegozari"
-            android:layout_below="@+id/enter_mablagh"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_toLeftOf="@+id/modate_sepordegozari"
-            android:layout_toStartOf="@+id/modate_sepordegozari"
-            android:layout_marginRight="30dp" />
+                android:layout_alignEnd="@+id/enter_modate_sepordegozari" />
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:editable="false"
+                android:ems="10"
+                android:id="@+id/enter_modate_sepordegozari"
+                android:layout_below="@+id/enter_mablagh"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/modate_sepordegozari"
+                android:layout_toStartOf="@+id/modate_sepordegozari"
+                android:layout_marginRight="30dp" />
 
             <TextView
                 android:layout_width="wrap_content"
