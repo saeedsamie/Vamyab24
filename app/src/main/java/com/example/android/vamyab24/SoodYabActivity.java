@@ -119,9 +119,9 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
                     }
                     show(tmp);
                 } else {
-                    findViewById(R.id.vamYab_searchLayout).getLayoutParams().height = height;
+                    findViewById(R.id.soodYab_SearchLayout).getLayoutParams().height = height;
                 }
-                findViewById(R.id.vamYab_searchLayout).requestLayout();
+                findViewById(R.id.soodYab_SearchLayout).requestLayout();
                 i++;
                 break;
             case R.id.enter_mablagh:
