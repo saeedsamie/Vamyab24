@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.android.vamyab24.Back.VaamyabDatabaseHandler;
@@ -212,11 +213,13 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
     private void show(Vector<VaamyabRow> tmp) {
         //// TODO: 9/30/2016
         int i = 1;
+        TextView textView;
+        ImageView imageView;
         for (VaamyabRow r : tmp) {
             String log = "Mablagh: " + r.getMablagh() + " ,ID: " + r.getId() + ",hadeaksar karmozd: "+r.getHadeaksar_karmozd()+" ,bazpardakht: " + r.getBazpardakht() + " mablaghe_har_ghest: " + r.getMablagh_har_ghest() + " tedad_zamen: " + r.getTedad_zamen() + " niyaz_be_seporde: " + r.getNiyaz_be_seporde()+ " niyaz_be_sanad: " + r.getNiyaz_be_sanad();
             Log.d("BBBB: ", log);
             if(i == 1) {
-                TextView textView = (TextView) findViewById(R.id.BankName);
+                textView = (TextView) findViewById(R.id.BankName);
                 textView.setText("ملٌی");
                 textView = (TextView) findViewById(R.id.VMblagh);
                 textView.setText(Integer.toString(r.getMablagh()));
@@ -226,8 +229,10 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
                 textView.setText(Integer.toString(r.getBazpardakht()));
                 textView = (TextView) findViewById(R.id.VMblagh_har_ghest);
                 textView.setText(Integer.toString(r.getMablagh_har_ghest()));
+                imageView = (ImageView) findViewById(R.id.Logo_Bank1);
+                imageView.setImageResource(R.drawable.logo_melli2);
             }else if(i == 2) {
-                TextView textView = (TextView) findViewById(R.id.BankName2);
+                textView = (TextView) findViewById(R.id.BankName2);
                 textView.setText("ملٌی");
                 textView = (TextView) findViewById(R.id.VMblagh2);
                 textView.setText(Integer.toString(r.getMablagh()));
@@ -237,8 +242,10 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
                 textView.setText(Integer.toString(r.getBazpardakht()));
                 textView = (TextView) findViewById(R.id.VMblagh_har_ghest2);
                 textView.setText(Integer.toString(r.getMablagh_har_ghest()));
+                imageView = (ImageView) findViewById(R.id.Logo_Bank2);
+                imageView.setImageResource(R.drawable.logo_melli2);
             }else if(i == 3) {
-                TextView textView = (TextView) findViewById(R.id.BankName3);
+                textView = (TextView) findViewById(R.id.BankName3);
                 textView.setText("ملٌی");
                 textView = (TextView) findViewById(R.id.VMblagh3);
                 textView.setText(Integer.toString(r.getMablagh()));
@@ -248,8 +255,10 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
                 textView.setText(Integer.toString(r.getBazpardakht()));
                 textView = (TextView) findViewById(R.id.VMblagh_har_ghest3);
                 textView.setText(Integer.toString(r.getMablagh_har_ghest()));
+                imageView = (ImageView) findViewById(R.id.Logo_Bank3);
+                imageView.setImageResource(R.drawable.logo_melli2);
             } else if(i == 4) {
-                TextView textView = (TextView) findViewById(R.id.BankName4);
+                textView = (TextView) findViewById(R.id.BankName4);
                 textView.setText("ملٌی");
                 textView = (TextView) findViewById(R.id.VMblagh4);
                 textView.setText(Integer.toString(r.getMablagh()));
@@ -259,8 +268,10 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
                 textView.setText(Integer.toString(r.getBazpardakht()));
                 textView = (TextView) findViewById(R.id.VMblagh_har_ghest4);
                 textView.setText(Integer.toString(r.getMablagh_har_ghest()));
+                imageView = (ImageView) findViewById(R.id.Logo_Bank4);
+                imageView.setImageResource(R.drawable.logo_melli2);
             } else if(i == 5) {
-                TextView textView = (TextView) findViewById(R.id.BankName5);
+                textView = (TextView) findViewById(R.id.BankName5);
                 textView.setText("ملٌی");
                 textView = (TextView) findViewById(R.id.VMblagh5);
                 textView.setText(Integer.toString(r.getMablagh()));
@@ -270,6 +281,8 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
                 textView.setText(Integer.toString(r.getBazpardakht()));
                 textView = (TextView) findViewById(R.id.VMblagh_har_ghest5);
                 textView.setText(Integer.toString(r.getMablagh_har_ghest()));
+                imageView = (ImageView) findViewById(R.id.Logo_Bank2);
+                imageView.setImageResource(R.drawable.logo_melli2);
             }
 
             i++;
