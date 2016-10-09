@@ -76,6 +76,7 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
         imageButton = (ImageButton)findViewById(R.id.logo_sina);
         imageButton.setOnClickListener(this);
 
+
         vaamyabDatabaseHandler = new VaamyabDatabaseHandler(this);
         try {
             vaamyabDatabaseHandler.createDataBase();

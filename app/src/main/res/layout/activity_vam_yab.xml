@@ -997,6 +997,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/info5"
                     android:background="@drawable/box_border"
+
                     >
 
                     <TextView
