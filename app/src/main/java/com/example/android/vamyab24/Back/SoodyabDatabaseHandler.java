@@ -1,14 +1,13 @@
 package com.example.android.vamyab24.Back;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.support.compat.BuildConfig;
 
-import java.io.File;
+import com.example.android.vamyab24.BuildConfig;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,7 +15,7 @@ import java.io.OutputStream;
 import java.util.Vector;
 
 /**
- * Created by HP on 10/8/2016.
+ * Created by HP on 10/2/2016.
  */
 public class SoodyabDatabaseHandler extends SQLiteOpenHelper {
     //your pachakge in middle
@@ -26,7 +25,7 @@ public class SoodyabDatabaseHandler extends SQLiteOpenHelper {
 
     private static final String BRANCHS_DATABASE_NAME = "DB_SoodYab";
 
-    private static final String TABLE_MELLI_BANK_SOODYAB = "BankMelli_SoodYab";
+    private static final String TABLE_MELLI_BANK = "BankMelli";
 
     //for each bank table!
     private static final String KEY_MABLAGH = "branch_mablagh";
@@ -41,17 +40,6 @@ public class SoodyabDatabaseHandler extends SQLiteOpenHelper {
     public SoodyabDatabaseHandler(Context context) {
         super(context, BRANCHS_DATABASE_NAME, null, BRANCH_DATABASE_VERSION);
         myContext = context;
-    }
-
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table " + TABLE_MELLI_BANK_SOODYAB + "(" +  KEY_ID + " integer primary key," + KEY_MABLAGH + " integer," + KEY_MODDAT_SEPORDEGOZARI + " integer," + KEY_MABLAGH_GHEST_VARIZI + " integer," + KEY_PARDAKHT_GHEST_HAR + " integer" + ")");
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("drop table if exists " + TABLE_MELLI_BANK_SOODYAB);
-        onCreate(db);
     }
 
     public void createDataBase() throws IOException {
@@ -70,9 +58,30 @@ public class SoodyabDatabaseHandler extends SQLiteOpenHelper {
 
     }
 
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        db.execSQL("create table " + TABLE_MELLI_BANK + "(" +  KEY_ID + " integer primary key," + KEY_MABLAGH + " integer," + KEY_MODDAT_SEPORDEGOZARI + " integer," + KEY_MABLAGH_GHEST_VARIZI + " integer," + KEY_PARDAKHT_GHEST_HAR + " integer" + ")");
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("drop table if exists " + TABLE_MELLI_BANK);
+        onCreate(db);
+    }
+
     private boolean checkDataBase(){
-        File dbFile = myContext.getDatabasePath(BRANCHS_DATABASE_NAME);
-        return dbFile.exists();
+        SQLiteDatabase checkDB = null;
+        try{
+            String myPath = DB_PATH + BRANCHS_DATABASE_NAME;
+            checkDB = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
+
+        }catch(SQLiteException e){
+            //database does't exist yet.
+        }
+        if(checkDB != null){
+            checkDB.close();
+        }
+        return checkDB != null ? true : false;
     }
 
 

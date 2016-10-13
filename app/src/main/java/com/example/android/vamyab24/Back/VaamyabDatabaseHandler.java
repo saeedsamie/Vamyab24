@@ -24,7 +24,7 @@ public class VaamyabDatabaseHandler extends SQLiteOpenHelper {
 
     private static String DB_PATH = "/data/data/"+ BuildConfig.APPLICATION_ID+"/databases/";
     private static final int DATABASE_VERSION = 1;
-    private static final String DATABASE_NAME = "DB";
+    private static final String DATABASE_NAME = "DB_vaamyab";
 
     private static final String KEY_MABLAGH = "branch_mablagh";
     private static final String KEY_ID = "branch_code";

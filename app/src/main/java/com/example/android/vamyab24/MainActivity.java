@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.android.vamyab24.Back.SoodYabRow;
+import com.example.android.vamyab24.Back.SoodyabDatabaseHandler;
 import com.example.android.vamyab24.Back.VaamyabDatabaseHandler;
 import com.example.android.vamyab24.Back.MyActivityManager;
 import com.example.android.vamyab24.Back.VaamyabRow;
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public MyActivityManager myActivityManager;
     private static final String TABLE_MELLI_BANK = "BankMelli";
     public Vector<VaamyabRow> vaamha;
+    public Vector<SoodYabRow> soodha;
 
     public Vector<VaamyabRow> getVaamha() {
         return vaamha;
@@ -41,9 +44,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             e.printStackTrace();
         }
         vaamha = vaamyabDatabaseHandler.getAllBranchRows(TABLE_MELLI_BANK);
+        Log.d("AA:  ", "Table Name = "+TABLE_MELLI_BANK);
         for (VaamyabRow r : vaamha) {
             String log = "Mablagh: " + r.getMablagh() + " ,ID: " + r.getId() + ",hadeaksar karmozd: "+r.getHadeaksar_karmozd()+" ,bazpardakht: " + r.getBazpardakht() + " mablaghe_har_ghest: " + r.getMablagh_har_ghest() + " tedad_zamen: " + r.getTedad_zamen() + " niyaz_be_seporde: " + r.getNiyaz_be_seporde()+ " niyaz_be_sanad: " + r.getNiyaz_be_sanad();
             Log.d("AAAAA: ", log);
+        }
+        SoodyabDatabaseHandler soodyabDatabaseHandler = new SoodyabDatabaseHandler(this);
+        try {
+            soodyabDatabaseHandler.createDataBase();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        soodha = soodyabDatabaseHandler.getAllBranchRows(TABLE_MELLI_BANK);
+        for (SoodYabRow cn : soodha) {
+            String log = "Mablagh: " + cn.getMablagh() + " ,ID: " + cn.getId() + " ,moddat_seporde_gozari: " + cn.getModdat_sepordegozari() + " mablagh_ghest_varizi: " + cn.getMablagh_ghest_varizi() + " pardakht_ghest_har: " + cn.getPardakht_ghest_har();
+            Log.d("BBBB: ", log);
         }
 
 

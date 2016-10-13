@@ -654,15 +654,8 @@
                 android:id="@+id/mah"
                 android:layout_alignBottom="@+id/enter_pardakhte_ghest_har"
                 android:layout_toLeftOf="@+id/enter_pardakhte_ghest_har"
-                android:layout_toStartOf="@+id/enter_pardakhte_ghest_har" />Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button"
-            android:minHeight="600dp"
-            android:layout_above="@+id/enter_pardakhte_ghest_har"
-            android:layout_alignLeft="@+id/mah"
-            android:layout_alignStart="@+id/mah" />
+                android:layout_toStartOf="@+id/enter_pardakhte_ghest_har" />
+
 
         </RelativeLayout>
     </RelativeLayout>
