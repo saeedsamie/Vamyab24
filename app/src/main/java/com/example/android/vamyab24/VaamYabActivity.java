@@ -5,12 +5,14 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.android.vamyab24.Back.VaamyabDatabaseHandler;
@@ -212,81 +214,74 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
 
     private void show(Vector<VaamyabRow> tmp) {
         //// TODO: 9/30/2016
-        int i = 1;
-        TextView textView;
-        ImageView imageView;
+
         for (VaamyabRow r : tmp) {
             String log = "Mablagh: " + r.getMablagh() + " ,ID: " + r.getId() + ",hadeaksar karmozd: "+r.getHadeaksar_karmozd()+" ,bazpardakht: " + r.getBazpardakht() + " mablaghe_har_ghest: " + r.getMablagh_har_ghest() + " tedad_zamen: " + r.getTedad_zamen() + " niyaz_be_seporde: " + r.getNiyaz_be_seporde()+ " niyaz_be_sanad: " + r.getNiyaz_be_sanad();
-            Log.d("BBBB: ", log);
-            if(i == 1) {
-                textView = (TextView) findViewById(R.id.BankName);
-                textView.setText("ملٌی");
-                textView = (TextView) findViewById(R.id.VMblagh);
-                textView.setText(Integer.toString(r.getMablagh()));
-                textView = (TextView) findViewById(R.id.NDarsad);
-                textView.setText(Integer.toString(r.getHadeaksar_karmozd()));
-                textView = (TextView) findViewById(R.id.Mohlat);
-                textView.setText(Integer.toString(r.getBazpardakht()));
-                textView = (TextView) findViewById(R.id.VMblagh_har_ghest);
-                textView.setText(Integer.toString(r.getMablagh_har_ghest()));
-                imageView = (ImageView) findViewById(R.id.Logo_Bank1);
-                imageView.setImageResource(R.drawable.logo_melli2);
-            }else if(i == 2) {
-                textView = (TextView) findViewById(R.id.BankName2);
-                textView.setText("ملٌی");
-                textView = (TextView) findViewById(R.id.VMblagh2);
-                textView.setText(Integer.toString(r.getMablagh()));
-                textView = (TextView) findViewById(R.id.NDarsad2);
-                textView.setText(Integer.toString(r.getHadeaksar_karmozd()));
-                textView = (TextView) findViewById(R.id.Mohlat2);
-                textView.setText(Integer.toString(r.getBazpardakht()));
-                textView = (TextView) findViewById(R.id.VMblagh_har_ghest2);
-                textView.setText(Integer.toString(r.getMablagh_har_ghest()));
-                imageView = (ImageView) findViewById(R.id.Logo_Bank2);
-                imageView.setImageResource(R.drawable.logo_melli2);
-            }else if(i == 3) {
-                textView = (TextView) findViewById(R.id.BankName3);
-                textView.setText("ملٌی");
-                textView = (TextView) findViewById(R.id.VMblagh3);
-                textView.setText(Integer.toString(r.getMablagh()));
-                textView = (TextView) findViewById(R.id.NDarsad3);
-                textView.setText(Integer.toString(r.getHadeaksar_karmozd()));
-                textView = (TextView) findViewById(R.id.Mohlat3);
-                textView.setText(Integer.toString(r.getBazpardakht()));
-                textView = (TextView) findViewById(R.id.VMblagh_har_ghest3);
-                textView.setText(Integer.toString(r.getMablagh_har_ghest()));
-                imageView = (ImageView) findViewById(R.id.Logo_Bank3);
-                imageView.setImageResource(R.drawable.logo_melli2);
-            } else if(i == 4) {
-                textView = (TextView) findViewById(R.id.BankName4);
-                textView.setText("ملٌی");
-                textView = (TextView) findViewById(R.id.VMblagh4);
-                textView.setText(Integer.toString(r.getMablagh()));
-                textView = (TextView) findViewById(R.id.NDarsad4);
-                textView.setText(Integer.toString(r.getHadeaksar_karmozd()));
-                textView = (TextView) findViewById(R.id.Mohlat4);
-                textView.setText(Integer.toString(r.getBazpardakht()));
-                textView = (TextView) findViewById(R.id.VMblagh_har_ghest4);
-                textView.setText(Integer.toString(r.getMablagh_har_ghest()));
-                imageView = (ImageView) findViewById(R.id.Logo_Bank4);
-                imageView.setImageResource(R.drawable.logo_melli2);
-            } else if(i == 5) {
-                textView = (TextView) findViewById(R.id.BankName5);
-                textView.setText("ملٌی");
-                textView = (TextView) findViewById(R.id.VMblagh5);
-                textView.setText(Integer.toString(r.getMablagh()));
-                textView = (TextView) findViewById(R.id.NDarsad5);
-                textView.setText(Integer.toString(r.getHadeaksar_karmozd()));
-                textView = (TextView) findViewById(R.id.Mohlat5);
-                textView.setText(Integer.toString(r.getBazpardakht()));
-                textView = (TextView) findViewById(R.id.VMblagh_har_ghest5);
-                textView.setText(Integer.toString(r.getMablagh_har_ghest()));
-                imageView = (ImageView) findViewById(R.id.Logo_Bank2);
-                imageView.setImageResource(R.drawable.logo_melli2);
-            }
-
-            i++;
+            Log.d("DDDD: ", log);
         }
+
+
+        LinearLayout resultLayout = (LinearLayout)findViewById(R.id.resultLinearLayout);
+        resultLayout.removeAllViews();
+        for (VaamyabRow rs : tmp) {
+
+            LinearLayout linearLayout1 = new LinearLayout(this);
+            linearLayout1.setOrientation(LinearLayout.VERTICAL);
+            LinearLayout linearLayout2 = new LinearLayout(this);
+            linearLayout2.setOrientation(LinearLayout.HORIZONTAL);
+            LinearLayout linearLayout3 = new LinearLayout(this);
+            linearLayout3.setOrientation(LinearLayout.VERTICAL);
+
+            LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.FILL_PARENT);
+            param.weight = 1.0f;
+            param.gravity = Gravity.START;
+
+            final TextView rowTextView = new TextView(this);
+            rowTextView.setText("بانک: "+"ملی");
+            rowTextView.setTextSize(20);
+            linearLayout1.addView(rowTextView,param);
+
+            final TextView rowTextView1 = new TextView(this);
+            rowTextView1.setText("مبلغ: "+rs.getMablagh()+"ملیون تومان");
+            rowTextView1.setTextSize(20);
+            linearLayout1.addView(rowTextView1,param);
+
+            final TextView rowTextView2 = new TextView(this);
+            rowTextView2.setText("حداکثر کارمزد: "+rs.getHadeaksar_karmozd()+"%");
+            rowTextView2.setTextSize(20);
+            linearLayout1.addView(rowTextView2,param);
+
+            final TextView rowTextView3 = new TextView(this);
+            rowTextView3.setText("مهلت بازپرداخت: "+rs.getBazpardakht()+"ماهه");
+            rowTextView3.setTextSize(20);
+            linearLayout1.addView(rowTextView3,param);
+
+            final TextView rowTextView4 = new TextView(this);
+            rowTextView4.setText("مبلغ هر قسط: "+rs.getMablagh_har_ghest()+"000"+"تومان");
+            rowTextView4.setTextSize(20);
+            linearLayout1.addView(rowTextView4,param);
+
+//            final TextView rowTextView5 = new TextView(this);
+//            rowTextView5.setText("نوع حساب: "+"-");
+//            rowTextView5.setTextSize(20);
+//            linearLayout1.addView(rowTextView5,param);
+
+            final ImageView imageView = new ImageView(this);
+            imageView.setBackgroundResource(R.drawable.logo_melli2);
+
+            linearLayout2.addView(imageView,param);
+            linearLayout2.addView(linearLayout1,param);
+
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT);
+            linearLayout3.addView(linearLayout2,params);
+
+            linearLayout3.setBackgroundResource(R.drawable.result_box_border);
+            resultLayout.addView(linearLayout3);
+            TextView tx = new TextView(this);
+            tx.setMinHeight(10);
+            resultLayout.addView(tx);
+        }
+
     }
 
     @Override

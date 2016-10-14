@@ -155,67 +155,67 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
 
     private void show(Vector<SoodYabRow> tmp) {
         //// TODO: 9/30/2016
-        int i = 1;
-        for (SoodYabRow r : tmp) {
-            String log = "Mablagh: " + r.getMablagh() + " ,ID: " + r.getId() + ",modate_sepordegozari: " + r.getModdat_sepordegozari() + " ,mablagh_ghest_varizi: " + r.getMablagh_ghest_varizi() + "pardakht_ghest_har: " + r.getPardakht_ghest_har() + " tedad_zamen: ";
-            Log.d("BBBB: ", log);
-            if (i == 1) {
-                TextView textView = (TextView) findViewById(R.id.BankName10);
-                textView.setText("ملٌی");
-                textView = (TextView) findViewById(R.id.VMblagh);
-                textView.setText(Integer.toString(r.getMablagh()));
-                textView = (TextView) findViewById(R.id.NDarsad);
-                textView.setText(Integer.toString(r.getModdat_sepordegozari()));
-                textView = (TextView) findViewById(R.id.Mohlat);
-                textView.setText(Integer.toString(r.getMablagh_ghest_varizi()));
-                textView = (TextView) findViewById(R.id.VMblagh_har_ghest);
-                textView.setText(Integer.toString(r.getPardakht_ghest_har()));
-            } else if (i == 2) {
-                TextView textView = (TextView) findViewById(R.id.BankName2);
-                textView.setText("ملٌی");
-                textView = (TextView) findViewById(R.id.VMblagh2);
-                textView.setText(Integer.toString(r.getMablagh()));
-                textView = (TextView) findViewById(R.id.NDarsad2);
-                textView.setText(Integer.toString(r.getModdat_sepordegozari()));
-                textView = (TextView) findViewById(R.id.Mohlat);
-                textView.setText(Integer.toString(r.getMablagh_ghest_varizi()));
-                textView = (TextView) findViewById(R.id.VMblagh_har_ghest);
-                textView.setText(Integer.toString(r.getPardakht_ghest_har()));
-            } else if (i == 3) {
-                TextView textView = (TextView) findViewById(R.id.BankName3);
-                textView.setText("ملٌی");
-                textView = (TextView) findViewById(R.id.VMblagh3);
-                textView.setText(Integer.toString(r.getMablagh()));
-                textView = (TextView) findViewById(R.id.NDarsad3);
-                textView.setText(Integer.toString(r.getModdat_sepordegozari()));
-                textView = (TextView) findViewById(R.id.Mohlat);
-                textView.setText(Integer.toString(r.getMablagh_ghest_varizi()));
-                textView = (TextView) findViewById(R.id.VMblagh_har_ghest);
-                textView.setText(Integer.toString(r.getPardakht_ghest_har()));
-            } else if (i == 4) {
-                TextView textView = (TextView) findViewById(R.id.BankName4);
-                textView.setText("ملٌی");
-                textView = (TextView) findViewById(R.id.VMblagh4);
-                textView.setText(Integer.toString(r.getMablagh()));
-                textView = (TextView) findViewById(R.id.NDarsad4);
-                textView.setText(Integer.toString(r.getModdat_sepordegozari()));
-                textView = (TextView) findViewById(R.id.Mohlat);
-                textView.setText(Integer.toString(r.getMablagh_ghest_varizi()));
-                textView = (TextView) findViewById(R.id.VMblagh_har_ghest);
-                textView.setText(Integer.toString(r.getPardakht_ghest_har()));
-            } else if (i == 5) {
-                TextView textView = (TextView) findViewById(R.id.BankName5);
-                textView.setText("ملٌی");
-                textView = (TextView) findViewById(R.id.VMblagh5);
-                textView.setText(Integer.toString(r.getMablagh()));
-                textView = (TextView) findViewById(R.id.NDarsad5);
-                textView.setText(Integer.toString(r.getModdat_sepordegozari()));
-                textView = (TextView) findViewById(R.id.Mohlat);
-                textView.setText(Integer.toString(r.getMablagh_ghest_varizi()));
-                textView = (TextView) findViewById(R.id.VMblagh_har_ghest);
-                textView.setText(Integer.toString(r.getPardakht_ghest_har()));
-            }
-        }
+//        int i = 1;
+//        for (SoodYabRow r : tmp) {
+//            String log = "Mablagh: " + r.getMablagh() + " ,ID: " + r.getId() + ",modate_sepordegozari: " + r.getModdat_sepordegozari() + " ,mablagh_ghest_varizi: " + r.getMablagh_ghest_varizi() + "pardakht_ghest_har: " + r.getPardakht_ghest_har() + " tedad_zamen: ";
+//            Log.d("BBBB: ", log);
+//            if (i == 1) {
+//                TextView textView = (TextView) findViewById(R.id.BankName10);
+//                textView.setText("ملٌی");
+//                textView = (TextView) findViewById(R.id.VMblagh);
+//                textView.setText(Integer.toString(r.getMablagh()));
+//                textView = (TextView) findViewById(R.id.NDarsad);
+//                textView.setText(Integer.toString(r.getModdat_sepordegozari()));
+//                textView = (TextView) findViewById(R.id.Mohlat);
+//                textView.setText(Integer.toString(r.getMablagh_ghest_varizi()));
+//                textView = (TextView) findViewById(R.id.VMblagh_har_ghest);
+//                textView.setText(Integer.toString(r.getPardakht_ghest_har()));
+//            } else if (i == 2) {
+//                TextView textView = (TextView) findViewById(R.id.BankName2);
+//                textView.setText("ملٌی");
+//                textView = (TextView) findViewById(R.id.VMblagh2);
+//                textView.setText(Integer.toString(r.getMablagh()));
+//                textView = (TextView) findViewById(R.id.NDarsad2);
+//                textView.setText(Integer.toString(r.getModdat_sepordegozari()));
+//                textView = (TextView) findViewById(R.id.Mohlat);
+//                textView.setText(Integer.toString(r.getMablagh_ghest_varizi()));
+//                textView = (TextView) findViewById(R.id.VMblagh_har_ghest);
+//                textView.setText(Integer.toString(r.getPardakht_ghest_har()));
+//            } else if (i == 3) {
+//                TextView textView = (TextView) findViewById(R.id.BankName3);
+//                textView.setText("ملٌی");
+//                textView = (TextView) findViewById(R.id.VMblagh3);
+//                textView.setText(Integer.toString(r.getMablagh()));
+//                textView = (TextView) findViewById(R.id.NDarsad3);
+//                textView.setText(Integer.toString(r.getModdat_sepordegozari()));
+//                textView = (TextView) findViewById(R.id.Mohlat);
+//                textView.setText(Integer.toString(r.getMablagh_ghest_varizi()));
+//                textView = (TextView) findViewById(R.id.VMblagh_har_ghest);
+//                textView.setText(Integer.toString(r.getPardakht_ghest_har()));
+//            } else if (i == 4) {
+//                TextView textView = (TextView) findViewById(R.id.BankName4);
+//                textView.setText("ملٌی");
+//                textView = (TextView) findViewById(R.id.VMblagh4);
+//                textView.setText(Integer.toString(r.getMablagh()));
+//                textView = (TextView) findViewById(R.id.NDarsad4);
+//                textView.setText(Integer.toString(r.getModdat_sepordegozari()));
+//                textView = (TextView) findViewById(R.id.Mohlat);
+//                textView.setText(Integer.toString(r.getMablagh_ghest_varizi()));
+//                textView = (TextView) findViewById(R.id.VMblagh_har_ghest);
+//                textView.setText(Integer.toString(r.getPardakht_ghest_har()));
+//            } else if (i == 5) {
+//                TextView textView = (TextView) findViewById(R.id.BankName5);
+//                textView.setText("ملٌی");
+//                textView = (TextView) findViewById(R.id.VMblagh5);
+//                textView.setText(Integer.toString(r.getMablagh()));
+//                textView = (TextView) findViewById(R.id.NDarsad5);
+//                textView.setText(Integer.toString(r.getModdat_sepordegozari()));
+//                textView = (TextView) findViewById(R.id.Mohlat);
+//                textView.setText(Integer.toString(r.getMablagh_ghest_varizi()));
+//                textView = (TextView) findViewById(R.id.VMblagh_har_ghest);
+//                textView.setText(Integer.toString(r.getPardakht_ghest_har()));
+//            }
+//        }
     }
 
     void fadeOutEverythings(){
