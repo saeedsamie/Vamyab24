@@ -269,7 +269,11 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
             final ImageView imageView = new ImageView(this);
             imageView.setBackgroundResource(R.drawable.logo_melli2);
 
-            linearLayout2.addView(imageView,param);
+            LinearLayout.LayoutParams pm = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.FILL_PARENT);
+            pm.weight = 1.0f;
+            pm.gravity = Gravity.START;
+
+            linearLayout2.addView(imageView,pm);
             linearLayout2.addView(linearLayout1,param);
 
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT);
