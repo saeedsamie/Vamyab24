@@ -156,8 +156,8 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
     private void show(Vector<SoodYabRow> tmp) {
         //// TODO: 9/30/2016
 //        int i = 1;
-//        for (SoodYabRow r : tmp) {
-//            String log = "Mablagh: " + r.getMablagh() + " ,ID: " + r.getId() + ",modate_sepordegozari: " + r.getModdat_sepordegozari() + " ,mablagh_ghest_varizi: " + r.getMablagh_ghest_varizi() + "pardakht_ghest_har: " + r.getPardakht_ghest_har() + " tedad_zamen: ";
+        for (SoodYabRow r : tmp) {
+            String log = "Mablagh: " + r.getMablagh() + " ,ID: " + r.getId() + ",modate_sepordegozari: " + r.getModdat_sepordegozari() + " ,mablagh_ghest_varizi: " + r.getMablagh_ghest_varizi() + "pardakht_ghest_har: " + r.getPardakht_ghest_har() + " tedad_zamen: ";
 //            Log.d("BBBB: ", log);
 //            if (i == 1) {
 //                TextView textView = (TextView) findViewById(R.id.BankName10);
@@ -215,7 +215,7 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
 //                textView = (TextView) findViewById(R.id.VMblagh_har_ghest);
 //                textView.setText(Integer.toString(r.getPardakht_ghest_har()));
 //            }
-//        }
+        }
     }
 
     void fadeOutEverythings(){

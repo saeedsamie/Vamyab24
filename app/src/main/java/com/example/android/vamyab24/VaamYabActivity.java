@@ -231,6 +231,8 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
             linearLayout2.setOrientation(LinearLayout.HORIZONTAL);
             LinearLayout linearLayout3 = new LinearLayout(this);
             linearLayout3.setOrientation(LinearLayout.VERTICAL);
+            LinearLayout linearLayout4 = new LinearLayout(this);
+            linearLayout4.setOrientation(LinearLayout.VERTICAL);
 
             LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.FILL_PARENT);
             param.weight = 1.0f;
@@ -273,7 +275,11 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
             pm.weight = 1.0f;
             pm.gravity = Gravity.START;
 
-            linearLayout2.addView(imageView,pm);
+            linearLayout4.addView(imageView,pm);
+            TextView textView = new TextView(this);
+            textView.setMinHeight(imageView.getHeight());
+            linearLayout4.addView(textView,pm);
+            linearLayout2.addView(linearLayout4,param);
             linearLayout2.addView(linearLayout1,param);
 
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT);
