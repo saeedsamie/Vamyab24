@@ -277,7 +277,7 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
 
             linearLayout4.addView(imageView,pm);
             TextView textView = new TextView(this);
-            textView.setMinHeight(imageView.getHeight());
+            textView.setMinHeight(linearLayout1.getHeight()-imageView.getHeight());
             linearLayout4.addView(textView,pm);
             linearLayout2.addView(linearLayout4,param);
             linearLayout2.addView(linearLayout1,param);
