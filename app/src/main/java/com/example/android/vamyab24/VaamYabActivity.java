@@ -27,7 +27,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class VaamYabActivity extends AppCompatActivity implements View.OnClickListener {
 
-    int i=0;
+    int i = 0;
     private static final String TABLE_MELLI_BANK = "BankMelli";
     VaamyabDatabaseHandler vaamyabDatabaseHandler;
     @Override
