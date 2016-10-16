@@ -8,15 +8,18 @@ import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.android.vamyab24.Back.SoodYabRow;
 //import com.example.android.vamyab24.Back.SoodyabDatabaseHandler;
 import com.example.android.vamyab24.Back.SoodyabDatabaseHandler;
-import com.example.android.vamyab24.Back.VaamyabRow;
 
 import java.io.IOException;
 import java.util.Vector;
@@ -26,8 +29,9 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public class SoodYabActivity extends AppCompatActivity implements View.OnClickListener {
 
     int i=0;
+    int height =0;
     SoodyabDatabaseHandler soodyabDatabaseHandler;
-    private static final String TABLE_MELLI_BANK_SOODYAB = "BankMelli_SoodYab";
+    private static final String TABLE_MELLI_BANK = "BankMelli";
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -63,7 +67,8 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
 
         Intent intent;
-        int height = 900;
+        RelativeLayout relativeLayout = (RelativeLayout)findViewById(R.id.soodYab_SearchLayout);
+
         EditText editText;
         switch (v.getId()) {
 
@@ -71,8 +76,9 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
                 if (i % 2 == 0) {
                     findViewById(R.id.soodYab_SearchLayout).getLayoutParams().height = 0;
                     findViewById(R.id.soodYab_SearchLayout).requestLayout();
+                    height = relativeLayout.getHeight();
 
-                    Vector<SoodYabRow> tmp = soodyabDatabaseHandler.getAllBranchRows(TABLE_MELLI_BANK_SOODYAB);
+                    Vector<SoodYabRow> tmp = soodyabDatabaseHandler.getAllBranchRows(TABLE_MELLI_BANK);
                     EditText mablagh = (EditText) findViewById(R.id.enter_mablagh);
                     EditText modate_sepordegozari = (EditText) findViewById(R.id.enter_modate_sepordegozari);
                     EditText mablaghe_ghest_varizi = (EditText) findViewById(R.id.enter_mablaghe_ghest_varizi);
@@ -120,6 +126,7 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
                     show(tmp);
                 } else {
                     findViewById(R.id.soodYab_SearchLayout).getLayoutParams().height = height;
+                    findViewById(R.id.soodYab_SearchLayout).requestLayout();
                 }
                 findViewById(R.id.soodYab_SearchLayout).requestLayout();
                 i++;
@@ -158,7 +165,7 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
 //        int i = 1;
         for (SoodYabRow r : tmp) {
             String log = "Mablagh: " + r.getMablagh() + " ,ID: " + r.getId() + ",modate_sepordegozari: " + r.getModdat_sepordegozari() + " ,mablagh_ghest_varizi: " + r.getMablagh_ghest_varizi() + "pardakht_ghest_har: " + r.getPardakht_ghest_har() + " tedad_zamen: ";
-//            Log.d("BBBB: ", log);
+            Log.d("BBBB: ", log);
 //            if (i == 1) {
 //                TextView textView = (TextView) findViewById(R.id.BankName10);
 //                textView.setText("ملٌی");
@@ -216,6 +223,78 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
 //                textView.setText(Integer.toString(r.getPardakht_ghest_har()));
 //            }
         }
+
+        LinearLayout resultLayout = (LinearLayout)findViewById(R.id.soodyabResultLinearLayout);
+        resultLayout.removeAllViews();
+        for (SoodYabRow rs : tmp) {
+
+            LinearLayout linearLayout1 = new LinearLayout(this);
+            linearLayout1.setOrientation(LinearLayout.VERTICAL);
+            LinearLayout linearLayout2 = new LinearLayout(this);
+            linearLayout2.setOrientation(LinearLayout.HORIZONTAL);
+            LinearLayout linearLayout3 = new LinearLayout(this);
+            linearLayout3.setOrientation(LinearLayout.VERTICAL);
+            LinearLayout linearLayout4 = new LinearLayout(this);
+            linearLayout4.setOrientation(LinearLayout.VERTICAL);
+
+            LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.FILL_PARENT);
+            param.weight = 1.0f;
+            param.gravity = Gravity.START;
+
+            final TextView rowTextView = new TextView(this);
+            rowTextView.setText("بانک: "+"ملی");
+            rowTextView.setTextSize(20);
+            linearLayout1.addView(rowTextView,param);
+
+            final TextView rowTextView1 = new TextView(this);
+            rowTextView1.setText("مبلغ: "+rs.getMablagh()+"ملیون تومان");
+            rowTextView1.setTextSize(20);
+            linearLayout1.addView(rowTextView1,param);
+
+            final TextView rowTextView2 = new TextView(this);
+            rowTextView2.setText("مدت سپرده گذاری: "+rs.getModdat_sepordegozari()+"ماه");
+            rowTextView2.setTextSize(20);
+            linearLayout1.addView(rowTextView2,param);
+
+            final TextView rowTextView3 = new TextView(this);
+            rowTextView3.setText("مهلت بازپرداخت: "+rs.getPardakht_ghest_har()+"ماهه");
+            rowTextView3.setTextSize(20);
+            linearLayout1.addView(rowTextView3,param);
+
+            final TextView rowTextView4 = new TextView(this);
+            rowTextView4.setText("مبلغ هر قسط: "+rs.getMablagh_ghest_varizi()+"000"+"تومان");
+            rowTextView4.setTextSize(20);
+            linearLayout1.addView(rowTextView4,param);
+
+//            final TextView rowTextView5 = new TextView(this);
+//            rowTextView5.setText("نوع حساب: "+"-");
+//            rowTextView5.setTextSize(20);
+//            linearLayout1.addView(rowTextView5,param);
+
+            final ImageView imageView = new ImageView(this);
+            imageView.setBackgroundResource(R.drawable.logo_melli2);
+
+            LinearLayout.LayoutParams pm = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.FILL_PARENT);
+            pm.weight = 1.0f;
+            pm.gravity = Gravity.START;
+
+            linearLayout4.addView(imageView,pm);
+            TextView textView = new TextView(this);
+            textView.setMinHeight(linearLayout1.getHeight()-imageView.getHeight());
+            linearLayout4.addView(textView,pm);
+            linearLayout2.addView(linearLayout4,param);
+            linearLayout2.addView(linearLayout1,param);
+
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT);
+            linearLayout3.addView(linearLayout2,params);
+
+            linearLayout3.setBackgroundResource(R.drawable.result_box_border);
+            resultLayout.addView(linearLayout3);
+            TextView tx = new TextView(this);
+            tx.setMinHeight(10);
+            resultLayout.addView(tx);
+        }
+
     }
 
     void fadeOutEverythings(){

@@ -18,8 +18,6 @@ import android.widget.TextView;
 import com.example.android.vamyab24.Back.VaamyabDatabaseHandler;
 import com.example.android.vamyab24.Back.VaamyabRow;
 
-import org.w3c.dom.Text;
-
 import java.io.IOException;
 import java.util.Vector;
 
@@ -221,7 +219,7 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
         }
 
 
-        LinearLayout resultLayout = (LinearLayout)findViewById(R.id.resultLinearLayout);
+        LinearLayout resultLayout = (LinearLayout)findViewById(R.id.vaamyabResultLinearLayout);
         resultLayout.removeAllViews();
         for (VaamyabRow rs : tmp) {
 
