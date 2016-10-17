@@ -29,7 +29,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public class SoodYabActivity extends AppCompatActivity implements View.OnClickListener {
 
     int i=0;
-    int height =0;
+    int height;
     SoodyabDatabaseHandler soodyabDatabaseHandler;
     private static final String TABLE_MELLI_BANK = "BankMelli";
 
@@ -74,9 +74,9 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
 
             case R.id.SoodYab_go:
                 if (i % 2 == 0) {
+                    height = relativeLayout.getHeight();
                     findViewById(R.id.soodYab_SearchLayout).getLayoutParams().height = 0;
                     findViewById(R.id.soodYab_SearchLayout).requestLayout();
-                    height = relativeLayout.getHeight();
 
                     Vector<SoodYabRow> tmp = soodyabDatabaseHandler.getAllBranchRows(TABLE_MELLI_BANK);
                     EditText mablagh = (EditText) findViewById(R.id.enter_mablagh);

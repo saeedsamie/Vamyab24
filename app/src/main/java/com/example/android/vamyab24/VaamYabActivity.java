@@ -1,5 +1,6 @@
 package com.example.android.vamyab24;
 
+import android.animation.RectEvaluator;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.android.vamyab24.Back.VaamyabDatabaseHandler;
@@ -26,6 +28,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public class VaamYabActivity extends AppCompatActivity implements View.OnClickListener {
 
     int i = 0;
+    int height;
     private static final String TABLE_MELLI_BANK = "BankMelli";
     VaamyabDatabaseHandler vaamyabDatabaseHandler;
     @Override
@@ -91,11 +94,12 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
 
         Intent intent ;
         EditText editText;
-        int height = 900;
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.vaamyabResultLinearLayout);
+
         switch (v.getId()){
             case R.id.VamYab_go: //search
                 if(i%2==0){
-
+                    height = linearLayout.getHeight();
                     findViewById(R.id.vamYab_searchLayout).getLayoutParams().height = 0 ;
                     findViewById(R.id.vamYab_searchLayout).requestLayout();
 
@@ -173,6 +177,7 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
                     show(tmp);
                 }else {
                     findViewById(R.id.vamYab_searchLayout).getLayoutParams().height = height ;
+                    findViewById(R.id.vamYab_searchLayout).requestLayout();
                 }
                 findViewById(R.id.vamYab_searchLayout).requestLayout();
                 i++;
