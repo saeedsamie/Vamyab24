@@ -1,6 +1,5 @@
 package com.example.android.vamyab24;
 
-import android.animation.RectEvaluator;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -27,7 +26,9 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class VaamYabActivity extends AppCompatActivity implements View.OnClickListener {
 
+
     int i = 0;
+    boolean j [] = new boolean[12];
     int height;
     private static final String TABLE_MELLI_BANK = "BankMelli";
     VaamyabDatabaseHandler vaamyabDatabaseHandler;
@@ -38,8 +39,15 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vam_yab);
+        TextView text2ndActivity = new TextView(this);
+        text2ndActivity.setText("VaamYabActivity");
+
+        for(int k = 0;k<12;k++)
+            j[k] = false;
+
         getSupportActionBar().hide();
 
         Button button = (Button)findViewById(R.id.VamYab_go);
@@ -55,29 +63,30 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
         editText = (EditText)findViewById(R.id.editText8);
         editText.setOnClickListener(this);
 
-        ImageButton imageButton = (ImageButton)findViewById(R.id.logo_tourism);
-        imageButton.setOnClickListener(this);
-        imageButton = (ImageButton)findViewById(R.id.logo_day);
-        imageButton.setOnClickListener(this);
-        imageButton = (ImageButton)findViewById(R.id.logo_melli);
-        imageButton.setOnClickListener(this);
-        imageButton = (ImageButton)findViewById(R.id.logo_mellat);
-        imageButton.setOnClickListener(this);
-        imageButton = (ImageButton)findViewById(R.id.logo_tejarat);
-        imageButton.setOnClickListener(this);
-        imageButton = (ImageButton)findViewById(R.id.logo_pasargad);
+
+        ImageButton imageButton = (ImageButton)findViewById(R.id.logo_day);
         imageButton.setOnClickListener(this);
         imageButton = (ImageButton)findViewById(R.id.logo_karafarin);
         imageButton.setOnClickListener(this);
         imageButton = (ImageButton)findViewById(R.id.logo_maskan);
         imageButton.setOnClickListener(this);
+        imageButton = (ImageButton)findViewById(R.id.logo_mellat);
+        imageButton.setOnClickListener(this);
+        imageButton = (ImageButton)findViewById(R.id.logo_melli);
+        imageButton.setOnClickListener(this);
         imageButton = (ImageButton)findViewById(R.id.logo_parsian);
+        imageButton.setOnClickListener(this);
+        imageButton = (ImageButton)findViewById(R.id.logo_pasargad);
         imageButton.setOnClickListener(this);
         imageButton = (ImageButton)findViewById(R.id.logo_saman);
         imageButton.setOnClickListener(this);
         imageButton = (ImageButton)findViewById(R.id.logo_sarmaye);
         imageButton.setOnClickListener(this);
         imageButton = (ImageButton)findViewById(R.id.logo_sina);
+        imageButton.setOnClickListener(this);
+        imageButton = (ImageButton)findViewById(R.id.logo_tejarat);
+        imageButton.setOnClickListener(this);
+        imageButton = (ImageButton)findViewById(R.id.logo_tourism);
         imageButton.setOnClickListener(this);
 
 
@@ -94,12 +103,12 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
 
         Intent intent ;
         EditText editText;
-        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.vaamyabResultLinearLayout);
+        RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.vamYab_searchLayout);
 
         switch (v.getId()){
             case R.id.VamYab_go: //search
                 if(i%2==0){
-                    height = linearLayout.getHeight();
+                    height = relativeLayout.getHeight();
                     findViewById(R.id.vamYab_searchLayout).getLayoutParams().height = 0 ;
                     findViewById(R.id.vamYab_searchLayout).requestLayout();
 
@@ -211,6 +220,91 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
                 editText = (EditText)findViewById(R.id.editText11);
                 intent.putExtra("value",editText.getText().toString());
                 startActivityForResult(intent,2005);
+                break;
+
+            case R.id.logo_day:
+                if(j[0])
+                    v.setBackgroundResource(R.drawable.logo_day2);
+                else if(!j[0])
+                    v.setBackgroundResource(R.drawable.logo_day3);
+                j[0] = !j[0];
+                break;
+            case R.id.logo_karafarin:
+                if(j[1])
+                    v.setBackgroundResource(R.drawable.logo_karafarin2);
+                else if(!j[1])
+                    v.setBackgroundResource(R.drawable.logo_karafarin3);
+                j[1] = !j[1];
+                break;
+            case R.id.logo_maskan:
+                if(j[2])
+                    v.setBackgroundResource(R.drawable.logo_maskan2);
+                else if(!j[2])
+                    v.setBackgroundResource(R.drawable.logo_maskan3);
+                j[2] = !j[2];
+                break;
+            case R.id.logo_mellat:
+                if(j[3])
+                    v.setBackgroundResource(R.drawable.logo_mellat2);
+                else if(!j[3])
+                    v.setBackgroundResource(R.drawable.logo_mellat3);
+                j[3] = !j[3];
+                break;
+            case R.id.logo_melli:
+                if(j[4])
+                    v.setBackgroundResource(R.drawable.logo_melli2);
+                else if(!j[4])
+                    v.setBackgroundResource(R.drawable.logo_melli3);
+                j[4] = !j[4];
+                break;
+            case R.id.logo_parsian:
+                if(j[5])
+                    v.setBackgroundResource(R.drawable.logo_parsian2);
+                else if(!j[5])
+                    v.setBackgroundResource(R.drawable.logo_parsian3);
+                j[5] = !j[5];
+                break;
+            case R.id.logo_pasargad:
+                if(j[6])
+                    v.setBackgroundResource(R.drawable.logo_pasargad2);
+                else if(!j[6])
+                    v.setBackgroundResource(R.drawable.logo_pasargad3);
+                j[6] = !j[6];
+                break;
+            case R.id.logo_saman:
+                if(j[7])
+                    v.setBackgroundResource(R.drawable.logo_saman2);
+                else if(!j[7])
+                    v.setBackgroundResource(R.drawable.logo_saman3);
+                j[7] = !j[7];
+                break;
+            case R.id.logo_sarmaye:
+                if(j[8])
+                    v.setBackgroundResource(R.drawable.logo_sarmaye2);
+                else if(!j[8])
+                    v.setBackgroundResource(R.drawable.logo_sarmaye3);
+                j[8] = !j[8];
+                break;
+            case R.id.logo_sina:
+                if(j[9])
+                    v.setBackgroundResource(R.drawable.logo_sina2);
+                else if(!j[9])
+                    v.setBackgroundResource(R.drawable.logo_sina3);
+                j[9] = !j[9];
+                break;
+            case R.id.logo_tejarat:
+                if(j[10])
+                    v.setBackgroundResource(R.drawable.logo_tejarat2);
+                else if(!j[10])
+                    v.setBackgroundResource(R.drawable.logo_tejarat3);
+                j[10] = !j[10];
+                break;
+            case R.id.logo_tourism:
+                if(j[11])
+                    v.setBackgroundResource(R.drawable.logo_tourism2);
+                else if(!j[11])
+                    v.setBackgroundResource(R.drawable.logo_tourism3);
+                j[11] = !j[11];
                 break;
         }
     }

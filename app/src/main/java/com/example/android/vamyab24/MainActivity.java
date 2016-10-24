@@ -19,6 +19,8 @@ import java.util.Vector;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+
+
     public MyActivityManager myActivityManager;
     private static final String TABLE_MELLI_BANK = "BankMelli";
     public Vector<VaamyabRow> vaamha;
@@ -32,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 //        View decorView = getWindow().getDecorView();
 //        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
 //        decorView.setSystemUiVisibility(uiOptions);
@@ -44,9 +48,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             e.printStackTrace();
         }
         vaamha = vaamyabDatabaseHandler.getAllBranchRows(TABLE_MELLI_BANK);
-        Log.d("AA:  ", "Table Name = "+TABLE_MELLI_BANK);
+        Log.d("AA:  ", "Table Name = " + TABLE_MELLI_BANK);
         for (VaamyabRow r : vaamha) {
-            String log = "Mablagh: " + r.getMablagh() + " ,ID: " + r.getId() + ",hadeaksar karmozd: "+r.getHadeaksar_karmozd()+" ,bazpardakht: " + r.getBazpardakht() + " mablaghe_har_ghest: " + r.getMablagh_har_ghest() + " tedad_zamen: " + r.getTedad_zamen() + " niyaz_be_seporde: " + r.getNiyaz_be_seporde()+ " niyaz_be_sanad: " + r.getNiyaz_be_sanad();
+            String log = "Mablagh: " + r.getMablagh() + " ,ID: " + r.getId() + ",hadeaksar karmozd: " + r.getHadeaksar_karmozd() + " ,bazpardakht: " + r.getBazpardakht() + " mablaghe_har_ghest: " + r.getMablagh_har_ghest() + " tedad_zamen: " + r.getTedad_zamen() + " niyaz_be_seporde: " + r.getNiyaz_be_seporde() + " niyaz_be_sanad: " + r.getNiyaz_be_sanad();
             Log.d("AAAAA: ", log);
         }
         SoodyabDatabaseHandler soodyabDatabaseHandler = new SoodyabDatabaseHandler(this);
@@ -69,13 +73,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textView.setOnClickListener(this);
 
         TextView tv;
-        textView = (TextView)findViewById(R.id.textView);
-        Typeface tf = Typeface.createFromAsset(getAssets(),"fonts/BNazanin+Bold.ttf");
+        textView = (TextView) findViewById(R.id.textView);
+        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/BNazanin+Bold.ttf");
         textView.setTypeface(tf);
-        textView = (TextView)findViewById(R.id.textView2);
+        textView = (TextView) findViewById(R.id.textView2);
         textView.setTypeface(tf);
 
+
+
     }
+
 
     @Override
     public void onClick(View v) {
@@ -105,4 +112,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onBackPressed() {
         finish();
     }
+
+
 }
