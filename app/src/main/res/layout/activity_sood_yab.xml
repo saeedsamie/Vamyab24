@@ -61,30 +61,73 @@
                 android:layout_alignParentEnd="true" />
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:inputType="none"
                 android:editable="false"
                 android:ems="10"
                 android:id="@+id/enter_mablagh"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:layout_alignRight="@+id/enter_modate_sepordegozari"
                 android:layout_alignEnd="@+id/enter_modate_sepordegozari" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="تومان"
+                android:id="@+id/toman0"
+                android:layout_alignBottom="@+id/enter_mablagh"
+                android:layout_toLeftOf="@+id/enter_mablagh"
+                android:layout_toStartOf="@+id/enter_mablagh" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="بهره"
+                android:id="@+id/bahreh"
+                android:layout_alignBottom="@+id/enter_bahreh"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:editable="false"
+                android:ems="10"
+                android:id="@+id/enter_bahreh"
+                android:layout_below="@+id/mablagh"
+                android:layout_alignRight="@+id/enter_modate_sepordegozari"
+                android:layout_alignEnd="@+id/enter_modate_sepordegozari" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="درصد"
+                android:id="@+id/darsad"
+                android:layout_alignBottom="@+id/enter_bahreh"
+                android:layout_toLeftOf="@+id/enter_bahreh"
+                android:layout_toStartOf="@+id/enter_bahreh" />
+            <EditText
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:inputType="none"
                 android:editable="false"
                 android:ems="10"
                 android:id="@+id/enter_modate_sepordegozari"
-                android:layout_below="@+id/enter_mablagh"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
+                android:layout_below="@+id/enter_bahreh"
                 android:layout_toLeftOf="@+id/modate_sepordegozari"
                 android:layout_toStartOf="@+id/modate_sepordegozari"
                 android:layout_marginRight="30dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="ماه"
+                android:id="@+id/mah0"
+                android:layout_alignBottom="@+id/enter_modate_sepordegozari"
+                android:layout_toLeftOf="@+id/enter_modate_sepordegozari"
+                android:layout_toStartOf="@+id/enter_modate_sepordegozari" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -107,17 +150,25 @@
                 android:layout_alignEnd="@+id/pardakhte_ghest_har" />
 
             <EditText
-                android:layout_width="200dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:inputType="none"
                 android:editable="false"
                 android:ems="10"
                 android:id="@+id/enter_mablaghe_ghest_varizi"
                 android:layout_below="@+id/enter_modate_sepordegozari"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:layout_alignRight="@+id/enter_modate_sepordegozari"
                 android:layout_alignEnd="@+id/enter_modate_sepordegozari" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="تومان"
+                android:id="@+id/toman"
+                android:layout_alignBottom="@+id/enter_mablaghe_ghest_varizi"
+                android:layout_toLeftOf="@+id/enter_mablaghe_ghest_varizi"
+                android:layout_toStartOf="@+id/enter_mablaghe_ghest_varizi" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -151,7 +202,123 @@
                 android:layout_toLeftOf="@+id/enter_pardakhte_ghest_har"
                 android:layout_toStartOf="@+id/enter_pardakhte_ghest_har" />
 
+            <HorizontalScrollView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout"
+                android:layout_below="@+id/mah"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_selector"
+                        android:id="@+id/logo_mellats"
+                        android:src="@drawable/logo_mellat2"
+                        android:layout_below="@+id/vamYab_searchLayout"
+                        android:layout_centerHorizontal="true" />
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_selector"
+                        android:src="@drawable/logo_melli2"
+                        android:id="@+id/logo_mellis" />
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_selector"
+                        android:src="@drawable/logo_sarmaye2"
+                        android:id="@+id/logo_sarmayes" />
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_selector"
+                        android:src="@drawable/logo_parsian2"
+                        android:id="@+id/logo_parsians" />
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_selector"
+                        android:src="@drawable/logo_tejarat2"
+                        android:id="@+id/logo_tejarats" />
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_selector"
+                        android:src="@drawable/logo_saman2"
+                        android:id="@+id/logo_samans" />
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_selector"
+                        android:src="@drawable/logo_day2"
+                        android:id="@+id/logo_days" />
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_selector"
+                        android:src="@drawable/logo_karafarin2"
+                        android:id="@+id/logo_karafarins" />
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_selector"
+                        android:src="@drawable/logo_maskan2"
+                        android:id="@+id/logo_maskans" />
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_selector"
+                        android:src="@drawable/logo_pasargad2"
+                        android:id="@+id/logo_pasargads" />
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_selector"
+                        android:src="@drawable/logo_sina2"
+                        android:id="@+id/logo_sinas" />
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_selector"
+                        android:src="@drawable/logo_tourism2"
+                        android:id="@+id/logo_tourisms" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
 
         </RelativeLayout>
+
     </RelativeLayout>
 </RelativeLayout>

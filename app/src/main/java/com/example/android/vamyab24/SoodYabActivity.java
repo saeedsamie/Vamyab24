@@ -29,6 +29,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public class SoodYabActivity extends AppCompatActivity implements View.OnClickListener {
 
     int i=0;
+    boolean j [] = new boolean[12];
     int height;
     SoodyabDatabaseHandler soodyabDatabaseHandler;
     private static final String TABLE_MELLI_BANK = "BankMelli";
@@ -45,6 +46,12 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
         Button button ;
         button = (Button) findViewById(R.id.SoodYab_go);
         button.setOnClickListener(this);
+
+
+        for(int k = 0;k<12;k++)
+            j[k] = false;
+
+
         EditText editText;
         editText = (EditText) findViewById(R.id.enter_mablagh);
         editText.setOnClickListener(this);
@@ -137,6 +144,12 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
                 intent.putExtra("value", editText.getText().toString());
                 startActivityForResult(intent, 1001);
                 break;
+            case R.id.enter_bahreh:
+                intent = new Intent(this, EnteringNumber.class);
+                editText = (EditText) findViewById(R.id.enter_bahreh);
+                intent.putExtra("value", editText.getText().toString());
+                startActivityForResult(intent, 1005);
+                break;
             case R.id.enter_modate_sepordegozari:
                 intent = new Intent(this, EnteringNumber.class);
                 editText = (EditText) findViewById(R.id.enter_modate_sepordegozari);
@@ -154,6 +167,90 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
                 editText = (EditText) findViewById(R.id.enter_pardakhte_ghest_har);
                 intent.putExtra("value", editText.getText().toString());
                 startActivityForResult(intent, 1004);
+                break;
+            case R.id.logo_days:
+                if(j[0])
+                    v.setBackgroundResource(R.drawable.logo_day2);
+                else if(!j[0])
+                    v.setBackgroundResource(R.drawable.logo_day3);
+                j[0] = !j[0];
+                break;
+            case R.id.logo_karafarins:
+                if(j[1])
+                    v.setBackgroundResource(R.drawable.logo_karafarin2);
+                else if(!j[1])
+                    v.setBackgroundResource(R.drawable.logo_karafarin3);
+                j[1] = !j[1];
+                break;
+            case R.id.logo_maskans:
+                if(j[2])
+                    v.setBackgroundResource(R.drawable.logo_maskan2);
+                else if(!j[2])
+                    v.setBackgroundResource(R.drawable.logo_maskan3);
+                j[2] = !j[2];
+                break;
+            case R.id.logo_mellats:
+                if(j[3])
+                    v.setBackgroundResource(R.drawable.logo_mellat2);
+                else if(!j[3])
+                    v.setBackgroundResource(R.drawable.logo_mellat3);
+                j[3] = !j[3];
+                break;
+            case R.id.logo_mellis:
+                if(j[4])
+                    v.setBackgroundResource(R.drawable.logo_melli2);
+                else if(!j[4])
+                    v.setBackgroundResource(R.drawable.logo_melli3);
+                j[4] = !j[4];
+                break;
+            case R.id.logo_parsians:
+                if(j[5])
+                    v.setBackgroundResource(R.drawable.logo_parsian2);
+                else if(!j[5])
+                    v.setBackgroundResource(R.drawable.logo_parsian3);
+                j[5] = !j[5];
+                break;
+            case R.id.logo_pasargads:
+                if(j[6])
+                    v.setBackgroundResource(R.drawable.logo_pasargad2);
+                else if(!j[6])
+                    v.setBackgroundResource(R.drawable.logo_pasargad3);
+                j[6] = !j[6];
+                break;
+            case R.id.logo_samans:
+                if(j[7])
+                    v.setBackgroundResource(R.drawable.logo_saman2);
+                else if(!j[7])
+                    v.setBackgroundResource(R.drawable.logo_saman3);
+                j[7] = !j[7];
+                break;
+            case R.id.logo_sarmayes:
+                if(j[8])
+                    v.setBackgroundResource(R.drawable.logo_sarmaye2);
+                else if(!j[8])
+                    v.setBackgroundResource(R.drawable.logo_sarmaye3);
+                j[8] = !j[8];
+                break;
+            case R.id.logo_sinas:
+                if(j[9])
+                    v.setBackgroundResource(R.drawable.logo_sina2);
+                else if(!j[9])
+                    v.setBackgroundResource(R.drawable.logo_sina3);
+                j[9] = !j[9];
+                break;
+            case R.id.logo_tejarats:
+                if(j[10])
+                    v.setBackgroundResource(R.drawable.logo_tejarat2);
+                else if(!j[10])
+                    v.setBackgroundResource(R.drawable.logo_tejarat3);
+                j[10] = !j[10];
+                break;
+            case R.id.logo_tourisms:
+                if(j[11])
+                    v.setBackgroundResource(R.drawable.logo_tourism2);
+                else if(!j[11])
+                    v.setBackgroundResource(R.drawable.logo_tourism3);
+                j[11] = !j[11];
                 break;
         }
     }
