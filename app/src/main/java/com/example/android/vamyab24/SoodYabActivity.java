@@ -297,6 +297,8 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
 
     private void show(Vector<SoodYabRow> tmp) {
         //// TODO: 9/30/2016
+        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/irsans.ttf");
+
         for (SoodYabRow r : tmp) {
             String log = "Mablagh: " + r.getMablagh() + " ,ID: " + r.getId() + ",modate_sepordegozari: " + r.getModdat_sepordegozari() + " ,mablagh_ghest_varizi: " + r.getMablagh_ghest_varizi() + "pardakht_ghest_har: " + r.getPardakht_ghest_har() + " tedad_zamen: ";
             Log.d("BBBB: ", log);
@@ -323,26 +325,31 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
             final TextView rowTextView = new TextView(this);
             rowTextView.setText("بانک: "+"ملی");
             rowTextView.setTextSize(20);
+            rowTextView.setTypeface(tf);
             linearLayout1.addView(rowTextView,param);
 
             final TextView rowTextView1 = new TextView(this);
             rowTextView1.setText("مبلغ: "+rs.getMablagh()+"ملیون تومان");
             rowTextView1.setTextSize(15);
+            rowTextView.setTypeface(tf);
             linearLayout1.addView(rowTextView1,param);
 
             final TextView rowTextView2 = new TextView(this);
             rowTextView2.setText("مدت سپرده گذاری: "+rs.getModdat_sepordegozari()+"ماه");
             rowTextView2.setTextSize(15);
+            rowTextView.setTypeface(tf);
             linearLayout1.addView(rowTextView2,param);
 
             final TextView rowTextView3 = new TextView(this);
             rowTextView3.setText("مهلت بازپرداخت: "+rs.getPardakht_ghest_har()+"ماهه");
             rowTextView3.setTextSize(15);
+            rowTextView.setTypeface(tf);
             linearLayout1.addView(rowTextView3,param);
 
             final TextView rowTextView4 = new TextView(this);
             rowTextView4.setText("مبلغ هر قسط: "+rs.getMablagh_ghest_varizi()+"000"+"تومان");
             rowTextView4.setTextSize(15);
+            rowTextView.setTypeface(tf);
             linearLayout1.addView(rowTextView4,param);
 
             final ImageView imageView = new ImageView(this);
