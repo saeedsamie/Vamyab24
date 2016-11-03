@@ -13,7 +13,7 @@ public class Font extends Application {
     public void onCreate() {
         super.onCreate();
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/BNazanin+Regular.ttf")
+                .setDefaultFontPath("fonts/irsans.ttf")
                 .setFontAttrId(R.attr.fontPath)
                 .build()
         );

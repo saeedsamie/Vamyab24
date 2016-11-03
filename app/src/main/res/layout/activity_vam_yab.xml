@@ -26,11 +26,11 @@
                 android:text="مبلغ:"
                 android:id="@+id/textView23"
                 android:layout_alignBottom="@+id/editText5"
-                android:layout_alignRight="@+id/checkBox2"
-                android:layout_alignEnd="@+id/checkBox2" />
+                android:layout_alignParentRight="true"
+                 />
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:id="@+id/editText5"
@@ -41,6 +41,15 @@
                 android:layout_alignRight="@+id/linearLayout"
                 android:layout_alignEnd="@+id/linearLayout"
                 android:layout_marginRight="30dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="تومان"
+                android:id="@+id/toman3"
+                android:layout_alignBottom="@+id/editText5"
+                android:layout_toLeftOf="@+id/editText5"
+                android:layout_toStartOf="@+id/editText5" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -75,7 +84,7 @@
                 android:layout_alignParentEnd="true" />
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:inputType="none"
                 android:editable="false"
@@ -85,6 +94,16 @@
                 android:layout_toLeftOf="@+id/textView25"
                 android:layout_toStartOf="@+id/textView25"
                 android:layout_marginRight="30dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="تومان"
+                android:id="@+id/toman4"
+                android:layout_alignBottom="@+id/editText7"
+                android:layout_toLeftOf="@+id/editText7"
+                android:layout_toStartOf="@+id/editText7" />
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -162,29 +181,48 @@
                 android:layout_toLeftOf="@+id/editText11"
                 android:layout_toStartOf="@+id/editText11" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="نیاز به سند دارد"
+                android:id="@+id/niazbesanad"
+                android:layout_below="@+id/checkBox2"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+
+                />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="نیاز به سند دارد"
                 android:id="@+id/checkBox"
                 android:checked="false"
                 android:layout_below="@+id/checkBox2"
+                android:layout_toLeftOf="@+id/niazbesanad"
+                android:layout_toStartOf="@+id/niazbesanad"
+                android:layout_marginTop="15dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="نیاز به سپرده گذاری دارد"
+                android:id="@+id/niazbeseporde"
+                android:layout_below="@+id/textView24"
                 android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
                 android:layout_marginTop="20dp"
-                android:textSize="15dp" />
 
+                />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="نیاز به سپرده گذاری دارد"
                 android:id="@+id/checkBox2"
                 android:checked="false"
-                android:layout_below="@+id/textView24"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="20dp"
-                android:textSize="15dp" />
+                android:layout_below="@id/textView24"
+                android:layout_toLeftOf="@+id/niazbeseporde"
+                android:layout_toStartOf="@+id/niazbeseporde"
+                android:layout_marginTop="15dp"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -216,9 +254,8 @@
                     android:layout_marginRight="5dp"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
-                    android:background="@drawable/logo_selector"
                     android:id="@+id/logo_mellat"
-                    android:src="@drawable/logo_mellat2"
+                    android:background="@drawable/logo_mellat2"
                     android:layout_below="@+id/vamYab_searchLayout"
                     android:layout_centerHorizontal="true" />
 
@@ -226,88 +263,77 @@
                     android:layout_marginRight="5dp"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
-                    android:background="@drawable/logo_selector"
-                    android:src="@drawable/logo_melli2"
+                    android:background="@drawable/logo_melli2"
                     android:id="@+id/logo_melli" />
 
                 <ImageButton
                     android:layout_marginRight="5dp"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
-                    android:background="@drawable/logo_selector"
-                    android:src="@drawable/logo_sarmaye2"
+                    android:background="@drawable/logo_sarmaye2"
                     android:id="@+id/logo_sarmaye" />
 
                 <ImageButton
                     android:layout_marginRight="5dp"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
-                    android:background="@drawable/logo_selector"
-                    android:src="@drawable/logo_parsian2"
+                    android:background="@drawable/logo_parsian2"
                     android:id="@+id/logo_parsian" />
 
                 <ImageButton
                     android:layout_marginRight="5dp"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
-                    android:background="@drawable/logo_selector"
-                    android:src="@drawable/logo_tejarat2"
+                    android:background="@drawable/logo_tejarat2"
                     android:id="@+id/logo_tejarat" />
 
                 <ImageButton
                     android:layout_marginRight="5dp"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
-                    android:background="@drawable/logo_selector"
-                    android:src="@drawable/logo_saman2"
+                    android:background="@drawable/logo_saman2"
                     android:id="@+id/logo_saman" />
 
                 <ImageButton
                     android:layout_marginRight="5dp"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
-                    android:background="@drawable/logo_selector"
-                    android:src="@drawable/logo_day2"
+                    android:background="@drawable/logo_day2"
                     android:id="@+id/logo_day" />
 
                 <ImageButton
                     android:layout_marginRight="5dp"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
-                    android:background="@drawable/logo_selector"
-                    android:src="@drawable/logo_karafarin2"
+                    android:background="@drawable/logo_karafarin2"
                     android:id="@+id/logo_karafarin" />
 
                 <ImageButton
                     android:layout_marginRight="5dp"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
-                    android:background="@drawable/logo_selector"
-                    android:src="@drawable/logo_maskan2"
+                    android:background="@drawable/logo_maskan2"
                     android:id="@+id/logo_maskan" />
 
                 <ImageButton
                     android:layout_marginRight="5dp"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
-                    android:background="@drawable/logo_selector"
-                    android:src="@drawable/logo_pasargad2"
+                    android:background="@drawable/logo_pasargad2"
                     android:id="@+id/logo_pasargad" />
 
                 <ImageButton
                     android:layout_marginRight="5dp"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
-                    android:background="@drawable/logo_selector"
-                    android:src="@drawable/logo_sina2"
+                    android:background="@drawable/logo_sina2"
                     android:id="@+id/logo_sina" />
 
                 <ImageButton
                     android:layout_marginRight="5dp"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
-                    android:background="@drawable/logo_selector"
-                    android:src="@drawable/logo_tourism2"
+                    android:background="@drawable/logo_tourism2"
                     android:id="@+id/logo_tourism" />
 
             </LinearLayout>

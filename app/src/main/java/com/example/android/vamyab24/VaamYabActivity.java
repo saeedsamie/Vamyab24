@@ -2,6 +2,7 @@ package com.example.android.vamyab24;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -50,21 +51,35 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
 
         getSupportActionBar().hide();
 
+        Typeface tf2 = Typeface.createFromAsset(getAssets(), "fonts/B Zar_0.ttf");
+
         Button button = (Button)findViewById(R.id.VamYab_go);
         button.setOnClickListener(this);
         EditText editText = (EditText)findViewById(R.id.editText5);
         editText.setOnClickListener(this);
+        editText.setTypeface(tf2);
         editText = (EditText)findViewById(R.id.editText6);
         editText.setOnClickListener(this);
+        editText.setTypeface(tf2);
         editText = (EditText)findViewById(R.id.editText7);
         editText.setOnClickListener(this);
+        editText.setTypeface(tf2);
         editText = (EditText)findViewById(R.id.editText7);
         editText.setOnClickListener(this);
+        editText.setTypeface(tf2);
         editText = (EditText)findViewById(R.id.editText8);
         editText.setOnClickListener(this);
+        editText.setTypeface(tf2);
         editText = (EditText)findViewById(R.id.editText11);
         editText.setOnClickListener(this);
+        editText.setTypeface(tf2);
 
+
+        CheckBox checkBox = (CheckBox)findViewById(R.id.checkBox) ;
+        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/irsans.ttf");
+        checkBox.setTypeface(tf);
+        checkBox = (CheckBox)findViewById(R.id.checkBox2);
+        checkBox.setTypeface(tf);
 
         ImageButton imageButton = (ImageButton)findViewById(R.id.logo_day);
         imageButton.setOnClickListener(this);

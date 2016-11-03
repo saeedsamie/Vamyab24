@@ -152,7 +152,7 @@
                 android:layout_alignEnd="@+id/pardakhte_ghest_har" />
 
             <EditText
-                android:layout_width="100dp"
+                android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:inputType="none"
                 android:editable="false"
@@ -225,9 +225,8 @@
                         android:layout_marginRight="5dp"
                         android:layout_width="45dp"
                         android:layout_height="45dp"
-                        android:background="@drawable/logo_selector"
+                        android:background="@drawable/logo_mellat2"
                         android:id="@+id/logo_mellats"
-                        android:src="@drawable/logo_mellat2"
                         android:layout_below="@+id/vamYab_searchLayout"
                         android:layout_centerHorizontal="true" />
 
@@ -235,8 +234,7 @@
                         android:layout_marginRight="5dp"
                         android:layout_width="45dp"
                         android:layout_height="45dp"
-                        android:background="@drawable/logo_selector"
-                        android:src="@drawable/logo_melli2"
+                        android:background="@drawable/logo_melli2"
                         android:id="@+id/logo_mellis" />
 
                     <ImageButton
@@ -251,72 +249,63 @@
                         android:layout_marginRight="5dp"
                         android:layout_width="45dp"
                         android:layout_height="45dp"
-                        android:background="@drawable/logo_selector"
-                        android:src="@drawable/logo_parsian2"
+                        android:background="@drawable/logo_parsian2"
                         android:id="@+id/logo_parsians" />
 
                     <ImageButton
                         android:layout_marginRight="5dp"
                         android:layout_width="45dp"
                         android:layout_height="45dp"
-                        android:background="@drawable/logo_selector"
-                        android:src="@drawable/logo_tejarat2"
+                        android:background="@drawable/logo_tejarat2"
                         android:id="@+id/logo_tejarats" />
 
                     <ImageButton
                         android:layout_marginRight="5dp"
                         android:layout_width="45dp"
                         android:layout_height="45dp"
-                        android:background="@drawable/logo_selector"
-                        android:src="@drawable/logo_saman2"
+                        android:background="@drawable/logo_saman2"
                         android:id="@+id/logo_samans" />
 
                     <ImageButton
                         android:layout_marginRight="5dp"
                         android:layout_width="45dp"
                         android:layout_height="45dp"
-                        android:background="@drawable/logo_selector"
-                        android:src="@drawable/logo_day2"
+                        android:background="@drawable/logo_day2"
                         android:id="@+id/logo_days" />
 
                     <ImageButton
                         android:layout_marginRight="5dp"
                         android:layout_width="45dp"
                         android:layout_height="45dp"
-                        android:background="@drawable/logo_selector"
-                        android:src="@drawable/logo_karafarin2"
+                        android:background="@drawable/logo_karafarin2"
                         android:id="@+id/logo_karafarins" />
 
                     <ImageButton
                         android:layout_marginRight="5dp"
                         android:layout_width="45dp"
                         android:layout_height="45dp"
-                        android:background="@drawable/logo_selector"
-                        android:src="@drawable/logo_maskan2"
+                        android:background="@drawable/logo_maskan2"
                         android:id="@+id/logo_maskans" />
 
                     <ImageButton
                         android:layout_marginRight="5dp"
                         android:layout_width="45dp"
                         android:layout_height="45dp"
-                        android:background="@drawable/logo_selector"
-                        android:src="@drawable/logo_pasargad2"
+                        android:background="@drawable/logo_pasargad2"
                         android:id="@+id/logo_pasargads" />
 
                     <ImageButton
                         android:layout_marginRight="5dp"
                         android:layout_width="45dp"
                         android:layout_height="45dp"
-                        android:background="@drawable/logo_selector"
-                        android:src="@drawable/logo_sina2"
+                        android:background="@drawable/logo_sina2"
                         android:id="@+id/logo_sinas" />
 
                     <ImageButton
                         android:layout_marginRight="5dp"
                         android:layout_width="45dp"
                         android:layout_height="45dp"
-                        android:background="@drawable/logo_selector"
-                        android:src="@drawable/logo_tourism2"
+                        android:background="@drawable/logo_tourism2"
                         android:id="@+id/logo_tourisms" />
 
                 </LinearLayout>

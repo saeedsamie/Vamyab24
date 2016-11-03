@@ -4,12 +4,14 @@ import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -45,7 +47,10 @@ public class EnteringNumber extends Activity {
 
         editText = (EditText)findViewById(R.id.editText9);
         editText.setText(getIntent().getStringExtra("value").toString());
-        b1 = (Button)findViewById(R.id.n1);
+
+
+        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/B Zar_0.ttf");
+        b1 = (Button) findViewById(R.id.n1);
         b2 = (Button)findViewById(R.id.n2);
         b3 = (Button)findViewById(R.id.n3);
         b4 = (Button)findViewById(R.id.n4);
@@ -57,6 +62,19 @@ public class EnteringNumber extends Activity {
         b0 = (Button)findViewById(R.id.n0);
         dele = (Button)findViewById(R.id.del);
         done = (Button)findViewById(R.id.done);
+
+
+        editText.setTypeface(tf);
+        b0.setTypeface(tf);
+        b1.setTypeface(tf);
+        b2.setTypeface(tf);
+        b3.setTypeface(tf);
+        b4.setTypeface(tf);
+        b5.setTypeface(tf);
+        b6.setTypeface(tf);
+        b7.setTypeface(tf);
+        b8.setTypeface(tf);
+        b9.setTypeface(tf);
 
         b0.setOnClickListener(new View.OnClickListener(){
             @Override

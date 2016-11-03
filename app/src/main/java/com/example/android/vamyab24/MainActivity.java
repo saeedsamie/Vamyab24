@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         TextView tv;
         textView = (TextView) findViewById(R.id.textView);
-        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/BNazanin+Bold.ttf");
+        Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/irsans.ttf");
         textView.setTypeface(tf);
         textView = (TextView) findViewById(R.id.textView2);
         textView.setTypeface(tf);

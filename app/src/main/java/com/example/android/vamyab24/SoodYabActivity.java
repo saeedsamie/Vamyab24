@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -52,18 +53,25 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
         for(int k = 0;k<12;k++)
             j[k] = false;
 
+        Typeface tf2 = Typeface.createFromAsset(getAssets(), "fonts/B Zar_0.ttf");
 
         EditText editText;
         editText = (EditText) findViewById(R.id.enter_mablagh);
         editText.setOnClickListener(this);
+        editText.setTypeface(tf2);
         editText = (EditText) findViewById(R.id.enter_bahreh);
         editText.setOnClickListener(this);
+        editText.setTypeface(tf2);
         editText = (EditText) findViewById(R.id.enter_modate_sepordegozari);
         editText.setOnClickListener(this);
+        editText.setTypeface(tf2);
         editText = (EditText) findViewById(R.id.enter_pardakhte_ghest_har);
         editText.setOnClickListener(this);
+        editText.setTypeface(tf2);
         editText = (EditText) findViewById(R.id.enter_mablaghe_ghest_varizi);
         editText.setOnClickListener(this);
+        editText.setTypeface(tf2);
+
 
 
         ImageButton imageButton = (ImageButton)findViewById(R.id.logo_days);
