@@ -62,6 +62,8 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
         editText.setOnClickListener(this);
         editText = (EditText)findViewById(R.id.editText8);
         editText.setOnClickListener(this);
+        editText = (EditText)findViewById(R.id.editText11);
+        editText.setOnClickListener(this);
 
 
         ImageButton imageButton = (ImageButton)findViewById(R.id.logo_day);
@@ -166,22 +168,6 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
                             }
                         }catch(Exception e){}
 
-//                        if(niyaz_be_seporde.getText()!=null)
-//                        try {
-//                        if (niyaz_be_seporde.isChecked()!=Boolean.parseBoolean(r.getNiyaz_be_seporde())){
-//                            tmp.remove(tmp.indexOf(r));
-//                            i--;
-//                            continue;
-//                        }
-//                        }catch (Exception e){}
-//                        if(niyaz_be_sanad.getText()!=null)
-//                        try{
-//                          if (niyaz_be_sanad.isChecked()!=Boolean.parseBoolean(r.getNiyaz_be_sanad())){
-//                            tmp.remove(tmp.indexOf(r));
-//                            i--;
-//                            continue;
-//                        }
-//                        }catch (Exception e){}
                     }
                     show(tmp);
                 }else {
@@ -341,33 +327,28 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
             linearLayout1.addView(rowTextView,param);
 
             final TextView rowTextView1 = new TextView(this);
-            rowTextView1.setText("مبلغ: "+rs.getMablagh()+"ملیون تومان");
-            rowTextView1.setTextSize(20);
+            rowTextView1.setText("مبلغ: "+rs.getMablagh()+"میلیون تومان");
+            rowTextView1.setTextSize(15);
             linearLayout1.addView(rowTextView1,param);
 
             final TextView rowTextView2 = new TextView(this);
             rowTextView2.setText("حداکثر کارمزد: "+rs.getHadeaksar_karmozd()+"%");
-            rowTextView2.setTextSize(20);
+            rowTextView2.setTextSize(15);
             linearLayout1.addView(rowTextView2,param);
 
             final TextView rowTextView3 = new TextView(this);
             rowTextView3.setText("مهلت بازپرداخت: "+rs.getBazpardakht()+"ماهه");
-            rowTextView3.setTextSize(20);
+            rowTextView3.setTextSize(15);
             linearLayout1.addView(rowTextView3,param);
 
             final TextView rowTextView4 = new TextView(this);
             rowTextView4.setText("مبلغ هر قسط: "+rs.getMablagh_har_ghest()+"000"+"تومان");
-            rowTextView4.setTextSize(20);
+            rowTextView4.setTextSize(15);
             linearLayout1.addView(rowTextView4,param);
 
-//            final TextView rowTextView5 = new TextView(this);
-//            rowTextView5.setText("نوع حساب: "+"-");
-//            rowTextView5.setTextSize(20);
-//            linearLayout1.addView(rowTextView5,param);
-
             final ImageView imageView = new ImageView(this);
-            imageView.setBackgroundResource(R.drawable.logo_mellat);
-
+            imageView.setBackgroundResource(R.drawable.logo_melli);
+            imageView.setMinimumHeight(imageView.getHeight());
 
             LinearLayout.LayoutParams pm = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.FILL_PARENT);
             pm.weight = 1.0f;
@@ -376,6 +357,7 @@ public class VaamYabActivity extends AppCompatActivity implements View.OnClickLi
             linearLayout4.addView(imageView,pm);
             TextView textView = new TextView(this);
             textView.setMinHeight(linearLayout1.getHeight()-imageView.getHeight());
+
             linearLayout4.addView(textView,pm);
             linearLayout2.addView(linearLayout4,param);
             linearLayout2.addView(linearLayout1,param);

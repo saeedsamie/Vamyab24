@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final String TABLE_MELLI_BANK = "BankMelli";
     public Vector<VaamyabRow> vaamha;
     public Vector<SoodYabRow> soodha;
+    int cun=0;
 
     public Vector<VaamyabRow> getVaamha() {
         return vaamha;
@@ -110,7 +111,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onBackPressed() {
+        if (cun%2==0)
         finish();
+        else cun++;
     }
 
 
