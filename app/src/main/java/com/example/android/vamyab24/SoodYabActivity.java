@@ -329,7 +329,7 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
             linearLayout1.addView(rowTextView,param);
 
             final TextView rowTextView1 = new TextView(this);
-            rowTextView1.setText("مبلغ: "+rs.getMablagh()+"ملیون تومان");
+            rowTextView1.setText("مبلغ: "+rs.getMablagh()+"میلیون تومان");
             rowTextView1.setTextSize(15);
             rowTextView.setTypeface(tf);
             linearLayout1.addView(rowTextView1,param);
@@ -347,7 +347,7 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
             linearLayout1.addView(rowTextView3,param);
 
             final TextView rowTextView4 = new TextView(this);
-            rowTextView4.setText("مبلغ هر قسط: "+rs.getMablagh_ghest_varizi()+"000"+"تومان");
+            rowTextView4.setText("مبلغ هر قسط: "+rs.getMablagh_ghest_varizi()+"0000"+"تومان");
             rowTextView4.setTextSize(15);
             rowTextView.setTypeface(tf);
             linearLayout1.addView(rowTextView4,param);

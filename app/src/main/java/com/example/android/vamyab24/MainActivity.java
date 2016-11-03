@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onBackPressed() {
-        if (cun%2==0)
+        if (cun%2==1)
         finish();
         else {
             Toast.makeText(this, "برای خروج دوباره دکمه را لمس کنید", Toast.LENGTH_SHORT).show();
