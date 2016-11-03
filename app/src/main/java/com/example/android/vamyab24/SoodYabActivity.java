@@ -324,7 +324,7 @@ public class SoodYabActivity extends AppCompatActivity implements View.OnClickLi
 
             final TextView rowTextView = new TextView(this);
             rowTextView.setText("بانک: "+"ملی");
-            rowTextView.setTextSize(20);
+            rowTextView.setTextSize(15);
             rowTextView.setTypeface(tf);
             linearLayout1.addView(rowTextView,param);
 
