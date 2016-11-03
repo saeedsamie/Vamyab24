@@ -75,7 +75,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="تومان"
+                android:text="میلیون تومان"
                 android:id="@+id/toman0"
                 android:layout_alignBottom="@+id/enter_mablagh"
                 android:layout_toLeftOf="@+id/enter_mablagh"

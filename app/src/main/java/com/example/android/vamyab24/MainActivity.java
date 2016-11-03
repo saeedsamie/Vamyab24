@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.android.vamyab24.Back.SoodYabRow;
 import com.example.android.vamyab24.Back.SoodyabDatabaseHandler;
@@ -114,7 +115,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onBackPressed() {
         if (cun%2==0)
         finish();
-        else cun++;
+        else {
+            Toast.makeText(this, "برای خروج دوباره دکمه را لمس کنید", Toast.LENGTH_SHORT).show();
+        }
+        cun++;
     }
 
 
