@@ -30,13 +30,7 @@ public class EnteringNumber extends Activity {
     VaamYabActivity vaamYabActivity;
     SoodYabActivity soodYabActivity;
 
-    public void setVaamYabActivity(VaamYabActivity vaamYabActivity) {
-        this.vaamYabActivity = vaamYabActivity;
-    }
 
-    public void setSoodYabActivity(SoodYabActivity soodYabActivity) {
-        this.soodYabActivity = soodYabActivity;
-    }
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
@@ -136,58 +130,12 @@ public class EnteringNumber extends Activity {
             @Override
             public void onClick(View view) {
 
-//                Intent intent = new Intent();
-//                setResult(Activity.RESULT_OK,returnIntent);
-//                startActivityForResult(intent,1002);
+
                 Intent returnIntent =new Intent();
                 returnIntent.putExtra("code", editText.getText().toString());
                 setResult(Activity.RESULT_OK,returnIntent);
                 finish();
 
-//                intent.putExtra("code",editText.getText().toString());
-//                switch (getIntent().getExtras().get("field").toString()){
-//                    case "mablagh":
-//                        try{vaamYabActivity.setMablagh(Integer.parseInt(editText.getText().toString()));}catch (Exception e){}
-//                        break;
-//                    case "bazpardakht":
-//                        try{vaamYabActivity.setBazpardakht(Integer.parseInt(editText.getText().toString()));}catch (Exception e){}
-//                        break;
-//                    case "mablagheharghest":
-//                        try{vaamYabActivity.setMablagheharghest(Integer.parseInt(editText.getText().toString()));}catch (Exception e){}
-//                        break;
-//                    case "hadeaksarkarmozd":
-//                        try{vaamYabActivity.setHadeaksarkarmozd(Integer.parseInt(editText.getText().toString()));}catch (Exception e){}
-//                        break;
-//                    case "tedadezamen":
-//                        try{vaamYabActivity.setTedadezamen(Integer.parseInt(editText.getText().toString()));}catch (Exception e){}
-//                        break;
-//                }
-//                finish();
-
-
-
-
-
-
-//                Intent intent;
-////                intent = new Intent(getBaseContext(),);
-////                switch (getIntent().getExtras().getString("class")){
-////                    case "VaamYabActivity":
-//                        intent= new Intent(getBaseContext() ,VaamYabActivity.class);
-//                        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-//                Bundle bundle = new Bundle();
-//                bundle.putString("feild",getIntent().getExtras().getString("field").toString());
-//                bundle.putString("input",editText.getText().toString());
-//                        intent.putExtra("box",bundle);
-//                        startActivity(intent);
-//                    break;
-
-//                    case "SoodYabActivity":
-//                        intent= new Intent(getBaseContext() , SoodYabActivity.class);
-//                        intent.addFlags(Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
-//                        startActivity(intent);
-//                    break;
-//                }
 
             }
         });
