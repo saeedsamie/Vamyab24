@@ -3,261 +3,314 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:padding="10dp"
+    android:background="#7bba7b"
     tools:context="com.example.android.vamyab24.MainActivity">
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|bottom"
-        android:layout_below="@+id/relativeLayout">
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="1000dp"
-            android:layout_gravity="center_horizontal|bottom">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Button"
-                android:id="@+id/button3"
-                android:layout_gravity="bottom" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Button"
-                android:id="@+id/button2"
-                android:layout_gravity="bottom" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Text"
-                android:id="@+id/textView5"
-                android:layout_gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Text"
-                android:id="@+id/textView6"
-                android:layout_gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Text"
-                android:id="@+id/textView7"
-                android:layout_gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Text"
-                android:id="@+id/textView9"
-                android:layout_gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Text"
-                android:id="@+id/textView10"
-                android:layout_gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Text"
-                android:id="@+id/textView11"
-                android:layout_gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Text"
-                android:id="@+id/textView12"
-                android:layout_gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Text"
-                android:id="@+id/textView13"
-                android:layout_gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Text"
-                android:id="@+id/textView14"
-                android:layout_gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Text"
-                android:id="@+id/textView15"
-                android:layout_gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Text"
-                android:id="@+id/textView16"
-                android:layout_gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Text"
-                android:id="@+id/textView17"
-                android:layout_gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Text"
-                android:id="@+id/textView18"
-                android:layout_gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Text"
-                android:id="@+id/textView19"
-                android:layout_gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Text"
-                android:id="@+id/textView20"
-                android:layout_gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Text"
-                android:id="@+id/textView8"
-                android:layout_gravity="center_horizontal" />
-        </LinearLayout>
-    </ScrollView>
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|top"
-        android:id="@+id/relativeLayout"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="مبلغ"
-            android:id="@+id/textView"
-            android:layout_alignBottom="@+id/editText"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/editText"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <EditText
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/editText2"
-            android:layout_below="@+id/editText"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="مدت سپرده گذاری"
-            android:id="@+id/textView2"
-            android:layout_alignBottom="@+id/editText2"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="مبلغ قسط واریزی"
-            android:id="@+id/textView3"
-            android:layout_alignBottom="@+id/editText3"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-        <EditText
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/editText3"
-            android:layout_below="@+id/editText2"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="پرداخت قسط هر "
-            android:id="@+id/textView4"
-            android:layout_alignBottom="@+id/editText4"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-        <EditText
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:foregroundGravity="right"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/editText4"
-            android:layout_below="@+id/editText3"
-            android:layout_centerHorizontal="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="ماه"
-            android:id="@+id/textView21"
-            android:layout_above="@+id/button"
-            android:layout_toLeftOf="@+id/editText4"
-            android:layout_toStartOf="@+id/editText4" />
+        android:background="@drawable/box_border2" >
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="جستجو"
-            android:id="@+id/button"
-            android:layout_below="@+id/editText4"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
+            android:id="@+id/SoodYab_go"
+            android:layout_below="@+id/soodYab_SearchLayout"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-    </RelativeLayout>
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/scrollView2"
+            android:layout_below="@+id/SoodYab_go">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:id="@+id/soodyabResultLinearLayout"
+                android:layout_height="800dp">
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:id="@+id/soodYab_SearchLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="مبلغ:"
+                android:id="@+id/mablagh"
+                android:layout_alignBottom="@+id/enter_mablagh"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:editable="false"
+                android:ems="10"
+                android:id="@+id/enter_mablagh"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/mablagh"
+                android:layout_toStartOf="@+id/mablagh"
+                android:layout_marginRight="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="میلیون تومان"
+                android:id="@+id/toman0"
+                android:layout_alignBottom="@+id/enter_mablagh"
+                android:layout_toLeftOf="@+id/enter_mablagh"
+                android:layout_toStartOf="@+id/enter_mablagh" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="بهره:"
+                android:id="@+id/bahreh"
+                android:layout_alignBottom="@+id/enter_bahreh"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <EditText
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:editable="false"
+                android:ems="10"
+                android:id="@+id/enter_bahreh"
+                android:layout_below="@+id/mablagh"
+                android:layout_toLeftOf="@+id/bahreh"
+                android:layout_toStartOf="@+id/bahreh"
+                android:layout_marginRight="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="درصد"
+                android:id="@+id/darsad"
+                android:layout_alignBottom="@+id/enter_bahreh"
+                android:layout_toLeftOf="@+id/enter_bahreh"
+                android:layout_toStartOf="@+id/enter_bahreh" />
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:editable="false"
+                android:ems="10"
+                android:id="@+id/enter_modate_sepordegozari"
+                android:layout_below="@+id/darsad"
+                android:layout_toLeftOf="@+id/modate_sepordegozari"
+                android:layout_toStartOf="@+id/modate_sepordegozari"
+                android:layout_marginRight="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="ماه"
+                android:id="@+id/mah0"
+                android:layout_alignBottom="@+id/enter_modate_sepordegozari"
+                android:layout_toLeftOf="@+id/enter_modate_sepordegozari"
+                android:layout_toStartOf="@+id/enter_modate_sepordegozari" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="مدت سپرده گذاری:"
+                android:id="@+id/modate_sepordegozari"
+                android:layout_above="@+id/enter_mablaghe_ghest_varizi"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="مبلغ قسط واریزی:"
+                android:id="@+id/mablaghe_ghest_varizi"
+                android:layout_above="@+id/enter_pardakhte_ghest_har"
+                android:layout_alignRight="@+id/pardakhte_ghest_har"
+                android:layout_alignEnd="@+id/pardakhte_ghest_har" />
+
+            <EditText
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:editable="false"
+                android:ems="10"
+                android:id="@+id/enter_mablaghe_ghest_varizi"
+                android:layout_below="@+id/enter_modate_sepordegozari"
+                android:layout_toLeftOf="@+id/modate_sepordegozari"
+                android:layout_toStartOf="@+id/modate_sepordegozari"
+                android:layout_marginRight="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="تومان"
+                android:id="@+id/toman"
+                android:layout_alignBottom="@+id/enter_mablaghe_ghest_varizi"
+                android:layout_toLeftOf="@+id/enter_mablaghe_ghest_varizi"
+                android:layout_toStartOf="@+id/enter_mablaghe_ghest_varizi" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="پرداخت قسط هر:"
+                android:id="@+id/pardakhte_ghest_har"
+                android:layout_alignBottom="@+id/enter_pardakhte_ghest_har"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="right"
+                android:inputType="none"
+                android:editable="false"
+                android:ems="10"
+                android:id="@+id/enter_pardakhte_ghest_har"
+                android:layout_below="@+id/enter_mablaghe_ghest_varizi"
+                android:layout_toLeftOf="@+id/pardakhte_ghest_har"
+                android:layout_toStartOf="@+id/pardakhte_ghest_har"
+                android:layout_marginRight="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="ماه"
+                android:id="@+id/mah"
+                android:layout_alignBottom="@+id/enter_pardakhte_ghest_har"
+                android:layout_toLeftOf="@+id/enter_pardakhte_ghest_har"
+                android:layout_toStartOf="@+id/enter_pardakhte_ghest_har" />
+
+            <HorizontalScrollView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout"
+                android:layout_below="@+id/mah"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_mellat2"
+                        android:id="@+id/logo_mellats"
+                        android:layout_below="@+id/vamYab_searchLayout"
+                        android:layout_centerHorizontal="true" />
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_melli2"
+                        android:id="@+id/logo_mellis" />
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_sarmaye2"
+                        android:id="@+id/logo_sarmayes" />
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_parsian2"
+                        android:id="@+id/logo_parsians" />
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_tejarat2"
+                        android:id="@+id/logo_tejarats" />
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_saman2"
+                        android:id="@+id/logo_samans" />
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_day2"
+                        android:id="@+id/logo_days" />
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_karafarin2"
+                        android:id="@+id/logo_karafarins" />
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_maskan2"
+                        android:id="@+id/logo_maskans" />
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_pasargad2"
+                        android:id="@+id/logo_pasargads" />
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_sina2"
+                        android:id="@+id/logo_sinas" />
+
+                    <ImageButton
+                        android:layout_marginRight="5dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/logo_tourism2"
+                        android:id="@+id/logo_tourisms" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
 </RelativeLayout>

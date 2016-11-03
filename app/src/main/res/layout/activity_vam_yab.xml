@@ -3,296 +3,375 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".VaamYab">
-
+    android:padding="10dp"
+    android:background="#048583"
+    tools:context=".VaamYabActivity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/relativeLayout2"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/relativeLayout3">
-
-        <TextView
-            android:layout_width="wrap_content"
+        android:background="@drawable/box_border2"
+        >
+        <RelativeLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="مبلغ:"
-            android:id="@+id/textView23"
-            android:layout_alignBottom="@+id/editText5"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/editText5"
+            android:id="@+id/vamYab_searchLayout"
             android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="بازپرداخت:"
-            android:id="@+id/textView22"
-            android:layout_above="@+id/editText7"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-        <EditText
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/editText6"
-            android:layout_below="@+id/editText5"
-            android:layout_alignRight="@+id/editText7"
-            android:layout_alignEnd="@+id/editText7" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="مبلغ هر قسط:"
-            android:id="@+id/textView24"
-            android:layout_alignBottom="@+id/editText7"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/editText7"
-            android:layout_below="@+id/editText6"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="تعداد ضامن:"
-            android:id="@+id/textView25"
-            android:layout_below="@+id/editText7"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="22dp" />
-
-        <EditText
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="20"
-            android:id="@+id/editText8"
-            android:layout_below="@+id/editText7"
-            android:layout_alignRight="@+id/editText7"
-            android:layout_alignEnd="@+id/editText7" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="نیاز به سند دارد:"
-            android:id="@+id/textView26"
-            android:layout_marginTop="25dp"
-            android:layout_below="@+id/textView25"
-            android:layout_alignRight="@+id/textView27"
-            android:layout_alignEnd="@+id/textView27" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="نیاز به سپرده گذاری:"
-            android:id="@+id/textView27"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="حداکثر کارمزد:"
-            android:id="@+id/textView28"
-            android:layout_marginTop="25dp"
-            android:layout_below="@+id/textView27"
-            android:layout_alignRight="@+id/textView27"
-            android:layout_alignEnd="@+id/textView27" />
-
-        <EditText
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/editText11"
-            android:layout_alignBottom="@+id/textView28"
-            android:layout_alignLeft="@+id/editText8"
-            android:layout_alignStart="@+id/editText8" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="بانک:"
-            android:id="@+id/textView29"
-            android:layout_marginTop="21dp"
-            android:layout_below="@+id/editText11"
-            android:layout_alignRight="@+id/textView26"
-            android:layout_alignEnd="@+id/textView26" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="ماهه"
-            android:id="@+id/textView30"
-            android:layout_alignTop="@+id/textView22"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="نفر"
-            android:id="@+id/textView31"
-            android:layout_alignBottom="@+id/editText8"
-            android:layout_toLeftOf="@+id/editText8"
-            android:layout_toStartOf="@+id/editText8" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:id="@+id/checkBox"
-            android:layout_alignBottom="@+id/textView26"
-            android:layout_alignLeft="@+id/checkBox2"
-            android:layout_alignStart="@+id/checkBox2" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:id="@+id/checkBox2"
-            android:layout_alignBottom="@+id/textView27"
-            android:layout_alignLeft="@+id/textView31"
-            android:layout_alignStart="@+id/textView31" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="درصد"
-            android:id="@+id/textView32"
-            android:layout_above="@+id/textView29"
-            android:layout_toLeftOf="@+id/editText11"
-            android:layout_toStartOf="@+id/editText11" />
-    </RelativeLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:id="@+id/relativeLayout3"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="600dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/textView33" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="مبلغ:"
+                android:id="@+id/textView23"
+                android:layout_alignBottom="@+id/editText5"
+                android:layout_alignParentRight="true"
+                 />
+
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/editText5"
+                android:inputType="none"
+                android:editable="false"
+                android:contextClickable="false"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@+id/linearLayout"
+                android:layout_alignEnd="@+id/linearLayout"
+                android:layout_marginRight="30dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="میلیون تومان"
+                android:id="@+id/toman3"
+                android:layout_alignBottom="@+id/editText5"
+                android:layout_toLeftOf="@+id/editText5"
+                android:layout_toStartOf="@+id/editText5" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/textView35" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="بازپرداخت:"
+                android:id="@+id/textView22"
+                android:layout_alignBottom="@+id/editText6"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:editable="false"
+                android:ems="10"
+                android:id="@+id/editText6"
+                android:layout_below="@+id/textView23"
+                android:layout_toLeftOf="@+id/textView25"
+                android:layout_toStartOf="@+id/textView25"
+                android:layout_marginRight="30dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/textView36" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="مبلغ هر قسط:"
+                android:id="@+id/textView24"
+                android:layout_alignBottom="@+id/editText7"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:editable="false"
+                android:ems="10"
+                android:id="@+id/editText7"
+                android:layout_below="@+id/editText6"
+                android:layout_toLeftOf="@+id/textView25"
+                android:layout_toStartOf="@+id/textView25"
+                android:layout_marginRight="30dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="تومان"
+                android:id="@+id/toman4"
+                android:layout_alignBottom="@+id/editText7"
+                android:layout_toLeftOf="@+id/editText7"
+                android:layout_toStartOf="@+id/editText7" />
+
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/textView37" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="تعداد ضامن:"
+                android:id="@+id/textView25"
+                android:layout_alignTop="@+id/editText11"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp" />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:editable="false"
+                android:ems="20"
+                android:id="@+id/editText8"
+                android:layout_above="@+id/editText11"
+                android:layout_toLeftOf="@+id/textView28"
+                android:layout_toStartOf="@+id/textView28"
+                android:layout_marginRight="30dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/textView38" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="حداکثر کارمزد:"
+                android:id="@+id/textView28"
+                android:layout_below="@+id/checkBox"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp" />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:editable="false"
+                android:ems="10"
+                android:id="@+id/editText11"
+                android:layout_below="@+id/textView28"
+                android:layout_toLeftOf="@+id/textView25"
+                android:layout_toStartOf="@+id/textView25"
+                android:layout_marginRight="30dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/textView39" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="بانک:"
+                android:id="@+id/textView29"
+                android:layout_alignTop="@+id/linearLayout"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/textView40" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="ماهه"
+                android:id="@+id/textView30"
+                android:layout_alignBottom="@+id/editText6"
+                android:layout_toLeftOf="@+id/editText6"
+                android:layout_toStartOf="@+id/editText6" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/textView41" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="نفر"
+                android:id="@+id/textView31"
+                android:layout_alignBottom="@+id/editText11"
+                android:layout_toLeftOf="@+id/editText11"
+                android:layout_toStartOf="@+id/editText11" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/textView42" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="نیاز به سند دارد"
+                android:id="@+id/niazbesanad"
+                android:layout_below="@+id/checkBox2"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+
+                />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox"
+                android:checked="false"
+                android:layout_below="@+id/checkBox2"
+                android:layout_toLeftOf="@+id/niazbesanad"
+                android:layout_toStartOf="@+id/niazbesanad"
+                android:layout_marginTop="15dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="نیاز به سپرده گذاری دارد"
+                android:id="@+id/niazbeseporde"
+                android:layout_below="@+id/textView24"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+
+                />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox2"
+                android:checked="false"
+                android:layout_below="@id/textView24"
+                android:layout_toLeftOf="@+id/niazbeseporde"
+                android:layout_toStartOf="@+id/niazbeseporde"
+                android:layout_marginTop="15dp"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/textView43" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="درصد"
+                android:id="@+id/textView32"
+                android:layout_above="@+id/editText11"
+                android:layout_toLeftOf="@+id/editText8"
+                android:layout_toStartOf="@+id/editText8" />
+            <HorizontalScrollView
 
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/textView34" />
-        </LinearLayout>
-    </ScrollView>
+                android:id="@+id/linearLayout"
+                android:layout_below="@+id/editText11"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:layout_toLeftOf="@+id/textView29"
+                android:layout_toStartOf="@+id/textView29">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
 
+                <ImageButton
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:id="@+id/logo_mellat"
+                    android:background="@drawable/logo_mellat2"
+                    android:layout_below="@+id/vamYab_searchLayout"
+                    android:layout_centerHorizontal="true" />
+
+                <ImageButton
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/logo_melli2"
+                    android:id="@+id/logo_melli" />
+
+                <ImageButton
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/logo_sarmaye2"
+                    android:id="@+id/logo_sarmaye" />
+
+                <ImageButton
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/logo_parsian2"
+                    android:id="@+id/logo_parsian" />
+
+                <ImageButton
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/logo_tejarat2"
+                    android:id="@+id/logo_tejarat" />
+
+                <ImageButton
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/logo_saman2"
+                    android:id="@+id/logo_saman" />
+
+                <ImageButton
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/logo_day2"
+                    android:id="@+id/logo_day" />
+
+                <ImageButton
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/logo_karafarin2"
+                    android:id="@+id/logo_karafarin" />
+
+                <ImageButton
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/logo_maskan2"
+                    android:id="@+id/logo_maskan" />
+
+                <ImageButton
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/logo_pasargad2"
+                    android:id="@+id/logo_pasargad" />
+
+                <ImageButton
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/logo_sina2"
+                    android:id="@+id/logo_sina" />
+
+                <ImageButton
+                    android:layout_marginRight="5dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/logo_tourism2"
+                    android:id="@+id/logo_tourism" />
+
+            </LinearLayout>
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/relativeLayout3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/VamYab_go">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_below="@+id/VamYab_go"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/vaamyabResultLinearLayout">
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="جستجو"
+            android:id="@+id/VamYab_go"
+            android:layout_below="@+id/vamYab_searchLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/vamYab_searchLayout"
+            android:layout_alignEnd="@+id/vamYab_searchLayout" />
+    </RelativeLayout>
 </RelativeLayout>

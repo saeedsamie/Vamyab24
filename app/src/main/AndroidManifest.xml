@@ -3,11 +3,13 @@
     package="com.example.android.vamyab24">
 
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:name=".Font">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -15,8 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SoodYab" />
-        <activity android:name=".VaamYab"></activity>
+        <activity android:name=".SoodYabActivity" />
+        <activity android:name=".VaamYabActivity" />
+        <activity android:name=".EnteringNumber"></activity>
     </application>
 
 </manifest>
